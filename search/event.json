@@ -1,0 +1,370 @@
+{
+    "Records": [
+        {
+            "eventID": "4f198fd68698db87d133b8fee3b71254",
+            "eventName": "REMOVE",
+            "eventVersion": "1.1",
+            "eventSource": "aws:dynamodb",
+            "awsRegion": "us-east-1",
+            "dynamodb": {
+                "ApproximateCreationDateTime": 1577933935,
+                "Keys": {
+                    "sk": {
+                        "S": "mfgNo#DR620"
+                    },
+                    "pk": {
+                        "S": "upc#012502622291"
+                    }
+                },
+                "OldImage": {
+                    "selectedDealer": {
+                        "S": "ingram_Y88932"
+                    },
+                    "images": {
+                        "L": [
+                            {
+                                "M": {
+                                    "ThumbImg": {
+                                        "S": "http://images.icecat.biz/thumbs/5396613.jpg"
+                                    },
+                                    "HighImg": {
+                                        "S": "http://images.icecat.biz/img/norm/high/5396613-7603.jpg"
+                                    },
+                                    "IsMain": {
+                                        "S": "Y"
+                                    },
+                                    "LowImg": {
+                                        "S": "http://images.icecat.biz/img/norm/low/5396613-7603.jpg"
+                                    }
+                                }
+                            },
+                            {
+                                "M": {
+                                    "ThumbImg": {
+                                        "S": "http://images.icecat.biz/img/gallery_thumbs/16713_5396613_3282.jpg"
+                                    },
+                                    "HighImg": {
+                                        "S": "http://images.icecat.biz/img/gallery/16713_5396613_3282.jpg"
+                                    },
+                                    "LowImg": {
+                                        "S": "http://images.icecat.biz/img/gallery_lows/16713_5396613_3282.jpg"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "imgLink": {
+                        "S": "http://images.icecat.biz/img/norm/high/5396613-7603.jpg"
+                    },
+                    "ASIN": {
+                        "S": "B00BX9PBYW"
+                    },
+                    "description": {
+                        "BOOL": false
+                    },
+                    "specification": {
+                        "M": {
+                            "categoryFeatureGroups": {
+                                "L": [
+                                    {
+                                        "M": {
+                                            "name": {
+                                                "S": "Weight & dimensions"
+                                            },
+                                            "id": {
+                                                "S": "1242"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "M": {
+                                            "name": {
+                                                "S": "Operational conditions"
+                                            },
+                                            "id": {
+                                                "S": "1243"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "M": {
+                                            "name": {
+                                                "S": "Technical details"
+                                            },
+                                            "id": {
+                                                "S": "33453"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "M": {
+                                            "name": {
+                                                "S": "Other features"
+                                            },
+                                            "id": {
+                                                "S": "31031"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "M": {
+                                            "name": {
+                                                "S": "Features"
+                                            },
+                                            "id": {
+                                                "S": "10852"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "M": {
+                                            "name": {
+                                                "S": "Logistics data"
+                                            },
+                                            "id": {
+                                                "S": "20250"
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            "spec": {
+                                "L": [
+                                    {
+                                        "M": {
+                                            "specid": {
+                                                "S": "300364"
+                                            },
+                                            "name": {
+                                                "S": "Type"
+                                            },
+                                            "specGroupId": {
+                                                "S": "10852"
+                                            },
+                                            "value": {
+                                                "S": "Original"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "M": {
+                                            "specid": {
+                                                "S": "240805"
+                                            },
+                                            "name": {
+                                                "S": "Compatibility"
+                                            },
+                                            "specGroupId": {
+                                                "S": "10852"
+                                            },
+                                            "value": {
+                                                "S": "HL-5340D, HL-5370DW, DCP-8085DN, MFC-8480DN, MFC-8890DW"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "M": {
+                                            "specid": {
+                                                "S": "9070"
+                                            },
+                                            "name": {
+                                                "S": "Page yield"
+                                            },
+                                            "specGroupId": {
+                                                "S": "10852"
+                                            },
+                                            "value": {
+                                                "S": "25000 pages"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "M": {
+                                            "specid": {
+                                                "S": "12653"
+                                            },
+                                            "name": {
+                                                "S": "Product colour"
+                                            },
+                                            "specGroupId": {
+                                                "S": "10852"
+                                            },
+                                            "value": {
+                                                "S": "Black"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "upc": {
+                        "S": "012502622291"
+                    },
+                    "weight": {
+                        "N": "1.86"
+                    },
+                    "title": {
+                        "S": "Brother DR-620 printer drum Original"
+                    },
+                    "mfgNumber": {
+                        "S": "DR620"
+                    },
+                    "mobileLink": {
+                        "S": "http://images.icecat.biz/img/norm/high/5396613-7603.jpg"
+                    },
+                    "amazon": {
+                        "M": {
+                            "Products": {
+                                "M": {
+                                    "AttributeSets": {
+                                        "M": {
+                                            "ItemAttributes": {
+                                                "M": {
+                                                    "Binding": {
+                                                        "S": "Wireless Phone Accessory"
+                                                    },
+                                                    "ProductGroup": {
+                                                        "S": "PC Accessory"
+                                                    },
+                                                    "PartNumber": {
+                                                        "S": "DR620"
+                                                    },
+                                                    "Label": {
+                                                        "S": "Brother Int L (Supplies)"
+                                                    },
+                                                    "Title": {
+                                                        "S": "Wholesale CASE of 2 - Brother DR620 Laser Drum-Drum For Toner, 25,000 Page Yield"
+                                                    },
+                                                    "ProductTypeName": {
+                                                        "S": "COMPUTER"
+                                                    },
+                                                    "Publisher": {
+                                                        "S": "Brother Int L (Supplies)"
+                                                    },
+                                                    "PackageQuantity": {
+                                                        "S": "1"
+                                                    },
+                                                    "Studio": {
+                                                        "S": "Brother Int L (Supplies)"
+                                                    },
+                                                    "Brand": {
+                                                        "S": "Brother"
+                                                    },
+                                                    "xml:lang": {
+                                                        "S": "en-US"
+                                                    },
+                                                    "ItemDimensions": {
+                                                        "M": {
+                                                            "Weight": {
+                                                                "M": {
+                                                                    "Value": {
+                                                                        "S": "0.00"
+                                                                    },
+                                                                    "Units": {
+                                                                        "S": "pounds"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "Manufacturer": {
+                                                        "S": "Brother Int L (Supplies)"
+                                                    },
+                                                    "SmallImage": {
+                                                        "M": {
+                                                            "Height": {
+                                                                "M": {
+                                                                    "Value": {
+                                                                        "S": "75"
+                                                                    },
+                                                                    "Units": {
+                                                                        "S": "pixels"
+                                                                    }
+                                                                }
+                                                            },
+                                                            "Width": {
+                                                                "M": {
+                                                                    "Value": {
+                                                                        "S": "59"
+                                                                    },
+                                                                    "Units": {
+                                                                        "S": "pixels"
+                                                                    }
+                                                                }
+                                                            },
+                                                            "URL": {
+                                                                "S": "http://ecx.images-amazon.com/images/I/411w0UAEojL._SL75_.jpg"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "Relationships": {
+                                        "M": {}
+                                    },
+                                    "Identifiers": {
+                                        "M": {
+                                            "MarketplaceASIN": {
+                                                "M": {
+                                                    "MarketplaceId": {
+                                                        "S": "ATVPDKIKX0DER"
+                                                    },
+                                                    "ASIN": {
+                                                        "S": "B00BX9PBYW"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "SalesRankings": {
+                                        "M": {}
+                                    }
+                                }
+                            },
+                            "id": {
+                                "S": "012502622291"
+                            },
+                            "IdType": {
+                                "S": "UPC"
+                            }
+                        }
+                    },
+                    "sellingPrice": {
+                        "N": "122"
+                    },
+                    "additionalImageLink": {
+                        "S": "http://images.icecat.biz/img/norm/low/5396613-7603.jpg"
+                    },
+                    "ean": {
+                        "S": "0012502622291"
+                    },
+                    "productGroup": {
+                        "S": "PC Accessory"
+                    },
+                    "sk": {
+                        "S": "mfgNo#DR620"
+                    },
+                    "id": {
+                        "S": "5396613"
+                    },
+                    "pk": {
+                        "S": "upc#012502622291"
+                    },
+                    "brand": {
+                        "S": "Brother"
+                    },
+                    "retailPrice": {
+                        "N": "172"
+                    }
+                },
+                "SequenceNumber": "9159000000000005956473677",
+                "SizeBytes": 2175,
+                "StreamViewType": "NEW_AND_OLD_IMAGES"
+            },
+            "eventSourceARN": "arn:aws:dynamodb:us-east-1:677660837407:table/products/stream/2020-01-02T02:28:11.581"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "search",
+  "version": "1.0.0",
+  "description": "/* aws es create-elasticsearch-domain --domain-name products-es --elasticsearch-version 6.8 --elasticsearch-cluster-config InstanceType=t2.small.elasticsearch,InstanceCount=1 --ebs-options EBSEnabled=true,VolumeType=standard,VolumeSize=10 --access-policies '{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":[\"es:*\"],\"Condition\":{\"IpAddress\":{\"aws:SourceIp\":[\"207.181.207.119\"]}}}]}'",
+  "main": "dynamodb-stream-elasticsearch.js",
+  "scripts": {
+    "local-test": "serverless invoke local --function elasticsearch-dynamodb --path event.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dynamodb-stream-elasticsearch": "^2.7.0"
+  }
+}
