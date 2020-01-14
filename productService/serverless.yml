@@ -1,0 +1,83 @@
+service: products
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+plugins:
+  - serverless-dynamodb-local
+  - serverless-offline
+
+custom:
+  tableName: ${self:custom.stage}-products
+  stage: ${opt:stage, self:provider.stage}
+  dynamodb:
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+    migration:
+      dir: offline/migrations
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  deploymentBucket:
+    name: shop-elguru-artifacts
+    blockPublicAccess: true
+    serverSideEncryption: AES256
+  environment:
+    DYNAMODB_TABLE: ${self:provider.environment.DYNAMODB_TABLE}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
+
+functions:
+  create:
+    handler: functions/create.create
+    events:
+      - http:
+          path: products
+          method: post
+          cors: true
+
+  list:
+    handler: functions/list.list
+    events:
+      - http:
+          path: products
+          method: get
+          cors: true
+
+  get:
+    handler: functions/get.get
+    events:
+      - http:
+          path: products/{id}
+          method: get
+          cors: true
+
+  update:
+    handler: functions/update.update
+    events:
+      - http:
+          path: products/{id}
+          method: put
+          cors: true
+
+  delete:
+    handler: functions/delete.delete
+    events:
+      - http:
+          path: products/{id}
+          method: delete
+          cors: true
+
+resources:
+  # DynamoDB
+  - ${file(resources/dynamodb-table.yml)}
