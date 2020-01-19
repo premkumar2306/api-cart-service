@@ -9,6 +9,8 @@ plugins:
 custom:
   stage: ${opt:stage, self:provider.stage}
   tableName: ${self:custom.stage}-products
+  # serverless-offline:
+  #   port: 4000
   dynamodb:
     start:
       port: 8000
