@@ -1,15 +1,14 @@
 'use strict';
 
-// const uuid = require('uuid');
-const dynamodb = require('./dynamodb');
-const formatUPC = require('../common/formatUPC');
-module.exports = async (icecat, product, amazon_mws) => {
+const uuid = require('uuid');
+const formatUPC = require('./formatUPC');
+module.exports = ({icecat, product, amazon_mws}) => {
     if (!icecat || icecat.id === '') {
         return;
     }
     const timestamp = new Date().getTime();
     const data = {
-        pk: `upc#${formatUPC(product.ingram_UPC)}`,
+        pk: uuid.v1(),
         sk: `mfgNo#${product.mfgNumber}`,
         mfgNumber: product.mfgNumber,
         id: icecat.id,
@@ -34,14 +33,5 @@ module.exports = async (icecat, product, amazon_mws) => {
         createdAt: timestamp,
         updatedAt: timestamp,
     }
-    const params = {
-        TableName: 'products',
-        Item: data,
-    };
-    try {
-        const response = await dynamodb.put(params).promise()
-        console.log(JSON.stringify(response));
-    } catch (error) {
-        return new Error('Error');
-    }
+    return data;
 };

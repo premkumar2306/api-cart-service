@@ -4,23 +4,25 @@ const dynamodb = require('./dynamodb');
 
 module.exports.get = async (event, context) => {
     debugger;
+    console.log(event);
     const params = {
-        TableName: "dev-products", //process.env.DYNAMODB_TABLE,
-        Key: {
-            pk: event.pathParameters.id,
+        TableName: process.env.DYNAMODB_TABLE,
+        KeyConditionExpression: 'pk = :i',
+        ExpressionAttributeValues: {
+            ':i': event.pathParameters.id
         }
     };
     try {
-        const result = await dynamodb.get(params).promise();
+        const result = await dynamodb.query(params).promise();
         return {
             statusCode: 200,
-            body: JSON.stringify(result.Item),
+            body: JSON.stringify(result.Items[0]),
         };
     } catch (error) {
         return {
             statusCode: error.statusCode || 501,
             headers: { 'Content-Type': 'text/plain' },
-            body: 'Couldn\'t fetch the Product item.',
+            body: JSON.stringify(error),
         }
     }
 };

@@ -3,8 +3,9 @@
 const dynamodb = require('./dynamodb');
 
 module.exports.list = async (event, context) => {
+    debugger;
     const params = {
-        TableName: "dev-products",
+        TableName: process.env.DYNAMODB_TABLE
     };
     try {
         const result = await dynamodb.scan(params).promise();
@@ -17,7 +18,7 @@ module.exports.list = async (event, context) => {
         return {
             statusCode: error.statusCode || 501,
             headers: { 'Content-Type': 'text/plain' },
-            body: 'Couldn\'t fetch the Product item.',
+            body: JSON.stringify(error),
         }
     }
 };

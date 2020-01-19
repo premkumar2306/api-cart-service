@@ -2,11 +2,12 @@
 
 const uuid = require('uuid');
 const dynamodb = require('./dynamodb');
-
+const mapper = require('./mapper');
 module.exports.create = (event, context, callback) => {
-  const timestamp = new Date().getTime();
-  const data = JSON.parse(event.body);
-  if (typeof data.text !== 'string') {
+  debugger;
+  const data = mapper(JSON.parse(event.body));
+  console.log(data);
+  if (typeof data.pk !== 'string') {
     console.error('Validation Failed');
     callback(null, {
       statusCode: 400,
@@ -18,13 +19,7 @@ module.exports.create = (event, context, callback) => {
 
   const params = {
     TableName: process.env.DYNAMODB_TABLE,
-    Item: {
-      id: uuid.v1(),
-      text: data.text,
-      checked: false,
-      createdAt: timestamp,
-      updatedAt: timestamp,
-    },
+    Item: data,
   };
 
   // write the todo to the database

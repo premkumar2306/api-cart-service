@@ -1,4 +1,4 @@
-service: products
+service: products-service
 
 frameworkVersion: ">=1.1.0 <2.0.0"
 
@@ -7,8 +7,8 @@ plugins:
   - serverless-offline
 
 custom:
-  tableName: ${self:custom.stage}-products
   stage: ${opt:stage, self:provider.stage}
+  tableName: ${self:custom.stage}-products
   dynamodb:
     start:
       port: 8000
@@ -20,12 +20,8 @@ custom:
 provider:
   name: aws
   runtime: nodejs12.x
-  deploymentBucket:
-    name: shop-elguru-artifacts
-    blockPublicAccess: true
-    serverSideEncryption: AES256
   environment:
-    DYNAMODB_TABLE: ${self:provider.environment.DYNAMODB_TABLE}
+    DYNAMODB_TABLE: ${self:custom.tableName}
   iamRoleStatements:
     - Effect: Allow
       Action:
