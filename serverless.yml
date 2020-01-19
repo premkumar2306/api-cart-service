@@ -1,0 +1,90 @@
+service: cart-service
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+plugins:
+  - serverless-dynamodb-local
+  - serverless-offline
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  tableName: ${self:custom.stage}-cart
+  dynamodb:
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+    migration:
+      dir: offline/migrations
+
+provider:
+  name: aws
+  stage: dev
+  region: us-east-1
+  apiGateway: #shared Gateway setting
+    restApiId:
+      "Fn::ImportValue": ${self:custom.stage}-sharedGW-restApiId
+    restApiRootResourceId:
+      "Fn::ImportValue": ${self:custom.stage}-sharedGW-rootResourceId
+  environment:
+    DYNAMODB_TABLE: ${self:custom.tableName}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
+
+functions:
+  createCart:
+    runtime: nodejs12.x
+    handler: functions/create.create
+    events:
+      - http:
+          path: cart
+          method: post
+          cors: true
+
+  addCartItem:
+    runtime: nodejs12.x
+    handler: functions/cartItem/add.add
+    events:
+      - http:
+          path: cart/{cartid}/addItem
+          method: post
+          cors: true
+
+  updateCartItem:
+    runtime: nodejs12.x
+    handler: functions/cartItem/update.update
+    events:
+      - http:
+          path: cart/{cartid}/updateItem
+          method: post
+          cors: true
+
+  deleteCartItem:
+    runtime: nodejs12.x
+    handler: functions/cartItem/delete.delete
+    events:
+      - http:
+          path: cart/{cartid}/deleteItem
+          method: post
+          cors: true
+
+  deleteCart:
+    runtime: nodejs12.x
+    handler: functions/delete.delete
+    events:
+      - http:
+          path: cart/{cartid}
+          method: delete
+          cors: true
+
+resources:
+  # DynamoDB
+  - ${file(resources/dynamodb-table.yml)}

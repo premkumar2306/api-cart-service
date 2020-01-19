@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch createCart",
+            "program": "${workspaceRoot}/node_modules/.bin/sls",
+            "args": [
+                "invoke",
+                "local",
+                "-f",
+                "createCart",
+                "--path",
+                "events/create.json"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch deleteCart",
+            "program": "${workspaceRoot}/node_modules/.bin/sls",
+            "args": [
+                "invoke",
+                "local",
+                "-f",
+                "deleteCart",
+                "--path",
+                "events/delete.json"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "apicartservice",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "serverless offline -s dev",
+    "debug": "SLS_DEBUG=* sls offline start",
+    "create-cart-local": "sls invoke local -f createCart --path events/create.json",
+    "delete-cart-local": "sls invoke local -f deleteCart --path events/delete.json",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "serverless": "^1.61.2",
+    "uuid": "^2.0.3"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.12.0",
+    "serverless-dynamodb-local": "^0.2.18",
+    "serverless-offline": "^3.8.3"
+  },
+  "author": "premkumar duraiswamy",
+  "license": "ISC"
+}

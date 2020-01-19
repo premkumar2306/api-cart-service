@@ -1,0 +1,121 @@
+{
+    "resource": "/cart",
+    "path": "/cart",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate",
+        "Cache-Control": "no-cache",
+        "CloudFront-Forwarded-Proto": "https",
+        "CloudFront-Is-Desktop-Viewer": "true",
+        "CloudFront-Is-Mobile-Viewer": "false",
+        "CloudFront-Is-SmartTV-Viewer": "false",
+        "CloudFront-Is-Tablet-Viewer": "false",
+        "CloudFront-Viewer-Country": "US",
+        "Content-Type": "application/json",
+        "Host": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
+        "Postman-Token": "b28753cc-bb04-49c6-be54-4c9fdbef311b",
+        "User-Agent": "PostmanRuntime/7.21.0",
+        "Via": "1.1 548c240ae60f1a12a2cb777a5d992595.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "hSnQk3hmUnaDtJg-KQlxRu71WOpZ_GG-GyifRP-YsYaLGJMN30aJAA==",
+        "X-Amzn-Trace-Id": "Root=1-5e24d331-283ff9988a741a429eb5eb9a",
+        "X-Forwarded-For": "207.181.207.119, 64.252.169.163",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate"
+        ],
+        "Cache-Control": [
+            "no-cache"
+        ],
+        "CloudFront-Forwarded-Proto": [
+            "https"
+        ],
+        "CloudFront-Is-Desktop-Viewer": [
+            "true"
+        ],
+        "CloudFront-Is-Mobile-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-SmartTV-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-Tablet-Viewer": [
+            "false"
+        ],
+        "CloudFront-Viewer-Country": [
+            "US"
+        ],
+        "Content-Type": [
+            "application/json"
+        ],
+        "Host": [
+            "4rdz741pfg.execute-api.us-east-1.amazonaws.com"
+        ],
+        "Postman-Token": [
+            "b28753cc-bb04-49c6-be54-4c9fdbef311b"
+        ],
+        "User-Agent": [
+            "PostmanRuntime/7.21.0"
+        ],
+        "Via": [
+            "1.1 548c240ae60f1a12a2cb777a5d992595.cloudfront.net (CloudFront)"
+        ],
+        "X-Amz-Cf-Id": [
+            "hSnQk3hmUnaDtJg-KQlxRu71WOpZ_GG-GyifRP-YsYaLGJMN30aJAA=="
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-5e24d331-283ff9988a741a429eb5eb9a"
+        ],
+        "X-Forwarded-For": [
+            "207.181.207.119, 64.252.169.163"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "e68fbd",
+        "resourcePath": "/cart",
+        "httpMethod": "POST",
+        "extendedRequestId": "GkXv0F3uoAMFq_w=",
+        "requestTime": "19/Jan/2020:22:07:45 +0000",
+        "path": "/dev/cart",
+        "accountId": "677660837407",
+        "protocol": "HTTP/1.1",
+        "stage": "dev",
+        "domainPrefix": "4rdz741pfg",
+        "requestTimeEpoch": 1579471665919,
+        "requestId": "3b66652a-c6a6-4d3a-ac5b-8d539c48318f",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "207.181.207.119",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "PostmanRuntime/7.21.0",
+            "user": null
+        },
+        "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
+        "apiId": "4rdz741pfg"
+    },
+    "body": "{\n    \"cartId\": \"002 2197248 2529608\",\n    \"HMAC\": \"/WrekkZAPx782xttLFbZqviNUOA=\",\n    \"URLEncodedHMAC\": \"%2FWrekkZAPx782xttLFbZqviNUOA%3D\",\n    \"purchaseURL\": \"https://www.amazon.com/gp/cart/aws merge.html?cart id=002 2197248 2529608%26associate id=ws%26hmac=/WrekkZAPx782xttLFbZqviNUOA=%26AWSAccessKeyId=[AWS Access Key ID]\",\n    \"subTotal\": {\n       \"amount\": \"2998\",\n       \"currencyCode\": \"USD\",\n       \"formattedPrice\": \"$29.98\"\n    },\n       \"cartItems\": [{\n          \"cartItemId\": \"UV3W10T4V7PCZ\",\n          \"ASIN\": \"B000062TU1\",\n          \"quantity\": \"2\",\n          \"title\": \"Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)\",\n          \"productGroup\": \"DVD\",\n          \"price\": {\n             \"amount\": \"1499\",\n             \"currencyCode\": \"USD\",\n             \"formattedPrice\": \"$14.99\"\n          },\n          \"itemTotal\": {\n             \"amount\": \"2998\",\n             \"currencyCode\": \"USD\",\n             \"formattedPrice\": \"$29.98\"\n          }\n       }]\n }",
+    "isBase64Encoded": false
+}
