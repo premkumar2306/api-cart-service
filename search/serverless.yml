@@ -2,7 +2,11 @@ service: search-products
 provider:
   name: aws
   runtime: nodejs12.x
-  # apiName: custom-api-name # Use a custom name for the API Gateway API
+  apiGateway: #shared Gateway setting
+    restApiId:
+      "Fn::ImportValue": SharedGW-restApiId
+    restApiRootResourceId:
+      "Fn::ImportValue": SharedGW-rootResourceId
   deploymentBucket:
     name: shop-elguru-artifacts
     blockPublicAccess: true
@@ -29,6 +33,13 @@ provider:
         - { "Fn::Join": ["", ["Fn::GetAtt": ["ElasticSearchInstance", "DomainArn"], "/*"]] }
 
 functions:
+  search:
+    handler: functions/search.search
+    events:
+      - http:
+          path: search
+          method: get
+          cors: true
   elasticsearch-dynamodb:
     handler: dynamodb-stream-elasticsearch.stream
     environment:
@@ -42,7 +53,7 @@ functions:
           batchSize: 100
           startingPosition: LATEST
           enabled: true
-          arn: arn:aws:dynamodb:us-east-1:677660837407:table/products/stream/2020-01-02T02:28:11.581
+          arn: arn:aws:dynamodb:us-east-1:677660837407:table/dev-products/stream/2020-01-19T02:49:18.694
 resources:
   Resources:
     ElasticSearchInstance:
@@ -54,7 +65,7 @@ resources:
           VolumeType: standard
           VolumeSize: 10
         ElasticsearchClusterConfig:
-          InstanceType: t2.small.elasticsearch
+          InstanceType: t2.micro.elasticsearch
           InstanceCount: 1
           DedicatedMasterEnabled: false
           ZoneAwarenessEnabled: false
