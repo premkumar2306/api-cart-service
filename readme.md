@@ -27,15 +27,15 @@ This is a shopping cart manangement repo: Using serverless framework and node:12
 ## Commands
 
 ### Install 
-    ``` npm install ```
+    npm install
 ### Local Lambda Invoke
-``` npm run create-cart-local
+    npm run create-cart-local
     npm run get-cart-local
     npm run delete-cart-local
     npm run add-cart-item-local
     npm run update-cart-item-local
     npm run del-cart-item-local
-```
+
 ## Remove cart
 
 https://docs.aws.amazon.com/AWSECommerceService/latest/DG/UsingValuesReturnedbyCartCreateinOtherCartOperations.html
