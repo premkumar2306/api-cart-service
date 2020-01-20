@@ -39,7 +39,7 @@ This is a shopping cart manangement repo: Using serverless framework and node:12
 4. Ninety days automatic cart deletion
 
 | Category        | Description 
-| ------------- |:-------------|
+| :------------- |:-------------|
 | ForEachQuantityXGetQuantityFreeX	      | For a specified number of items, you receive additional items for free. For example, buy six dozen eggs and get a dozen eggs free.|
 | BuyAmountXGetSimpleShippingFreeX	      | For a specified dollar amount, you receive free shipping. For example, spend $25 and your item is shipped free of charge.|
 | BuyAmountXGetAmountOffX	      	      | For a specified dollar amount, you receive a discounted price. For example, spend $25 and get a $5 discount.|
