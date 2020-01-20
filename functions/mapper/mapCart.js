@@ -2,7 +2,26 @@
 
 const uuid = require('uuid');
 
-const mapCatItems = function (cartItems) {
+const calcSubTotal = function(products) {
+    let totalCost = products.reduce((sum, p) => {
+        return sum + p.itemTotal.amount;
+    }, 0);
+    return {
+        currencyCode: "USD",
+        amount: totalCost,
+        formattedPrice: `$${(totalCost/ 100).toFixed(2)}`
+    }
+};
+
+const calcItemTotal = function(product) {
+    const totalAmt = product.price.amount * product.quantity;
+    return {
+        amount: totalAmt,
+        currencyCode: "USD",
+        formattedPrice: `$${(totalAmt/ 100).toFixed(2)}`
+    }
+}
+const mapCartItems = function (cartItems) {
     const items = cartItems.map(c => {
         return {
             cartItemId: c.cartItemId,
@@ -15,11 +34,7 @@ const mapCatItems = function (cartItems) {
                 currencyCode: c.price.currencyCode || "USD",
                 formattedPrice: c.price.formattedPrice
             },
-            itemTotal: {
-                amount: c.itemTotal.amount,
-                currencyCode: c.itemTotal.currencyCode || "USD",
-                formattedPrice: c.itemTotal.formattedPrice
-            }
+            itemTotal: calcItemTotal(c)
         }
     });
     return items;
@@ -29,20 +44,15 @@ module.exports = (cart) => {
         return;
     }
     const timestamp = new Date().getTime();
-    const data = {
+    let data = {
         pk: cart.pk || uuid.v1(),
         sk: `HMAC_${cart.HMAC}`,
         HMAC: `${cart.HMAC}`,
         URLEncodedHMAC: cart.URLEncodedHMAC,
         purchaseURL: cart.upPurchaseURLc,
-        subTotal: {
-            amount: cart.subTotal.amount,
-            currencyCode: cart.subTotal.currencyCode,
-            formattedPrice: cart.subTotal.formattedPrice
-        },
-        cartItems: mapCatItems(cart.cartItems),
+        cartItems: mapCartItems(cart.cartItems),
         created: timestamp,
         updated: timestamp
     }
-    return data;
+    return {...data, subTotal: calcSubTotal(data.cartItems)}
 };

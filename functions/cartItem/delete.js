@@ -12,7 +12,8 @@ const deleteItem = async (cartId, newItem) => {
         productsInCart = removeItem(productsInCart, newItem.cartItemId);
         console.log(JSON.stringify(productsInCart));
     }
-    await updateCart(cart);
+    const data = {...cart, ...{cartItems: productsInCart}}
+    await updateCart(data);
     const response = await getCart(cartId);
     return response;
 };

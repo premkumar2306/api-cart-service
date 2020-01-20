@@ -14,12 +14,12 @@
         "CloudFront-Viewer-Country": "US",
         "Content-Type": "application/json",
         "Host": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
-        "Postman-Token": "b28753cc-bb04-49c6-be54-4c9fdbef311b",
+        "Postman-Token": "9604cb34-444c-4c2e-945f-4bf9707397b6",
         "User-Agent": "PostmanRuntime/7.21.0",
-        "Via": "1.1 548c240ae60f1a12a2cb777a5d992595.cloudfront.net (CloudFront)",
-        "X-Amz-Cf-Id": "hSnQk3hmUnaDtJg-KQlxRu71WOpZ_GG-GyifRP-YsYaLGJMN30aJAA==",
-        "X-Amzn-Trace-Id": "Root=1-5e24d331-283ff9988a741a429eb5eb9a",
-        "X-Forwarded-For": "207.181.207.119, 64.252.169.163",
+        "Via": "1.1 be071d71ef5bed15dfd6af31e50615d8.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "hBoSGm6jtHTgqKAqveMWQ8mlKISYHt1atg8YIgjKz4KhvjKGAuRu7Q==",
+        "X-Amzn-Trace-Id": "Root=1-5e25244d-0f148b403a7a2484b9c654ec",
+        "X-Forwarded-For": "207.181.207.119, 70.132.57.86",
         "X-Forwarded-Port": "443",
         "X-Forwarded-Proto": "https"
     },
@@ -58,22 +58,22 @@
             "4rdz741pfg.execute-api.us-east-1.amazonaws.com"
         ],
         "Postman-Token": [
-            "b28753cc-bb04-49c6-be54-4c9fdbef311b"
+            "9604cb34-444c-4c2e-945f-4bf9707397b6"
         ],
         "User-Agent": [
             "PostmanRuntime/7.21.0"
         ],
         "Via": [
-            "1.1 548c240ae60f1a12a2cb777a5d992595.cloudfront.net (CloudFront)"
+            "1.1 be071d71ef5bed15dfd6af31e50615d8.cloudfront.net (CloudFront)"
         ],
         "X-Amz-Cf-Id": [
-            "hSnQk3hmUnaDtJg-KQlxRu71WOpZ_GG-GyifRP-YsYaLGJMN30aJAA=="
+            "hBoSGm6jtHTgqKAqveMWQ8mlKISYHt1atg8YIgjKz4KhvjKGAuRu7Q=="
         ],
         "X-Amzn-Trace-Id": [
-            "Root=1-5e24d331-283ff9988a741a429eb5eb9a"
+            "Root=1-5e25244d-0f148b403a7a2484b9c654ec"
         ],
         "X-Forwarded-For": [
-            "207.181.207.119, 64.252.169.163"
+            "207.181.207.119, 70.132.57.86"
         ],
         "X-Forwarded-Port": [
             "443"
@@ -90,15 +90,15 @@
         "resourceId": "e68fbd",
         "resourcePath": "/cart",
         "httpMethod": "POST",
-        "extendedRequestId": "GkXv0F3uoAMFq_w=",
-        "requestTime": "19/Jan/2020:22:07:45 +0000",
+        "extendedRequestId": "GlKcGH1bIAMF-hA=",
+        "requestTime": "20/Jan/2020:03:53:49 +0000",
         "path": "/dev/cart",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",
         "domainPrefix": "4rdz741pfg",
-        "requestTimeEpoch": 1579471665919,
-        "requestId": "3b66652a-c6a6-4d3a-ac5b-8d539c48318f",
+        "requestTimeEpoch": 1579492429376,
+        "requestId": "4348d8d6-c811-4f96-9677-a26fe4f81d95",
         "identity": {
             "cognitoIdentityPoolId": null,
             "accountId": null,
@@ -116,6 +116,6 @@
         "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
         "apiId": "4rdz741pfg"
     },
-    "body": "{\n    \"cartId\": \"002 2197248 2529608\",\n    \"HMAC\": \"/WrekkZAPx782xttLFbZqviNUOA=\",\n    \"URLEncodedHMAC\": \"%2FWrekkZAPx782xttLFbZqviNUOA%3D\",\n    \"purchaseURL\": \"https://www.amazon.com/gp/cart/aws merge.html?cart id=002 2197248 2529608%26associate id=ws%26hmac=/WrekkZAPx782xttLFbZqviNUOA=%26AWSAccessKeyId=[AWS Access Key ID]\",\n    \"subTotal\": {\n       \"amount\": \"2998\",\n       \"currencyCode\": \"USD\",\n       \"formattedPrice\": \"$29.98\"\n    },\n       \"cartItems\": [{\n          \"cartItemId\": \"UV3W10T4V7PCZ\",\n          \"ASIN\": \"B000062TU1\",\n          \"quantity\": \"2\",\n          \"title\": \"Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)\",\n          \"productGroup\": \"DVD\",\n          \"price\": {\n             \"amount\": \"1499\",\n             \"currencyCode\": \"USD\",\n             \"formattedPrice\": \"$14.99\"\n          },\n          \"itemTotal\": {\n             \"amount\": \"2998\",\n             \"currencyCode\": \"USD\",\n             \"formattedPrice\": \"$29.98\"\n          }\n       }]\n }",
+    "body": "{\n    \"cartId\": \"002 2197248 2529608\",\n    \"HMAC\": \"/WrekkZAPx782xttLFbZqviNUOA=\",\n    \"URLEncodedHMAC\": \"%2FWrekkZAPx782xttLFbZqviNUOA%3D\",\n    \"purchaseURL\": \"https://www.amazon.com/gp/cart/aws merge.html?cart id=002 2197248 2529608%26associate id=ws%26hmac=/WrekkZAPx782xttLFbZqviNUOA=%26AWSAccessKeyId=[AWS Access Key ID]\",\n    \"cartItems\": [\n        {\n            \"cartItemId\": \"UV3W10T4V7PCZ\",\n            \"ASIN\": \"B000062TU1\",\n            \"quantity\": \"2\",\n            \"title\": \"Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)\",\n            \"productGroup\": \"DVD\",\n            \"price\": {\n                \"amount\": \"1499\",\n                \"currencyCode\": \"USD\",\n                \"formattedPrice\": \"$14.99\"\n            }\n        }\n    ]\n}",
     "isBase64Encoded": false
 }
