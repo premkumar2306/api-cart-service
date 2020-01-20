@@ -17,7 +17,7 @@ This is a shopping cart manangement repo: Using serverless framework and node:12
 ├── functions               <-- Business functions
 │   ├── get.js              <-- get cart by the cartId
 │   ├── create.js           <-- create a new cart (atleast one item needed)
-│   ├── delete.js           <-- delete cart by id (exipres - 90days)
+│   ├── delete.js           <-- delete cart by id (expires - 90days)
 │   └── cartItem            <-- Individual cart item
 │      ├── add.js           <-- add a new item; if already exist then will increment the quantity
 │      ├── update.js        <-- update existing item based on the quantity (quantity - 1  || del item.count<0 )
