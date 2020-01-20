@@ -18,13 +18,8 @@ https://docs.aws.amazon.com/AWSECommerceService/latest/DG/UsingValuesReturnedbyC
 
 | Category        | Description 
 | ------------- |:-------------:|
-| ForEachQuantityXGetQuantityFreeX	      | For a specified number of items, you receive additional items for free. For example, buy six dozen eggs and get a dozen eggs free.
- |
-| BuyAmountXGetSimpleShippingFreeX	      | For a specified dollar amount, you receive free shipping. For example, spend $25 and your item is shipped free of charge.
-      |
-| BuyAmountXGetAmountOffX	      	      | For a specified dollar amount, you receive a discounted price. For example, spend $25 and get a $5 discount.
-      |
-| BuyQuantityXGetAmountOffX	      	   | For a specified number of items, you receive a discounted price. For example, buy three balls and get a $5 discount.
-      |
-| BuyQuantityXGetPercentOffX	      	   | For a specified number of items, you receive a percentage discount. For example, buy three balls and get a 15% discount.
-      |
+| ForEachQuantityXGetQuantityFreeX	      | For a specified number of items, you receive additional items for free. For example, buy six dozen eggs and get a dozen eggs free.|
+| BuyAmountXGetSimpleShippingFreeX	      | For a specified dollar amount, you receive free shipping. For example, spend $25 and your item is shipped free of charge.|
+| BuyAmountXGetAmountOffX	      	      | For a specified dollar amount, you receive a discounted price. For example, spend $25 and get a $5 discount.|
+| BuyQuantityXGetAmountOffX	      	   | For a specified number of items, you receive a discounted price. For example, buy three balls and get a $5 discount.|
+| BuyQuantityXGetPercentOffX	      	   | For a specified number of items, you receive a percentage discount. For example, buy three balls and get a 15% discount.|
