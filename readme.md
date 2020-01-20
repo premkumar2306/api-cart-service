@@ -10,7 +10,7 @@ https://docs.aws.amazon.com/AWSECommerceService/latest/DG/UsingValuesReturnedbyC
 
 ## What's in this repository?
 
-This is a sample template for Managing Long Lived Transactions with AWS Step Functions. Below is a brief explanation of what we have created for you:
+This is a shopping cart manangement repo: Using serverless framework and node:12.x lamdba and dynamodb as backend
 
 ``` bash
 .
