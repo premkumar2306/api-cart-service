@@ -20,8 +20,8 @@ This is a sample template for Managing Long Lived Transactions with AWS Step Fun
 │   ├── delete.js           <-- delete cart by id (exipres - 90days)
 │   └── cartItem            <-- Individual cart item
 │      ├── add.js           <-- add a new item; if already exist then will increment the quantity
-│      ├── update.js <-- update existing item based on the quantity (quantity - 1  || del item.count<0 )
-│      └── delete.js                <-- delete an item from the cart
+│      ├── update.js        <-- update existing item based on the quantity (quantity - 1  || del item.count<0 )
+│      └── delete.js        <-- delete an item from the cart
 ├── mapper
 │   └── mapcart.js           <-- Helper function code represents mapping list price and item price
 ├── models                  <-- /// TODO
