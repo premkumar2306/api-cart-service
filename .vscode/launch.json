@@ -28,6 +28,48 @@
                 "--path",
                 "events/delete.json"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch getCart",
+            "program": "${workspaceRoot}/node_modules/.bin/sls",
+            "args": [
+                "invoke",
+                "local",
+                "-f",
+                "getCart",
+                "--path",
+                "events/get.json"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch add Item to cart",
+            "program": "${workspaceRoot}/node_modules/.bin/sls",
+            "args": [
+                "invoke",
+                "local",
+                "-f",
+                "addCartItem",
+                "--path",
+                "events/addCartItem.json"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch del Item on cart",
+            "program": "${workspaceRoot}/node_modules/.bin/sls",
+            "args": [
+                "invoke",
+                "local",
+                "-f",
+                "deleteCartItem",
+                "--path",
+                "events/deleteCartItem.json"
+            ]
         }
     ]
 }

@@ -2,34 +2,33 @@
 
 const dynamodb = require('./dynamodb');
 
-const deleteCart = async function(cartid) {
+
+module.exports.get = async function(cartid) {
     const params = {
         TableName: process.env.DYNAMODB_TABLE,
-        Key: {
-            pk: cartid,
-            sk: "HMAC_/WrekkZAPx782xttLFbZqviNUOA="
-        },
+        KeyConditionExpression: 'pk = :i',
+        ExpressionAttributeValues: {
+            ':i': cartid
+        }
     };
-    await dynamodb.delete(params).promise();
+    const result = await dynamodb.query(params).promise();
+    return result.Items[0];
 }
-
-module.exports.deleteCart = deleteCart;
 
 module.exports.handler = async (event, context) => {
     console.log(JSON.stringify(event));
-    debugger;
     const cartId = event.pathParameters.cartid;
     try {
-        await deleteCart(cartId)
+        const cart = await this.get(cartId);
         return {
             statusCode: 200,
-            body: JSON.stringify({}),
+            body: JSON.stringify(cart),
         };
     } catch (error) {
         return {
             statusCode: error.statusCode || 501,
             headers: { 'Content-Type': 'text/plain' },
-            body: `Couldn\'t remove the cart item.${JSON.stringify(error)}`,
+            body: JSON.stringify(error),
         }
     }
 };

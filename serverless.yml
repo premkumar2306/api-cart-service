@@ -40,9 +40,17 @@ provider:
       Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
 
 functions:
+  getCart:
+    runtime: nodejs12.x
+    handler: functions/get.handler
+    events:
+      - http:
+          path: cart/{cartid}
+          method: get
+          cors: true
   createCart:
     runtime: nodejs12.x
-    handler: functions/create.create
+    handler: functions/create.handler
     events:
       - http:
           path: cart
@@ -51,7 +59,7 @@ functions:
 
   addCartItem:
     runtime: nodejs12.x
-    handler: functions/cartItem/add.add
+    handler: functions/cartItem/add.handler
     events:
       - http:
           path: cart/{cartid}/addItem
@@ -69,16 +77,16 @@ functions:
 
   deleteCartItem:
     runtime: nodejs12.x
-    handler: functions/cartItem/delete.delete
+    handler: functions/cartItem/delete.handler
     events:
       - http:
           path: cart/{cartid}/deleteItem
-          method: post
+          method: delete
           cors: true
 
   deleteCart:
     runtime: nodejs12.x
-    handler: functions/delete.delete
+    handler: functions/delete.handler
     events:
       - http:
           path: cart/{cartid}

@@ -1,7 +1,7 @@
 {
     "resource": "/cart/{cartid}",
-    "path": "/cart/3ae55040-3b0a-11ea-848b-5f7e8e89c7af",
-    "httpMethod": "DELETE",
+    "path": "/cart/80172bf0-3b0c-11ea-85d7-b37c79c289c8",
+    "httpMethod": "GET",
     "headers": {
         "Accept": "*/*",
         "Accept-Encoding": "gzip, deflate",
@@ -12,14 +12,13 @@
         "CloudFront-Is-SmartTV-Viewer": "false",
         "CloudFront-Is-Tablet-Viewer": "false",
         "CloudFront-Viewer-Country": "US",
-        "Content-Type": "application/json",
         "Host": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
-        "Postman-Token": "c3576eef-e436-4b1e-951a-b030ee42e1a1",
+        "Postman-Token": "668f1315-d887-4b58-a2b4-0fab4c6484b9",
         "User-Agent": "PostmanRuntime/7.21.0",
-        "Via": "1.1 98e8d6a25a47d8c375b8e41be88fdb58.cloudfront.net (CloudFront)",
-        "X-Amz-Cf-Id": "qEYvys-3mYAhxX-BvHIEhydwZyOaWiz_LDBYxpthYaNidMrfxNDThw==",
-        "X-Amzn-Trace-Id": "Root=1-5e24d6c8-5c1986fc270defd134acc7b5",
-        "X-Forwarded-For": "207.181.207.119, 64.252.169.139",
+        "Via": "1.1 03ed22e55f14c5e22303b8bea377a2cb.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "vAPA0hSogQx0841IWTdEvTGfb_6YVHk3e_WEfsATuYJYVy2RG5omDA==",
+        "X-Amzn-Trace-Id": "Root=1-5e24f4e0-c7c7ec5e12ed1578792d0636",
+        "X-Forwarded-For": "207.181.207.119, 70.132.57.152",
         "X-Forwarded-Port": "443",
         "X-Forwarded-Proto": "https"
     },
@@ -51,29 +50,26 @@
         "CloudFront-Viewer-Country": [
             "US"
         ],
-        "Content-Type": [
-            "application/json"
-        ],
         "Host": [
             "4rdz741pfg.execute-api.us-east-1.amazonaws.com"
         ],
         "Postman-Token": [
-            "c3576eef-e436-4b1e-951a-b030ee42e1a1"
+            "668f1315-d887-4b58-a2b4-0fab4c6484b9"
         ],
         "User-Agent": [
             "PostmanRuntime/7.21.0"
         ],
         "Via": [
-            "1.1 98e8d6a25a47d8c375b8e41be88fdb58.cloudfront.net (CloudFront)"
+            "1.1 03ed22e55f14c5e22303b8bea377a2cb.cloudfront.net (CloudFront)"
         ],
         "X-Amz-Cf-Id": [
-            "qEYvys-3mYAhxX-BvHIEhydwZyOaWiz_LDBYxpthYaNidMrfxNDThw=="
+            "vAPA0hSogQx0841IWTdEvTGfb_6YVHk3e_WEfsATuYJYVy2RG5omDA=="
         ],
         "X-Amzn-Trace-Id": [
-            "Root=1-5e24d6c8-5c1986fc270defd134acc7b5"
+            "Root=1-5e24f4e0-c7c7ec5e12ed1578792d0636"
         ],
         "X-Forwarded-For": [
-            "207.181.207.119, 64.252.169.139"
+            "207.181.207.119, 70.132.57.152"
         ],
         "X-Forwarded-Port": [
             "443"
@@ -91,16 +87,16 @@
     "requestContext": {
         "resourceId": "40tw58",
         "resourcePath": "/cart/{cartid}",
-        "httpMethod": "DELETE",
-        "extendedRequestId": "GkZ_RGBOoAMFfPw=",
-        "requestTime": "19/Jan/2020:22:23:04 +0000",
-        "path": "/dev/cart/3ae55040-3b0a-11ea-848b-5f7e8e89c7af",
+        "httpMethod": "GET",
+        "extendedRequestId": "GkszJEWOoAMF-hg=",
+        "requestTime": "20/Jan/2020:00:31:28 +0000",
+        "path": "/dev/cart/80172bf0-3b0c-11ea-85d7-b37c79c289c8",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",
         "domainPrefix": "4rdz741pfg",
-        "requestTimeEpoch": 1579472584055,
-        "requestId": "f598419a-2f8a-4475-9e7a-def0c5295f1c",
+        "requestTimeEpoch": 1579480288878,
+        "requestId": "edc4cab3-7690-4c95-80ce-c3eddb2d0ddc",
         "identity": {
             "cognitoIdentityPoolId": null,
             "accountId": null,
@@ -118,6 +114,6 @@
         "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
         "apiId": "4rdz741pfg"
     },
-    "body": "",
+    "body": null,
     "isBase64Encoded": false
 }
