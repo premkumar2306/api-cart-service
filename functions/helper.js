@@ -19,7 +19,7 @@ module.exports.increaseItemQuantity = function(products, cartItemId, qty=1){
 module.exports.reduceItemQuantity = function(products, cartItemId, qty=1) {
     const content = products.map(item => {
         if (item.cartItemId === cartItemId) {
-            item.quantity = item.quantity - qty;
+            item.quantity = parseInt(item.quantity) - parseInt(qty);
         }
         return item;
     });

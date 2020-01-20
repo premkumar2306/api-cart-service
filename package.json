@@ -9,6 +9,7 @@
     "get-cart-local": "sls invoke local -f getCart --path events/get.json",
     "delete-cart-local": "sls invoke local -f deleteCart --path events/delete.json",
     "add-cart-item-local": "sls invoke local -f addCartItem --path events/addCartItem.json",
+    "update-cart-item-local": "sls invoke local -f updateCartItem --path events/updateCartItem.json",
     "del-cart-item-local": "sls invoke local -f deleteCartItem --path events/deleteCartItem.json",
     "test": "mocha"
   },

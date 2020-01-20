@@ -17,6 +17,10 @@ custom:
     migration:
       dir: offline/migrations
 
+# package:
+#   individually: true
+#   excludeDevDependencies: false
+
 provider:
   name: aws
   stage: dev
@@ -68,7 +72,7 @@ functions:
 
   updateCartItem:
     runtime: nodejs12.x
-    handler: functions/cartItem/update.update
+    handler: functions/cartItem/update.handler
     events:
       - http:
           path: cart/{cartid}/updateItem

@@ -7,14 +7,14 @@ const deleteItem = async (cartId, newItem) => {
     console.log(`cartId: ${cartId}\tadd:${JSON.stringify(newItem)}`);
     const cart = await getCart(cartId);
     console.log(JSON.stringify(cart));
-    let productsInCart = JSON.parse(cart.cartItems)
+    let productsInCart = cart.cartItems;
     if (findProduct(productsInCart, newItem.cartItemId)) {
-        productsInCart = removeItem(productsInCart, newItem.cartItemId, 1);
-        console.log(JSON.stringify(newCart));
+        productsInCart = removeItem(productsInCart, newItem.cartItemId);
+        console.log(JSON.stringify(productsInCart));
     }
-    const data = {...cart, ...productsInCart}
-    await updateCart(data);
-    await getCart(cartId);
+    await updateCart(cart);
+    const response = await getCart(cartId);
+    return response;
 };
 
 module.exports.deleteItem = deleteItem;

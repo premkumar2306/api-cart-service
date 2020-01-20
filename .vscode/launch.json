@@ -70,6 +70,20 @@
                 "--path",
                 "events/deleteCartItem.json"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Update Item on cart",
+            "program": "${workspaceRoot}/node_modules/.bin/sls",
+            "args": [
+                "invoke",
+                "local",
+                "-f",
+                "updateCartItem",
+                "--path",
+                "events/updateCartItem.json"
+            ]
         }
     ]
 }
