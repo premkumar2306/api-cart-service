@@ -1,8 +1,8 @@
 'use strict';
 const getCart = require('../get').get;
 const updateCart = require("../create").create;
-
 const { findProduct, removeItem } = require('../helper');
+
 const deleteItem = async (cartId, newItem) => {
     console.log(`cartId: ${cartId}\tadd:${JSON.stringify(newItem)}`);
     const cart = await getCart(cartId);
