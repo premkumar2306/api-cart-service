@@ -32,11 +32,14 @@ This is a shopping cart manangement repo: Using serverless framework and node:12
 ```
 
 ## TODO
-
-1. Out of Stock Items
-2. Items With Limited Quantities
-3. Validate the create cart - It is not possible to create an empty cart. At least, one item must be added.
-4. Ninety days automatic cart deletion
+- [ ] Authentication
+- [ ] Logging
+- [ ] Monitoring
+- [ ] Alerts
+- [ ] Handle Out of Stock Items
+- [ ] Items With Limited Quantities
+- [ ] Validate the create cart - It is not possible to create an empty cart. At least, one item must be added.
+- [ ] Ninety days automatic cart cleanup and move to s3
 
 | Category        | Description 
 | :------------- |:-------------|
