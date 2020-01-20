@@ -1,12 +1,5 @@
-## Create cart
+# Shopping cart
 
-    * Add items to cart
-
-    * Update items on cart
-
-## Remove cart
-
-https://docs.aws.amazon.com/AWSECommerceService/latest/DG/UsingValuesReturnedbyCartCreateinOtherCartOperations.html
 
 ## What's in this repository?
 
@@ -30,6 +23,22 @@ This is a shopping cart manangement repo: Using serverless framework and node:12
 │                             [##TODO]
 └── serverless.yaml         <-- serverless template for defining and deploying serverless application resources
 ```
+
+## Commands
+
+### Install 
+    ``` npm install ```
+### Local Lambda Invoke
+``` npm run create-cart-local
+    npm run get-cart-local
+    npm run delete-cart-local
+    npm run add-cart-item-local
+    npm run update-cart-item-local
+    npm run del-cart-item-local
+```
+## Remove cart
+
+https://docs.aws.amazon.com/AWSECommerceService/latest/DG/UsingValuesReturnedbyCartCreateinOtherCartOperations.html
 
 ## TODO
 - [ ] Authentication
