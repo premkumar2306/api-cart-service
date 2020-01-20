@@ -14,7 +14,7 @@ const addItem = async (cartId, newItem) => {
     } else {
         productsInCart.push(newItem);
     }
-    const data = {...cart, ...{cartItems: productsInCart}}
+    const data = { ...cart, ...{ cartItems: productsInCart } }
     await updateCart(data);
     const response = await getCart(cartId);
     return response;
@@ -22,7 +22,7 @@ const addItem = async (cartId, newItem) => {
 
 module.exports.addItem = addItem;
 
-module.exports.handler = async function(event, context) {
+module.exports.handler = async function (event, context) {
     debugger;
     console.log(JSON.stringify(event));
     const cartId = event.pathParameters.cartid;

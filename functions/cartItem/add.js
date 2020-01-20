@@ -21,7 +21,7 @@ const addItem = async (cartId, newItem) => {
 
 module.exports.addItem = addItem;
 
-module.exports.handler = async function(event, context) {
+module.exports.handler = async function (event, context) {
     debugger;
     console.log(JSON.stringify(event));
     const cartId = event.pathParameters.cartid;

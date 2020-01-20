@@ -12,7 +12,7 @@ const deleteItem = async (cartId, newItem) => {
         productsInCart = removeItem(productsInCart, newItem.cartItemId);
         console.log(JSON.stringify(productsInCart));
     }
-    const data = {...cart, ...{cartItems: productsInCart}}
+    const data = { ...cart, ...{ cartItems: productsInCart } }
     await updateCart(data);
     const response = await getCart(cartId);
     return response;
@@ -20,7 +20,7 @@ const deleteItem = async (cartId, newItem) => {
 
 module.exports.deleteItem = deleteItem;
 
-module.exports.handler = async function(event, context) {
+module.exports.handler = async function (event, context) {
     debugger;
     console.log(JSON.stringify(event));
     const cartId = event.pathParameters.cartid;
