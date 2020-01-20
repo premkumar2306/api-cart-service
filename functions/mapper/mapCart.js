@@ -30,7 +30,7 @@ module.exports = (cart) => {
     }
     const timestamp = new Date().getTime();
     const data = {
-        pk: uuid.v1(),
+        pk: cart.pk || uuid.v1(),
         sk: `HMAC_${cart.HMAC}`,
         HMAC: `${cart.HMAC}`,
         URLEncodedHMAC: cart.URLEncodedHMAC,

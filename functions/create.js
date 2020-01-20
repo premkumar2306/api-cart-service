@@ -7,7 +7,7 @@ const validate = function (cart) {
 }
 
 const create = async function (body) {
-  const data = mapper(JSON.parse(body));
+  const data = mapper(body);
   if (!validate(data)) {
     throw new Error('Validation error');
   }
@@ -24,7 +24,7 @@ module.exports.handler = async (event, context) => {
   debugger;
   console.log(JSON.stringify(event));
   try {
-    const data = await create(event.body);
+    const data = await create(JSON.parse(event.body));
     return {
       statusCode: 200,
       body: JSON.stringify({data: data.Item })

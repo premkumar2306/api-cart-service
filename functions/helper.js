@@ -10,7 +10,7 @@ module.exports.findProduct = function (products, cartItemId) {
 module.exports.increaseItemQuantity = function(products, cartItemId, qty=1){
     return products.map(item => {
         if (item.cartItemId === cartItemId){
-            item.quantity = item.quantity + qty
+            item.quantity = parseInt(item.quantity) + parseInt(qty)
         }
         return item;
     });

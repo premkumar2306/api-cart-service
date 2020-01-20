@@ -7,20 +7,16 @@ const addItem = async (cartId, newItem) => {
     console.log(`cartId: ${cartId}\tadd:${JSON.stringify(newItem)}`);
     const cart = await getCart(cartId);
     console.log(JSON.stringify(cart));
-    let productsInCart = JSON.parse(cart.cartItems)
+    let productsInCart = cart.cartItems;
     if (findProduct(productsInCart, newItem.cartItemId)) {
-        productsInCart = increaseItemQuantity(productsInCart, newItem.cartItemId, 1);
-        console.log(JSON.stringify(newCart));
+        productsInCart = increaseItemQuantity(productsInCart, newItem.cartItemId, newItem.quantity);
+        console.log(JSON.stringify(productsInCart));
     } else {
         productsInCart.push(newItem);
     }
-    const data = {...cart, ...productsInCart}
-    await updateCart(data);
-    await getCart(cartId);
-    // TODO:
-    // Get the cart
-    // Add new item after the validtionis correct
-    // save the cart back
+    await updateCart(cart);
+    const response = await getCart(cartId);
+    return response;
 };
 
 module.exports.addItem = addItem;
