@@ -8,6 +8,7 @@ const addItem = async (cartId, newItem) => {
     const cart = await getCart(cartId);
     console.log(JSON.stringify(cart));
     let productsInCart = cart.cartItems;
+    // TODO: reduce or increase need to check with the business
     if (findProduct(productsInCart, newItem.cartItemId)) {
         productsInCart = reduceItemQuantity(productsInCart, newItem.cartItemId, newItem.quantity);
         console.log(JSON.stringify(productsInCart));
