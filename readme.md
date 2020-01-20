@@ -36,7 +36,7 @@ This is a sample template for Managing Long Lived Transactions with AWS Step Fun
 1. Out of Stock Items
 2. Items With Limited Quantities
 3. Validate the create cart - It is not possible to create an empty cart. At least, one item must be added.
-4. ninety days automatic cart deletion
+4. Ninety days automatic cart deletion
 
 | Category        | Description 
 | ------------- |:-------------:|
