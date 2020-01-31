@@ -12,11 +12,17 @@ This is a shopping cart manangement repo: Using serverless framework and node:12
 │   ├── create.js           <-- create a new cart (atleast one item needed)
 │   ├── delete.js           <-- delete cart by id (expires - 90days)
 │   └── cartItem            <-- Individual cart item
-│      ├── add.js           <-- add a new item; if already exist then will increment the quantity
-│      ├── update.js        <-- update existing item based on the quantity (quantity - 1  || del item.count<0 )
-│      └── delete.js        <-- delete an item from the cart
+│      ├── add.js           
+│      ├── update.js        
+│      └── delete.js        
+│   └── checkout
+│      ├── index.js          
+│      ├── create-stripe-checkout.js
+│      └── checkout.html
+│   └── secrets
+│      └── secretManager.js
 ├── mapper
-│   └── mapcart.js           <-- Helper function code represents mapping list price and item price
+│   └── mapcart.js          <-- Helper function code represents mapping list price and item price
 ├── models                  <-- /// TODO
 │   └── cart.model
 ├──package.json              <-- All the dependencies needed.
