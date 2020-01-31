@@ -1,35 +1,31 @@
 {
-    "cartId": "002 2197248 2529608",
-    "HMAC": "/WrekkZAPx782xttLFbZqviNUOA=",
-    "URLEncodedHMAC": "%2FWrekkZAPx782xttLFbZqviNUOA%3D",
-    "purchaseURL": "https://www.amazon.com/gp/cart/aws merge.html?cart id=002 2197248 2529608%26associate id=ws%26hmac=/WrekkZAPx782xttLFbZqviNUOA=%26AWSAccessKeyId=[AWS Access Key ID]",
-    "subTotal": {
-       "amount": "2998",
-       "currencyCode": "USD",
-       "formattedPrice": "$29.98"
-    },
-    "cartItems": {
-       "subTotal": {
-          "amount": "2998",
-          "currencyCode": "USD",
-          "formattedPrice": "$29.98"
-       },
-       "CartItem": {
-          "cartItemId": "UV3W10T4V7PCZ",
-          "ASIN": "B000062TU1",
-          "quantity": "2",
-          "title": "Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)",
-          "productGroup": "DVD",
-          "price": {
-             "amount": "1499",
-             "currencyCode": "USD",
-             "formattedPrice": "$14.99"
-          },
-          "itemTotal": {
-             "amount": "2998",
-             "currencyCode": "USD",
-             "formattedPrice": "$29.98"
-          }
-       }
-    }
- }
+   "cartId": "002 2197248 2529608",
+   "cartItems": [
+      {
+         "brand": "Harry Potter",
+         "productId": "B000062TU1",
+         "quantity": "2",
+         "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+         "title": "Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)",
+         "category": "DVD",
+         "price": {
+            "amount": "1499",
+            "currencyCode": "USD",
+            "formattedPrice": "$14.99"
+         }
+      },
+      {
+         "brand": "Acer",
+         "productId": "20190322TU1",
+         "category": "Laptop",
+         "quantity": "2",
+         "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+         "title": "Acer full edition monitor",
+         "price": {
+            "amount": "14999",
+            "currencyCode": "USD",
+            "formattedPrice": "$149.99"
+         }
+      }
+   ]
+}
