@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "node",
             "request": "launch",
@@ -83,6 +84,20 @@
                 "updateCartItem",
                 "--path",
                 "events/updateCartItem.json"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "checkout Cart",
+            "program": "${workspaceRoot}/node_modules/.bin/sls",
+            "args": [
+                "invoke",
+                "local",
+                "-f",
+                "checkoutCart",
+                "--path",
+                "events/checkoutCart.json"
             ]
         }
     ]

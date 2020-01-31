@@ -24,11 +24,12 @@ const calcItemTotal = function(product) {
 const mapCartItems = function (cartItems) {
     const items = cartItems.map(c => {
         return {
-            cartItemId: c.cartItemId,
+            productId: c.productId,
+            brand: c.brand,
             ASIN: c.ASIN,
             quantity: c.quantity,
             title: c.title,
-            productGroup: c.productGroup,
+            category: c.category,
             price: {
                 amount: c.price.amount,
                 currencyCode: c.price.currencyCode || "USD",
@@ -47,7 +48,6 @@ module.exports = (cart) => {
     let data = {
         pk: cart.pk || uuid.v1(),
         sk: `HMAC_${cart.HMAC}`,
-        HMAC: `${cart.HMAC}`,
         URLEncodedHMAC: cart.URLEncodedHMAC,
         purchaseURL: cart.upPurchaseURLc,
         cartItems: mapCartItems(cart.cartItems),
