@@ -1,6 +1,6 @@
 {
     "resource": "/cart/{cartid}/addItem",
-    "path": "/cart/bba7be00-3cd3-11ea-a4f1-f91b21eed63c/addItem",
+    "path": "/cart/476ad230-43c6-11ea-92ac-77d1b0ee7854/addItem",
     "httpMethod": "POST",
     "headers": {
         "Accept": "*/*",
@@ -85,7 +85,7 @@
     "queryStringParameters": null,
     "multiValueQueryStringParameters": null,
     "pathParameters": {
-        "cartid": "bba7be00-3cd3-11ea-a4f1-f91b21eed63c"
+        "cartid": "476ad230-43c6-11ea-92ac-77d1b0ee7854"
     },
     "stageVariables": null,
     "requestContext": {
@@ -94,7 +94,7 @@
         "httpMethod": "POST",
         "extendedRequestId": "Gk0xiFxEoAMFgPQ=",
         "requestTime": "20/Jan/2020:01:25:55 +0000",
-        "path": "/dev/cart/bba7be00-3cd3-11ea-a4f1-f91b21eed63c/addItem",
+        "path": "/dev/cart/476ad230-43c6-11ea-92ac-77d1b0ee7854/addItem",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",

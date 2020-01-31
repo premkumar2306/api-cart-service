@@ -5,6 +5,7 @@ frameworkVersion: ">=1.1.0 <2.0.0"
 plugins:
   - serverless-dynamodb-local
   - serverless-offline
+  - serverless-pseudo-parameters
 
 custom:
   stage: ${opt:stage, self:provider.stage}
@@ -36,6 +37,10 @@ provider:
   environment:
     DYNAMODB_TABLE: ${self:custom.tableName}
   iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - secretsmanager:GetSecretValue
+      Resource: "arn:aws:secretsmanager:us-east-1:#{AWS::AccountId}:secret:/external/*"
     - Effect: Allow
       Action:
         - dynamodb:Query

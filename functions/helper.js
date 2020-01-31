@@ -1,6 +1,6 @@
-module.exports.findProduct = function (products, cartItemId) {
+module.exports.findProduct = function (products, productId) {
     let match = products.filter(item => {
-        if (item.cartItemId == cartItemId)
+        if (item.productId == productId)
             return true;
     });
     if (match && match[0])

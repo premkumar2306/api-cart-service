@@ -22,7 +22,8 @@
     "aws-sdk": "^2.12.0",
     "node.extend": "^2.0.2",
     "serverless-dynamodb-local": "^0.2.18",
-    "serverless-offline": "^3.8.3"
+    "serverless-offline": "^3.8.3",
+    "serverless-pseudo-parameters": "^2.5.0"
   },
   "author": "premkumar duraiswamy",
   "license": "ISC"
