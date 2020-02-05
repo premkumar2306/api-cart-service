@@ -1,5 +1,5 @@
 const getCart = require('../get').get;
-const secretManager = require("../getSecrets/secretManager");
+const secretManager = require("../secrets/secretManager");
 const mapToStripe = require("./mapToStripe");
 
 const createStripeCheckout = async (cartId, customerId) => {
@@ -12,7 +12,7 @@ const createStripeCheckout = async (cartId, customerId) => {
     const session = await stripe.checkout.sessions.create({
         customer:customerId,
         payment_method_types:['card'],
-        billing_address_collection:'required',
+        // billing_address_collection:'required',
         line_items: mapToStripe(cart.cartItems),
         success_url: 'https://localhost.com:3000/success?session_id={CHECKOUT_SESSION_ID}',
         cancel_url: 'https://localhost.com:3000/cancel',
