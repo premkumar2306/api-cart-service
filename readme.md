@@ -8,7 +8,7 @@ This is a shopping cart manangement repo: Using serverless framework and node:12
 ``` bash
 .
 ├── functions               
-│   └── cartItem
+│   ├── cartItem
 │   │   ├── add    
 │   │   ├── update     
 │   │   └── delete
