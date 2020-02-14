@@ -73,7 +73,6 @@ test('should calculate the item Total for each item in cart ', () => {
         }
     ];
     const response = calcSubTotal(cartItems);
-    console.log(JSON.stringify(response));
     expect(response.amount).toBe(59494);
     expect(response.formattedPrice).toBe("$594.94");
 });

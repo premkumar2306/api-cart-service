@@ -7,18 +7,18 @@ module.exports.findProduct = function (products, productId) {
         return match[0];
 };
 
-module.exports.increaseItemQuantity = function(products, cartItemId, qty=1){
+module.exports.increaseItemQuantity = function(products, productId, qty=1){
     return products.map(item => {
-        if (item.cartItemId === cartItemId){
+        if (item.productId === productId){
             item.quantity = parseInt(item.quantity) + parseInt(qty)
         }
         return item;
     });
 }
 
-module.exports.reduceItemQuantity = function(products, cartItemId, qty=1) {
+module.exports.reduceItemQuantity = function(products, productId, qty=1) {
     const content = products.map(item => {
-        if (item.cartItemId === cartItemId) {
+        if (item.productId === productId) {
             item.quantity = parseInt(item.quantity) - parseInt(qty);
         }
         return item;
