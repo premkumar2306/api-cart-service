@@ -4,30 +4,37 @@
 ## What's in this repository?
 
 This is a shopping cart manangement repo: Using serverless framework and node:12.x lamdba and dynamodb as backend
-
+ * create a new cart (atleast one item needed)
 ``` bash
 .
-├── functions               <-- Business functions
-│   ├── get.js              <-- get cart by the cartId
-│   ├── create.js           <-- create a new cart (atleast one item needed)
-│   ├── delete.js           <-- delete cart by id (expires - 90days)
-│   └── cartItem            <-- Individual cart item
-│      ├── add.js           
-│      ├── update.js        
-│      └── delete.js        
-│   └── checkout
-│      ├── index.js          
-│      ├── create-stripe-checkout.js
-│      └── checkout.html
-│   └── secrets
-│      └── secretManager.js
-├── mapper
-│   └── mapcart.js          <-- Helper function code represents mapping list price and item price
-├── models                  <-- /// TODO
+├── functions               
+│   └── cartItem
+│   │   ├── add    
+│   │   ├── update     
+│   │   └── delete
+│   ├── checkout
+│   │   ├── checkout.html
+│   │   ├── create-stripe-checkout
+│   │   └── mapToStripe
+│   ├── create
+│   │   ├── handler
+│   │   └──  create.json
+│   ├── update
+│   │   ├── handler
+│   │   └──  update.json     
+│   └── delete
+│       ├── handler
+│       └──  delete.json    
+├── helper
+│   ├── calcItemTotal
+│   ├── calcSubTotal
+│   ├── cartItem
+│   ├── mapCart
+│   └── mapCartItems
+├── models
 │   └── cart.model
-├──package.json              <-- All the dependencies needed.
-│                             [##TODO]
-└── serverless.yaml         <-- serverless template for defining and deploying serverless application resources
+├──package.json
+└── serverless.yaml
 ```
 
 ## Commands
