@@ -13,7 +13,7 @@
                 "-f",
                 "createCart",
                 "--path",
-                "events/create.json"
+                "functions/create/create.json"
             ]
         },
         {
@@ -27,7 +27,7 @@
                 "-f",
                 "deleteCart",
                 "--path",
-                "events/delete.json"
+                "functions/delete/delete.json"
             ]
         },
         {
@@ -41,7 +41,7 @@
                 "-f",
                 "getCart",
                 "--path",
-                "events/get.json"
+                "functions/get/get.json"
             ]
         },
         {
@@ -55,7 +55,7 @@
                 "-f",
                 "addCartItem",
                 "--path",
-                "events/addCartItem.json"
+                "functions/cartItem/add/addCartItem.json"
             ]
         },
         {
@@ -69,7 +69,7 @@
                 "-f",
                 "deleteCartItem",
                 "--path",
-                "events/deleteCartItem.json"
+                "functions/cartItem/delete/deleteCartItem.json"
             ]
         },
         {
@@ -83,7 +83,7 @@
                 "-f",
                 "updateCartItem",
                 "--path",
-                "events/updateCartItem.json"
+                "functions/cartItem/update/updateCartItem.json"
             ]
         },
         {

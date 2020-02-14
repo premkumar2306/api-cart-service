@@ -1,22 +1,20 @@
 'use strict';
-const getCart = require('../get').get;
-const updateCart = require("../create").create;
-const { findProduct, reduceItemQuantity } = require('../helper');
+const getCart = require('../../get/handler').get;
+const updateCart = require("../../create/handler").create;
+const { findProduct, increaseItemQuantity } = require('../../../helper/cartItem');
 
 const addItem = async (cartId, newItem) => {
     console.log(`cartId: ${cartId}\tadd:${JSON.stringify(newItem)}`);
     const cart = await getCart(cartId);
     console.log(JSON.stringify(cart));
     let productsInCart = cart.cartItems;
-    // TODO: reduce or increase need to check with the business
-    if (findProduct(productsInCart, newItem.cartItemId)) {
-        productsInCart = reduceItemQuantity(productsInCart, newItem.cartItemId, newItem.quantity);
+    if (findProduct(productsInCart, newItem.productId)) {
+        productsInCart = increaseItemQuantity(productsInCart, newItem.productId, newItem.quantity);
         console.log(JSON.stringify(productsInCart));
     } else {
         productsInCart.push(newItem);
     }
-    const data = { ...cart, ...{ cartItems: productsInCart } }
-    await updateCart(data);
+    await updateCart(cart);
     const response = await getCart(cartId);
     return response;
 };

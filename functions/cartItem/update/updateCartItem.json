@@ -1,7 +1,7 @@
 {
-    "resource": "/cart/{cartid}/deleteItem",
-    "path": "/cart/d7020440-3b1f-11ea-aae5-d11c1458b019/deleteItem",
-    "httpMethod": "DELETE",
+    "resource": "/cart/{cartid}/updateItem",
+    "path": "/cart/d991f290-4ed6-11ea-9121-7568a5538074/updateItem",
+    "httpMethod": "POST",
     "headers": {
         "Accept": "*/*",
         "Accept-Encoding": "gzip, deflate",
@@ -14,12 +14,12 @@
         "CloudFront-Viewer-Country": "US",
         "Content-Type": "application/json",
         "Host": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
-        "Postman-Token": "8dfb30f1-2b6f-40b0-b676-5f5a08135a6e",
+        "Postman-Token": "f5f2e458-99b4-45e3-8087-57d9eab69015",
         "User-Agent": "PostmanRuntime/7.21.0",
-        "Via": "1.1 6882b7f73f99f4252e38ffcae3fa0c4b.cloudfront.net (CloudFront)",
-        "X-Amz-Cf-Id": "sT7D9JmIEbp4FomtBjbKdtoRdjozAPT-7uV6hThlO4sCqGSIHFBTCA==",
-        "X-Amzn-Trace-Id": "Root=1-5e251494-a3f28cdaf2b772d4f05eea96",
-        "X-Forwarded-For": "207.181.207.119, 70.132.36.147",
+        "Via": "1.1 378aed6198930826658e990b50e042bc.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "oVJRiiqKTB1g3whlINTs463WMx8mYYsp4a6U1bxGILU3GYu2WlhPoQ==",
+        "X-Amzn-Trace-Id": "Root=1-5e2501a3-8ac0337e77cbf6b825a15390",
+        "X-Forwarded-For": "207.181.207.119, 64.252.168.67",
         "X-Forwarded-Port": "443",
         "X-Forwarded-Proto": "https"
     },
@@ -58,22 +58,22 @@
             "4rdz741pfg.execute-api.us-east-1.amazonaws.com"
         ],
         "Postman-Token": [
-            "8dfb30f1-2b6f-40b0-b676-5f5a08135a6e"
+            "f5f2e458-99b4-45e3-8087-57d9eab69015"
         ],
         "User-Agent": [
             "PostmanRuntime/7.21.0"
         ],
         "Via": [
-            "1.1 6882b7f73f99f4252e38ffcae3fa0c4b.cloudfront.net (CloudFront)"
+            "1.1 378aed6198930826658e990b50e042bc.cloudfront.net (CloudFront)"
         ],
         "X-Amz-Cf-Id": [
-            "sT7D9JmIEbp4FomtBjbKdtoRdjozAPT-7uV6hThlO4sCqGSIHFBTCA=="
+            "oVJRiiqKTB1g3whlINTs463WMx8mYYsp4a6U1bxGILU3GYu2WlhPoQ=="
         ],
         "X-Amzn-Trace-Id": [
-            "Root=1-5e251494-a3f28cdaf2b772d4f05eea96"
+            "Root=1-5e2501a3-8ac0337e77cbf6b825a15390"
         ],
         "X-Forwarded-For": [
-            "207.181.207.119, 70.132.36.147"
+            "207.181.207.119, 64.252.168.67"
         ],
         "X-Forwarded-Port": [
             "443"
@@ -85,22 +85,22 @@
     "queryStringParameters": null,
     "multiValueQueryStringParameters": null,
     "pathParameters": {
-        "cartid": "d7020440-3b1f-11ea-aae5-d11c1458b019"
+        "cartid": "d991f290-4ed6-11ea-9121-7568a5538074"
     },
     "stageVariables": null,
     "requestContext": {
-        "resourceId": "1u18n8",
-        "resourcePath": "/cart/{cartid}/deleteItem",
-        "httpMethod": "DELETE",
-        "extendedRequestId": "GlAnMGMKIAMFW1Q=",
-        "requestTime": "20/Jan/2020:02:46:44 +0000",
-        "path": "/dev/cart/d7020440-3b1f-11ea-aae5-d11c1458b019/deleteItem",
+        "resourceId": "kyu1ua",
+        "resourcePath": "/cart/{cartid}/updateItem",
+        "httpMethod": "POST",
+        "extendedRequestId": "Gk0xiFxEoAMFgPQ=",
+        "requestTime": "20/Jan/2020:01:25:55 +0000",
+        "path": "/dev/cart/d991f290-4ed6-11ea-9121-7568a5538074/updateItem",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",
         "domainPrefix": "4rdz741pfg",
-        "requestTimeEpoch": 1579488404384,
-        "requestId": "8051d93e-19a5-499a-9f6b-ac7fe9f49444",
+        "requestTimeEpoch": 1579483555366,
+        "requestId": "fc08826d-fefb-453c-85c1-e6f982d53a99",
         "identity": {
             "cognitoIdentityPoolId": null,
             "accountId": null,

@@ -1,6 +1,6 @@
 'use strict';
-const dynamodb = require('./dynamodb');
-const mapper = require('../mapper/mapCart');
+const dynamodb = require('../dynamodb');
+const mapper = require('../../helper/mapCart');
 
 const validate = function (cart) {
   return true;

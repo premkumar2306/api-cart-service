@@ -1,7 +1,7 @@
 {
-    "resource": "/cart/{cartid}/addItem",
-    "path": "/cart/d7020440-3b1f-11ea-aae5-d11c1458b019/addItem",
-    "httpMethod": "POST",
+    "resource": "/cart/{cartid}/deleteItem",
+    "path": "/cart/d991f290-4ed6-11ea-9121-7568a5538074/deleteItem",
+    "httpMethod": "DELETE",
     "headers": {
         "Accept": "*/*",
         "Accept-Encoding": "gzip, deflate",
@@ -14,12 +14,12 @@
         "CloudFront-Viewer-Country": "US",
         "Content-Type": "application/json",
         "Host": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
-        "Postman-Token": "f5f2e458-99b4-45e3-8087-57d9eab69015",
+        "Postman-Token": "8dfb30f1-2b6f-40b0-b676-5f5a08135a6e",
         "User-Agent": "PostmanRuntime/7.21.0",
-        "Via": "1.1 378aed6198930826658e990b50e042bc.cloudfront.net (CloudFront)",
-        "X-Amz-Cf-Id": "oVJRiiqKTB1g3whlINTs463WMx8mYYsp4a6U1bxGILU3GYu2WlhPoQ==",
-        "X-Amzn-Trace-Id": "Root=1-5e2501a3-8ac0337e77cbf6b825a15390",
-        "X-Forwarded-For": "207.181.207.119, 64.252.168.67",
+        "Via": "1.1 6882b7f73f99f4252e38ffcae3fa0c4b.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "sT7D9JmIEbp4FomtBjbKdtoRdjozAPT-7uV6hThlO4sCqGSIHFBTCA==",
+        "X-Amzn-Trace-Id": "Root=1-5e251494-a3f28cdaf2b772d4f05eea96",
+        "X-Forwarded-For": "207.181.207.119, 70.132.36.147",
         "X-Forwarded-Port": "443",
         "X-Forwarded-Proto": "https"
     },
@@ -58,22 +58,22 @@
             "4rdz741pfg.execute-api.us-east-1.amazonaws.com"
         ],
         "Postman-Token": [
-            "f5f2e458-99b4-45e3-8087-57d9eab69015"
+            "8dfb30f1-2b6f-40b0-b676-5f5a08135a6e"
         ],
         "User-Agent": [
             "PostmanRuntime/7.21.0"
         ],
         "Via": [
-            "1.1 378aed6198930826658e990b50e042bc.cloudfront.net (CloudFront)"
+            "1.1 6882b7f73f99f4252e38ffcae3fa0c4b.cloudfront.net (CloudFront)"
         ],
         "X-Amz-Cf-Id": [
-            "oVJRiiqKTB1g3whlINTs463WMx8mYYsp4a6U1bxGILU3GYu2WlhPoQ=="
+            "sT7D9JmIEbp4FomtBjbKdtoRdjozAPT-7uV6hThlO4sCqGSIHFBTCA=="
         ],
         "X-Amzn-Trace-Id": [
-            "Root=1-5e2501a3-8ac0337e77cbf6b825a15390"
+            "Root=1-5e251494-a3f28cdaf2b772d4f05eea96"
         ],
         "X-Forwarded-For": [
-            "207.181.207.119, 64.252.168.67"
+            "207.181.207.119, 70.132.36.147"
         ],
         "X-Forwarded-Port": [
             "443"
@@ -85,22 +85,22 @@
     "queryStringParameters": null,
     "multiValueQueryStringParameters": null,
     "pathParameters": {
-        "cartid": "d7020440-3b1f-11ea-aae5-d11c1458b019"
+        "cartid": "d991f290-4ed6-11ea-9121-7568a5538074"
     },
     "stageVariables": null,
     "requestContext": {
-        "resourceId": "kyu1ua",
-        "resourcePath": "/cart/{cartid}/addItem",
-        "httpMethod": "POST",
-        "extendedRequestId": "Gk0xiFxEoAMFgPQ=",
-        "requestTime": "20/Jan/2020:01:25:55 +0000",
-        "path": "/dev/cart/d7020440-3b1f-11ea-aae5-d11c1458b019/addItem",
+        "resourceId": "1u18n8",
+        "resourcePath": "/cart/{cartid}/deleteItem",
+        "httpMethod": "DELETE",
+        "extendedRequestId": "GlAnMGMKIAMFW1Q=",
+        "requestTime": "20/Jan/2020:02:46:44 +0000",
+        "path": "/dev/cart/d991f290-4ed6-11ea-9121-7568a5538074/deleteItem",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",
         "domainPrefix": "4rdz741pfg",
-        "requestTimeEpoch": 1579483555366,
-        "requestId": "fc08826d-fefb-453c-85c1-e6f982d53a99",
+        "requestTimeEpoch": 1579488404384,
+        "requestId": "8051d93e-19a5-499a-9f6b-ac7fe9f49444",
         "identity": {
             "cognitoIdentityPoolId": null,
             "accountId": null,
@@ -118,6 +118,6 @@
         "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
         "apiId": "4rdz741pfg"
     },
-    "body": "{\n    \"cartItemId\": \"UV3W10T4V7PCZ\",\n    \"ASIN\": \"B000062TU1\",\n    \"quantity\": \"2\",\n    \"title\": \"Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)\",\n    \"productGroup\": \"DVD\",\n    \"price\": {\n        \"amount\": \"1499\",\n        \"currencyCode\": \"USD\",\n        \"formattedPrice\": \"$14.99\"\n    },\n    \"itemTotal\": {\n        \"amount\": \"2998\",\n        \"currencyCode\": \"USD\",\n        \"formattedPrice\": \"$29.98\"\n    }\n}",
+    "body": "{\n    \"cartItemId\": \"DDDDD\",\n    \"ASIN\": \"B000062TU1\",\n    \"quantity\": \"1\",\n    \"title\": \"Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)\",\n    \"productGroup\": \"DVD\",\n    \"price\": {\n        \"amount\": \"1499\",\n        \"currencyCode\": \"USD\",\n        \"formattedPrice\": \"$14.99\"\n    },\n    \"itemTotal\": {\n        \"amount\": \"2998\",\n        \"currencyCode\": \"USD\",\n        \"formattedPrice\": \"$29.98\"\n    }\n}",
     "isBase64Encoded": false
 }

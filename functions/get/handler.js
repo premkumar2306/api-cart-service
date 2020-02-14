@@ -1,6 +1,6 @@
 'use strict';
 
-const dynamodb = require('./dynamodb');
+const dynamodb = require('../dynamodb');
 
 
 module.exports.get = async function(cartid) {
@@ -16,6 +16,7 @@ module.exports.get = async function(cartid) {
 }
 
 module.exports.handler = async (event, context) => {
+    debugger;
     console.log(JSON.stringify(event));
     const cartId = event.pathParameters.cartid;
     try {
