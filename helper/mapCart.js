@@ -1,6 +1,6 @@
 'use strict';
 
-const { v4: uuidv4 } = require('uuid');
+const crypto = require("crypto");
 
 const calcSubTotal = require("./calcSubTotal");
 const mapCartItems = require("./mapCartItems");
@@ -11,7 +11,7 @@ module.exports = (cart) => {
     }
     console.log('enter mapper')
     const timestamp = new Date().getTime();
-    const uuid = uuidv4().split("-")[0]
+    const uuid = crypto.randomBytes(8).toString("hex");
     let data = {
         pk: cart.cartId || uuid,
         sk: cart.customerId || uuid,

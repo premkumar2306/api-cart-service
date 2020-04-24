@@ -22,6 +22,10 @@ const create = async function (body) {
   };
   const response = await dynamodb.put(params).promise();
   console.log('insert success..');
+  const response = {
+    statusCode: 200,
+    body: JSON.stringify(params.Item),
+  };
   console.log(response);
   return response;
 };
