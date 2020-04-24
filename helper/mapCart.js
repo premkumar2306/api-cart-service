@@ -10,9 +10,10 @@ module.exports = (cart) => {
         return;
     }
     const timestamp = new Date().getTime();
+    const uuid = uuid.v1().split("-")[0]
     let data = {
-        pk: cart.pk || uuid.v1(),
-        sk: cart.customerid || uuid.v1(),
+        pk: cart.cartId || uuid,
+        sk: cart.customerId || uuid.v1(),
         cartItems: mapCartItems(cart.cartItems),
         created: timestamp,
         updated: timestamp
