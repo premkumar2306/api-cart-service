@@ -5,11 +5,9 @@ const mapCartItems = function (cartItems) {
         return {
             SKU: c.SKU,
             brand: c.brand,
-            ASIN: c.ASIN,
             quantity: c.quantity,
             title: c.title,
             img: c.images,
-            partnumber: c.partnumber,
             category: c.category,
             price: {
                 amount: c.price.amount,
