@@ -8,6 +8,7 @@ const validate = function (cart) {
 
 const create = async function (body) {
   const data = mapper(body);
+  console.log(`data to insert ${JSON.stringify(data)}`)
   if (!validate(data)) {
     throw new Error('Validation error');
   }
@@ -16,6 +17,7 @@ const create = async function (body) {
     Item: data,
   };
   const response = await dynamodb.put(params).promise();
+  console.log(response);
   return response;
 };
 
