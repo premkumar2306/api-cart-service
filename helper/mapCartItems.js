@@ -19,6 +19,7 @@ const mapCartItems = function (cartItems) {
             itemTotal: calcItemTotal(c)
         }
     });
+    console.log(`cartitems ${items}`);
     return items;
 }
 

@@ -18,5 +18,6 @@ module.exports = (cart) => {
         created: timestamp,
         updated: timestamp
     }
+    console.log(`data ${data}`);
     return {...data, subTotal: calcSubTotal(data.cartItems)}
 };
