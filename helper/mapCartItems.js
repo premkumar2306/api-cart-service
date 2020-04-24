@@ -1,6 +1,8 @@
 const calcItemTotal = require("./calcItemTotal");
 
 const mapCartItems = function (cartItems) {
+    console.log('enter mapCartItems');
+    console.log(cartItems);
     const items = cartItems.map(c => {
         return {
             SKU: c.SKU,
