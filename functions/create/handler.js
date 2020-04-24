@@ -37,6 +37,7 @@ module.exports.handler = async (event, context) => {
       body: JSON.stringify({data: data.Item })
     };
   } catch (error) {
+    console.log(error);
     return {
       statusCode: error.statusCode || 501,
       headers: { 'Content-Type': 'text/plain' },
