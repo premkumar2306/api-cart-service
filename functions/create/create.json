@@ -4,8 +4,7 @@
     "httpMethod": "POST",
     "headers": {
         "Accept": "*/*",
-        "Accept-Encoding": "gzip, deflate",
-        "Cache-Control": "no-cache",
+        "Accept-Encoding": "gzip, deflate, br",
         "CloudFront-Forwarded-Proto": "https",
         "CloudFront-Is-Desktop-Viewer": "true",
         "CloudFront-Is-Mobile-Viewer": "false",
@@ -14,12 +13,12 @@
         "CloudFront-Viewer-Country": "US",
         "Content-Type": "application/json",
         "Host": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
-        "Postman-Token": "9604cb34-444c-4c2e-945f-4bf9707397b6",
-        "User-Agent": "PostmanRuntime/7.21.0",
-        "Via": "1.1 be071d71ef5bed15dfd6af31e50615d8.cloudfront.net (CloudFront)",
-        "X-Amz-Cf-Id": "hBoSGm6jtHTgqKAqveMWQ8mlKISYHt1atg8YIgjKz4KhvjKGAuRu7Q==",
-        "X-Amzn-Trace-Id": "Root=1-5e25244d-0f148b403a7a2484b9c654ec",
-        "X-Forwarded-For": "207.181.207.119, 70.132.57.86",
+        "Postman-Token": "6182b32e-5394-4a0d-a99a-c68a460742b3",
+        "User-Agent": "PostmanRuntime/7.24.1",
+        "Via": "1.1 89f5815ea89e2c259d279849df06095a.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "aDXyKwNYJj_3y_XKtt9E-RRQrFLDJe8Xn401qpi9LNSMKHX4DUX-Xg==",
+        "X-Amzn-Trace-Id": "Root=1-5ea26821-80a88e1cffd4d40688053b5e",
+        "X-Forwarded-For": "192.64.12.41, 130.176.50.134",
         "X-Forwarded-Port": "443",
         "X-Forwarded-Proto": "https"
     },
@@ -28,10 +27,7 @@
             "*/*"
         ],
         "Accept-Encoding": [
-            "gzip, deflate"
-        ],
-        "Cache-Control": [
-            "no-cache"
+            "gzip, deflate, br"
         ],
         "CloudFront-Forwarded-Proto": [
             "https"
@@ -58,22 +54,22 @@
             "4rdz741pfg.execute-api.us-east-1.amazonaws.com"
         ],
         "Postman-Token": [
-            "9604cb34-444c-4c2e-945f-4bf9707397b6"
+            "6182b32e-5394-4a0d-a99a-c68a460742b3"
         ],
         "User-Agent": [
-            "PostmanRuntime/7.21.0"
+            "PostmanRuntime/7.24.1"
         ],
         "Via": [
-            "1.1 be071d71ef5bed15dfd6af31e50615d8.cloudfront.net (CloudFront)"
+            "1.1 89f5815ea89e2c259d279849df06095a.cloudfront.net (CloudFront)"
         ],
         "X-Amz-Cf-Id": [
-            "hBoSGm6jtHTgqKAqveMWQ8mlKISYHt1atg8YIgjKz4KhvjKGAuRu7Q=="
+            "aDXyKwNYJj_3y_XKtt9E-RRQrFLDJe8Xn401qpi9LNSMKHX4DUX-Xg=="
         ],
         "X-Amzn-Trace-Id": [
-            "Root=1-5e25244d-0f148b403a7a2484b9c654ec"
+            "Root=1-5ea26821-80a88e1cffd4d40688053b5e"
         ],
         "X-Forwarded-For": [
-            "207.181.207.119, 70.132.57.86"
+            "192.64.12.41, 130.176.50.134"
         ],
         "X-Forwarded-Port": [
             "443"
@@ -87,35 +83,35 @@
     "pathParameters": null,
     "stageVariables": null,
     "requestContext": {
-        "resourceId": "e68fbd",
+        "resourceId": "pgolih",
         "resourcePath": "/cart",
         "httpMethod": "POST",
-        "extendedRequestId": "GlKcGH1bIAMF-hA=",
-        "requestTime": "20/Jan/2020:03:53:49 +0000",
+        "extendedRequestId": "LeU1RG6zoAMF78w=",
+        "requestTime": "24/Apr/2020:04:16:33 +0000",
         "path": "/dev/cart",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",
         "domainPrefix": "4rdz741pfg",
-        "requestTimeEpoch": 1579492429376,
-        "requestId": "4348d8d6-c811-4f96-9677-a26fe4f81d95",
+        "requestTimeEpoch": 1587701793661,
+        "requestId": "a9625de9-63b9-4ced-b3fa-2b4bc1d5b5d9",
         "identity": {
             "cognitoIdentityPoolId": null,
             "accountId": null,
             "cognitoIdentityId": null,
             "caller": null,
-            "sourceIp": "207.181.207.119",
+            "sourceIp": "192.64.12.41",
             "principalOrgId": null,
             "accessKey": null,
             "cognitoAuthenticationType": null,
             "cognitoAuthenticationProvider": null,
             "userArn": null,
-            "userAgent": "PostmanRuntime/7.21.0",
+            "userAgent": "PostmanRuntime/7.24.1",
             "user": null
         },
         "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
         "apiId": "4rdz741pfg"
     },
-    "body": "{\n    \"cartId\": \"002 2197248 2529608\",\n    \"HMAC\": \"/WrekkZAPx782xttLFbZqviNUOA=\",\n    \"URLEncodedHMAC\": \"%2FWrekkZAPx782xttLFbZqviNUOA%3D\",\n    \"purchaseURL\": \"https://www.amazon.com/gp/cart/aws merge.html?cart id=002 2197248 2529608%26associate id=ws%26hmac=/WrekkZAPx782xttLFbZqviNUOA=%26AWSAccessKeyId=[AWS Access Key ID]\",\n    \"cartItems\": [\n        {\n            \"cartItemId\": \"UV3W10T4V7PCZ\",\n            \"ASIN\": \"B000062TU1\",\n            \"quantity\": \"2\",\n            \"title\": \"Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)\",\n            \"productGroup\": \"DVD\",\n            \"price\": {\n                \"amount\": \"1499\",\n                \"currencyCode\": \"USD\",\n                \"formattedPrice\": \"$14.99\"\n            }\n        }\n    ]\n}",
+    "body": "{\n    \"cartId\": \"123456673\",\n    \"customerId\": \"cus_123456\",\n    \"cartItems\": [\n        {\n            \"brand\": \"productId\",\n            \"SKU\": \"b821cca3\",\n            \"quantity\": \"2\",\n            \"images\": \"http://images.icecat.biz/img/gallery/40027482_7383642436.jpg\",\n            \"title\": \"Acer B7 B247Y bmiprzx 60.5 cm (23.8\\\") 1920 x 1080 pixels Full HD LED Black\",\n            \"category\": \"Monitor\",\n            \"price\": {\n                \"amount\": \"11999\",\n                \"currencyCode\": \"USD\",\n                \"formattedPrice\": \"$119.99\"\n            }\n        },\n        {\n            \"brand\": \"Acer\",\n            \"productId\": \"20190322TU1\",\n            \"category\": \"Laptop\",\n            \"quantity\": \"1\",\n            \"images\": \"https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png\",\n            \"title\": \"Acer full edition monitor\",\n            \"price\": {\n                \"amount\": \"14999\",\n                \"currencyCode\": \"USD\",\n                \"formattedPrice\": \"$149.99\"\n            }\n        }\n    ]\n}",
     "isBase64Encoded": false
 }

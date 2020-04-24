@@ -8,6 +8,7 @@ const validate = function (cart) {
 
 const create = async function (body) {
   console.log('enter create..');
+  console.log(body);
   const data = mapper(body);
   console.log('mapper completed..');
   console.log(`data to insert ${JSON.stringify(data)}`)

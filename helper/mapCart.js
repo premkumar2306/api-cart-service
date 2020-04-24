@@ -9,6 +9,7 @@ module.exports = (cart) => {
     if (!cart || cart.cartItems.length < 1) {
         return;
     }
+    console.log('enter mapper')
     const timestamp = new Date().getTime();
     const uuid = uuid.v1()
     let data = {

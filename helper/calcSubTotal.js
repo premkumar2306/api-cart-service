@@ -2,6 +2,7 @@ const calcSubTotal = function(products) {
     let totalCost = products.reduce((sum, p) => {
         return sum + p.itemTotal.amount;
     }, 0);
+    console.log(`subtotal ${totalCost}`)
     return {
         currencyCode: "USD",
         amount: totalCost,
