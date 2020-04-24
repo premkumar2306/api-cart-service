@@ -22,12 +22,7 @@ const create = async function (body) {
   };
   await dynamodb.put(params).promise();
   console.log('insert success..');
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify(params.Item),
-  };
-  console.log(response);
-  return response;
+  return params;
 };
 
 module.exports.create = create;
@@ -38,7 +33,7 @@ module.exports.handler = async (event, context) => {
     const data = await create(JSON.parse(event.body));
     return {
       statusCode: 200,
-      body: JSON.stringify({data: data.Item })
+      body: JSON.stringify(data.Item)
     };
   } catch (error) {
     console.log(error);
