@@ -7,16 +7,20 @@ const validate = function (cart) {
 }
 
 const create = async function (body) {
+  console.log('enter create..');
   const data = mapper(body);
+  console.log('mapper completed..');
   console.log(`data to insert ${JSON.stringify(data)}`)
   if (!validate(data)) {
     throw new Error('Validation error');
   }
+  console.log('validation success..');
   const params = {
     TableName: process.env.DYNAMODB_TABLE,
     Item: data,
   };
   const response = await dynamodb.put(params).promise();
+  console.log('insert success..');
   console.log(response);
   return response;
 };
