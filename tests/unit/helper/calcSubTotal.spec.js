@@ -10,7 +10,7 @@ test('should calculate the item Total for each item in cart ', () => {
                 "formattedPrice": "$29.98"
             },
             "quantity": "2",
-            "productId": "B000062TU1",
+            "SKU": "B000062TU1",
             "price": {
                 "currencyCode": "USD",
                 "amount": "1499",
@@ -28,7 +28,7 @@ test('should calculate the item Total for each item in cart ', () => {
                 "formattedPrice": "$299.98"
             },
             "quantity": "2",
-            "productId": "20190322TU1",
+            "SKU": "20190322TU1",
             "price": {
                 "currencyCode": "USD",
                 "amount": "14999",
@@ -46,7 +46,7 @@ test('should calculate the item Total for each item in cart ', () => {
                 "formattedPrice": "$249.99"
             },
             "quantity": "1",
-            "productId": "predatorxb2",
+            "SKU": "predatorxb2",
             "price": {
                 "currencyCode": "USD",
                 "amount": "24999",

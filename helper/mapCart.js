@@ -12,8 +12,7 @@ module.exports = (cart) => {
     const timestamp = new Date().getTime();
     let data = {
         pk: cart.pk || uuid.v1(),
-        sk: `HMAC_${timestamp}`,
-        URLEncodedHMAC: cart.URLEncodedHMAC,
+        sk: cart.customerid || uuid.v1(),
         cartItems: mapCartItems(cart.cartItems),
         created: timestamp,
         updated: timestamp

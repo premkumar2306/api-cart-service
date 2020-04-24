@@ -3,12 +3,13 @@ const calcItemTotal = require("./calcItemTotal");
 const mapCartItems = function (cartItems) {
     const items = cartItems.map(c => {
         return {
-            productId: c.productId,
+            SKU: c.SKU,
             brand: c.brand,
             ASIN: c.ASIN,
             quantity: c.quantity,
             title: c.title,
-            img: c.img,
+            img: c.imges,
+            partnumber: c.partnumber,
             category: c.category,
             price: {
                 amount: c.price.amount,

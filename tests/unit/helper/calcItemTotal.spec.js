@@ -6,7 +6,7 @@ describe('item Total', () => {
         const cartItem = {
             "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
             "quantity": "2",
-            "productId": "B000062TU1",
+            "SKU": "B000062TU1",
             "price": {
                 "currencyCode": "USD",
                 "amount": "1499",
