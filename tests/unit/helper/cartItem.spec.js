@@ -5,7 +5,7 @@ describe('cartItem helper methods', () => {
     test('should  find the product in cart', () => {
         const cartItems = [
             {
-                "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+                "images": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
                 "itemTotal": {
                     "currencyCode": "USD",
                     "amount": 2998,
@@ -23,7 +23,7 @@ describe('cartItem helper methods', () => {
                 "brand": "Harry Potter"
             },
             {
-                "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+                "images": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
                 "itemTotal": {
                     "currencyCode": "USD",
                     "amount": 29998,
@@ -41,7 +41,7 @@ describe('cartItem helper methods', () => {
                 "brand": "Acer"
             },
             {
-                "img": "https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png",
+                "images": "https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png",
                 "itemTotal": {
                     "currencyCode": "USD",
                     "amount": 24999,
@@ -84,7 +84,7 @@ describe('cartItem helper methods', () => {
     test('should be able to increment the quantity', () => {
         const cartItems = [
             {
-                "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+                "images": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
                 "itemTotal": {
                     "currencyCode": "USD",
                     "amount": 2998,
@@ -102,7 +102,7 @@ describe('cartItem helper methods', () => {
                 "brand": "Harry Potter"
             },
             {
-                "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+                "images": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
                 "itemTotal": {
                     "currencyCode": "USD",
                     "amount": 29998,
@@ -120,7 +120,7 @@ describe('cartItem helper methods', () => {
                 "brand": "Acer"
             },
             {
-                "img": "https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png",
+                "images": "https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png",
                 "itemTotal": {
                     "currencyCode": "USD",
                     "amount": 24999,
@@ -164,7 +164,7 @@ describe('cartItem helper methods', () => {
     test('should be able to decrement the quantity', () => {
         const cartItems = [
             {
-                "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+                "images": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
                 "itemTotal": {
                     "currencyCode": "USD",
                     "amount": 2998,
@@ -182,7 +182,7 @@ describe('cartItem helper methods', () => {
                 "brand": "Harry Potter"
             },
             {
-                "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+                "images": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
                 "itemTotal": {
                     "currencyCode": "USD",
                     "amount": 29998,
@@ -200,7 +200,7 @@ describe('cartItem helper methods', () => {
                 "brand": "Acer"
             },
             {
-                "img": "https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png",
+                "images": "https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png",
                 "itemTotal": {
                     "currencyCode": "USD",
                     "amount": 24999,
