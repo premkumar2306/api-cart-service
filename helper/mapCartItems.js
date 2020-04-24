@@ -8,7 +8,7 @@ const mapCartItems = function (cartItems) {
             ASIN: c.ASIN,
             quantity: c.quantity,
             title: c.title,
-            img: c.imges,
+            img: c.images,
             partnumber: c.partnumber,
             category: c.category,
             price: {
