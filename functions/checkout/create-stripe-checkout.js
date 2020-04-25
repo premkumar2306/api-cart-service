@@ -17,7 +17,7 @@ const createStripeCheckout = async (cartId, customerId) => {
             success_url: 'https://localhost.com:3000/success?session_id={CHECKOUT_SESSION_ID}',
             cancel_url: 'https://localhost.com:3000/cancel',
         });
-        console.log(session);
+        console.log({...session, ...cart});
         return {...session, ...cart};
     } catch (error) {
         console.log(error)
