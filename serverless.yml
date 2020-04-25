@@ -25,7 +25,7 @@ package:
 provider:
   name: aws
   stage: dev
-  runtime: nodejs13.x
+  runtime: nodejs12.x
   region: us-east-1
   tags:
     app: ${self:custom.service}
