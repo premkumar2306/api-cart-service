@@ -13,9 +13,6 @@ const createStripeCheckout = async (cartId, customerId) => {
             customer:customerId,
             payment_method_types:['card'],
             billing_address_collection:'auto',
-            shipping_address_collection={
-                'allowed_countries': ['US', 'CA'],
-            },
             line_items: mapToStripe(cart.cartItems),
             success_url: 'https://localhost.com:3000/success?session_id={CHECKOUT_SESSION_ID}',
             cancel_url: 'https://localhost.com:3000/cancel',
