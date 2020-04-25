@@ -13,7 +13,7 @@ const createStripeCheckout = async (cartId, customerId) => {
             customer:customerId,
             payment_method_types:['card'],
             billing_address_collection:'auto',
-            shipping_address_collection={
+            shipping_address_collection: {
                 'allowed_countries': ['US', 'CA'],
             },
             line_items: mapToStripe(cart.cartItems),
