@@ -9,7 +9,6 @@ const mapCartItems = function (cartItems) {
             images: [c.images],
             amount: c.itemTotal.amount,
             quantity: c.quantity,
-            sku: c.SKU,
             currency: 'usd'
         }
     });
