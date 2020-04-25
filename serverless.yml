@@ -9,6 +9,7 @@ plugins:
 
 custom:
   stage: ${opt:stage, self:provider.stage}
+  service: cart-service
   tableName: ${self:custom.stage}-cart
   dynamodb:
     start:
@@ -18,15 +19,17 @@ custom:
     migration:
       dir: offline/migrations
 
-# package:
-#   individually: true
-#   excludeDevDependencies: false
+package:
+  individually: true
 
 provider:
   name: aws
   stage: dev
-  runtime: nodejs12.x
+  runtime: nodejs13.x
   region: us-east-1
+  tags:
+    app: ${self:custom.service}
+    env: ${self:custom.stage}
   deploymentBucket:
     name: shop-service-artifacts
   apiGateway: #shared Gateway setting
