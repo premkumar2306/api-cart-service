@@ -10,9 +10,9 @@ const createStripeCheckout = async (cartId, customerId) => {
     const stripe = require('stripe')(secret.STRIPE_API_KEY);
     try {
         const session = await stripe.checkout.sessions.create({
-            // customer:customerId,
+            customer:customerId,
             payment_method_types:['card'],
-            customer_email='test1@bar.com',
+            // customer_email='test1@bar.com',
             billing_address_collection:'required',
             shipping_address_collection={
                 'allowed_countries': ['US', 'CA'],
