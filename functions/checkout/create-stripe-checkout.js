@@ -16,7 +16,9 @@ const createStripeCheckout = async (cartId, customerId) => {
             shipping_address_collection: {
                 'allowed_countries': ['US', 'CA'],
             },
-            mode: 'setup',
+            payment_intent_data:{
+                'capture_method': 'manual',
+            },
             client_reference_id: cartId,
             metadata: {
                 cartId,
