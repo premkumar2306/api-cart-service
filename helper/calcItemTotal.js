@@ -1,4 +1,6 @@
 const calcItemTotal = function(product) {
+    console.log('calcItemTotal')
+    console.log(product)
     const totalAmt = product.price.amount * product.quantity;
     return {
         amount: totalAmt,

@@ -7,16 +7,22 @@ const validate = function (cart) {
 }
 
 const create = async function (body) {
+  console.log('enter create..');
+  console.log(body);
   const data = mapper(body);
+  console.log('mapper completed..');
+  console.log(`data to insert ${JSON.stringify(data)}`)
   if (!validate(data)) {
     throw new Error('Validation error');
   }
+  console.log('validation success..');
   const params = {
     TableName: process.env.DYNAMODB_TABLE,
     Item: data,
   };
-  const response = await dynamodb.put(params).promise();
-  return response;
+  await dynamodb.put(params).promise();
+  console.log('insert success..');
+  return params;
 };
 
 module.exports.create = create;
@@ -27,9 +33,10 @@ module.exports.handler = async (event, context) => {
     const data = await create(JSON.parse(event.body));
     return {
       statusCode: 200,
-      body: JSON.stringify({data: data.Item })
+      body: JSON.stringify(data.Item)
     };
   } catch (error) {
+    console.log(error);
     return {
       statusCode: error.statusCode || 501,
       headers: { 'Content-Type': 'text/plain' },

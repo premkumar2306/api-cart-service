@@ -6,7 +6,7 @@ const mapCartItems = function (cartItems) {
         return {
             name: c.category,
             description: c.title,
-            images: [c.img],
+            images: [c.images],
             amount: c.itemTotal.amount,
             quantity: c.quantity,
             currency: 'usd'

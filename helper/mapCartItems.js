@@ -1,14 +1,15 @@
 const calcItemTotal = require("./calcItemTotal");
 
 const mapCartItems = function (cartItems) {
+    console.log('enter mapCartItems');
+    console.log(cartItems);
     const items = cartItems.map(c => {
         return {
-            productId: c.productId,
+            SKU: c.SKU,
             brand: c.brand,
-            ASIN: c.ASIN,
             quantity: c.quantity,
             title: c.title,
-            img: c.img,
+            images: c.images,
             category: c.category,
             price: {
                 amount: c.price.amount,
@@ -18,6 +19,7 @@ const mapCartItems = function (cartItems) {
             itemTotal: calcItemTotal(c)
         }
     });
+    console.log(`cartitems ${items}`);
     return items;
 }
 

@@ -10,6 +10,7 @@ plugins:
 
 custom:
   stage: ${opt:stage, self:provider.stage}
+  service: cart-service
   tableName: ${self:custom.stage}-cart
   dynamodb:
     start:
@@ -19,15 +20,17 @@ custom:
     migration:
       dir: offline/migrations
 
-# package:
-#   individually: true
-#   excludeDevDependencies: false
+package:
+  individually: true
 
 provider:
   name: aws
   stage: dev
   runtime: nodejs12.x
   region: us-east-1
+  tags:
+    app: ${self:custom.service}
+    env: ${self:custom.stage}
   deploymentBucket:
     name: shop-service-artifacts
   apiGateway: #shared Gateway setting
@@ -54,7 +57,6 @@ provider:
 
 functions:
   getCart:
-    runtime: nodejs12.x
     handler: functions/get/handler.handler
     events:
       - http:
@@ -62,7 +64,6 @@ functions:
           method: get
           cors: true
   createCart:
-    runtime: nodejs12.x
     handler: functions/create/handler.handler
     events:
       - http:
@@ -71,7 +72,6 @@ functions:
           cors: true
 
   addCartItem:
-    runtime: nodejs12.x
     handler: functions/cartItem/add/handler.handler
     events:
       - http:
@@ -80,7 +80,6 @@ functions:
           cors: true
 
   updateCartItem:
-    runtime: nodejs12.x
     handler: functions/cartItem/update/handler.handler
     events:
       - http:
@@ -89,7 +88,6 @@ functions:
           cors: true
 
   deleteCartItem:
-    runtime: nodejs12.x
     handler: functions/cartItem/delete/handler.handler
     events:
       - http:
@@ -98,7 +96,6 @@ functions:
           cors: true
 
   deleteCart:
-    runtime: nodejs12.x
     handler: functions/delete/handler.handler
     events:
       - http:
@@ -107,7 +104,6 @@ functions:
           cors: true
   
   checkoutCart:
-    runtime: nodejs12.x
     handler: functions/checkout/index.handler
     events:
       - http:

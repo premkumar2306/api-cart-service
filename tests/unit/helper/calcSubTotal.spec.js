@@ -3,14 +3,14 @@ const calcSubTotal = require("../../../helper/calcSubTotal");
 test('should calculate the item Total for each item in cart ', () => {
     const cartItems = [
         {
-            "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+            "images": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
             "itemTotal": {
                 "currencyCode": "USD",
                 "amount": 2998,
                 "formattedPrice": "$29.98"
             },
             "quantity": "2",
-            "productId": "B000062TU1",
+            "SKU": "B000062TU1",
             "price": {
                 "currencyCode": "USD",
                 "amount": "1499",
@@ -21,14 +21,14 @@ test('should calculate the item Total for each item in cart ', () => {
             "brand": "Harry Potter"
         },
         {
-            "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+            "images": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
             "itemTotal": {
                 "currencyCode": "USD",
                 "amount": 29998,
                 "formattedPrice": "$299.98"
             },
             "quantity": "2",
-            "productId": "20190322TU1",
+            "SKU": "20190322TU1",
             "price": {
                 "currencyCode": "USD",
                 "amount": "14999",
@@ -39,14 +39,14 @@ test('should calculate the item Total for each item in cart ', () => {
             "brand": "Acer"
         },
         {
-            "img": "https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png",
+            "images": "https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png",
             "itemTotal": {
                 "currencyCode": "USD",
                 "amount": 24999,
                 "formattedPrice": "$249.99"
             },
             "quantity": "1",
-            "productId": "predatorxb2",
+            "SKU": "predatorxb2",
             "price": {
                 "currencyCode": "USD",
                 "amount": "24999",

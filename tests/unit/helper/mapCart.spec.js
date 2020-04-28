@@ -7,9 +7,9 @@ describe('map Cart', () => {
             "cartItems": [
                 {
                     "brand": "Harry Potter",
-                    "productId": "B000062TU1",
+                    "SKU": "B000062TU1",
                     "quantity": "2",
-                    "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+                    "images": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
                     "title": "Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)",
                     "category": "DVD",
                     "price": {
@@ -20,10 +20,10 @@ describe('map Cart', () => {
                 },
                 {
                     "brand": "Acer",
-                    "productId": "20190322TU1",
+                    "SKU": "20190322TU1",
                     "category": "Laptop",
                     "quantity": "2",
-                    "img": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+                    "images": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
                     "title": "Acer full edition monitor",
                     "price": {
                         "amount": "14999",
