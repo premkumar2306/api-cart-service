@@ -1,11 +1,10 @@
 {
-    "resource": "/cart/{cartid}/addItem",
-    "path": "/cart/476ad230-43c6-11ea-92ac-77d1b0ee7854/addItem",
+    "resource": "/cart/{cartid}/checkout",
+    "path": "/cart/ea64629efbeef299/checkout",
     "httpMethod": "POST",
     "headers": {
         "Accept": "*/*",
-        "Accept-Encoding": "gzip, deflate",
-        "Cache-Control": "no-cache",
+        "Accept-Encoding": "gzip, deflate, br",
         "CloudFront-Forwarded-Proto": "https",
         "CloudFront-Is-Desktop-Viewer": "true",
         "CloudFront-Is-Mobile-Viewer": "false",
@@ -14,12 +13,12 @@
         "CloudFront-Viewer-Country": "US",
         "Content-Type": "application/json",
         "Host": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
-        "Postman-Token": "f5f2e458-99b4-45e3-8087-57d9eab69015",
-        "User-Agent": "PostmanRuntime/7.21.0",
-        "Via": "1.1 378aed6198930826658e990b50e042bc.cloudfront.net (CloudFront)",
-        "X-Amz-Cf-Id": "oVJRiiqKTB1g3whlINTs463WMx8mYYsp4a6U1bxGILU3GYu2WlhPoQ==",
-        "X-Amzn-Trace-Id": "Root=1-5e2501a3-8ac0337e77cbf6b825a15390",
-        "X-Forwarded-For": "207.181.207.119, 64.252.168.67",
+        "Postman-Token": "db3ebdd6-eaba-4617-9eab-48da3f5eca23",
+        "User-Agent": "PostmanRuntime/7.24.1",
+        "Via": "1.1 2aa70b747c4cbd671958bc7faab603a2.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "bwP3H7cNQRhoyT_j0O4SMfIgkppyohnB1HHRTW8WzfDqKUvKOdHutw==",
+        "X-Amzn-Trace-Id": "Root=1-5ea52443-9c0f776569c40f8e8b628a96",
+        "X-Forwarded-For": "192.64.12.41, 130.176.50.86",
         "X-Forwarded-Port": "443",
         "X-Forwarded-Proto": "https"
     },
@@ -28,10 +27,7 @@
             "*/*"
         ],
         "Accept-Encoding": [
-            "gzip, deflate"
-        ],
-        "Cache-Control": [
-            "no-cache"
+            "gzip, deflate, br"
         ],
         "CloudFront-Forwarded-Proto": [
             "https"
@@ -58,22 +54,22 @@
             "4rdz741pfg.execute-api.us-east-1.amazonaws.com"
         ],
         "Postman-Token": [
-            "f5f2e458-99b4-45e3-8087-57d9eab69015"
+            "db3ebdd6-eaba-4617-9eab-48da3f5eca23"
         ],
         "User-Agent": [
-            "PostmanRuntime/7.21.0"
+            "PostmanRuntime/7.24.1"
         ],
         "Via": [
-            "1.1 378aed6198930826658e990b50e042bc.cloudfront.net (CloudFront)"
+            "1.1 2aa70b747c4cbd671958bc7faab603a2.cloudfront.net (CloudFront)"
         ],
         "X-Amz-Cf-Id": [
-            "oVJRiiqKTB1g3whlINTs463WMx8mYYsp4a6U1bxGILU3GYu2WlhPoQ=="
+            "bwP3H7cNQRhoyT_j0O4SMfIgkppyohnB1HHRTW8WzfDqKUvKOdHutw=="
         ],
         "X-Amzn-Trace-Id": [
-            "Root=1-5e2501a3-8ac0337e77cbf6b825a15390"
+            "Root=1-5ea52443-9c0f776569c40f8e8b628a96"
         ],
         "X-Forwarded-For": [
-            "207.181.207.119, 64.252.168.67"
+            "192.64.12.41, 130.176.50.86"
         ],
         "X-Forwarded-Port": [
             "443"
@@ -85,39 +81,39 @@
     "queryStringParameters": null,
     "multiValueQueryStringParameters": null,
     "pathParameters": {
-        "cartid": "476ad230-43c6-11ea-92ac-77d1b0ee7854"
+        "cartid": "ea64629efbeef299"
     },
     "stageVariables": null,
     "requestContext": {
-        "resourceId": "kyu1ua",
-        "resourcePath": "/cart/{cartid}/addItem",
+        "resourceId": "qqfdnl",
+        "resourcePath": "/cart/{cartid}/checkout",
         "httpMethod": "POST",
-        "extendedRequestId": "Gk0xiFxEoAMFgPQ=",
-        "requestTime": "20/Jan/2020:01:25:55 +0000",
-        "path": "/dev/cart/476ad230-43c6-11ea-92ac-77d1b0ee7854/addItem",
+        "extendedRequestId": "LlKaiFMioAMFzXw=",
+        "requestTime": "26/Apr/2020:06:03:47 +0000",
+        "path": "/dev/cart/ea64629efbeef299/checkout",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",
         "domainPrefix": "4rdz741pfg",
-        "requestTimeEpoch": 1579483555366,
-        "requestId": "fc08826d-fefb-453c-85c1-e6f982d53a99",
+        "requestTimeEpoch": 1587881027389,
+        "requestId": "dc7bd65d-49eb-44cd-ad48-343d06f06fe5",
         "identity": {
             "cognitoIdentityPoolId": null,
             "accountId": null,
             "cognitoIdentityId": null,
             "caller": null,
-            "sourceIp": "207.181.207.119",
+            "sourceIp": "192.64.12.41",
             "principalOrgId": null,
             "accessKey": null,
             "cognitoAuthenticationType": null,
             "cognitoAuthenticationProvider": null,
             "userArn": null,
-            "userAgent": "PostmanRuntime/7.21.0",
+            "userAgent": "PostmanRuntime/7.24.1",
             "user": null
         },
         "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
         "apiId": "4rdz741pfg"
     },
-    "body": "{\n    \"cartItemId\": \"UV3W10T4V7PCZ\",\n    \"ASIN\": \"B000062TU1\",\n    \"quantity\": \"2\",\n    \"title\": \"Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)\",\n    \"productGroup\": \"DVD\",\n    \"price\": {\n        \"amount\": \"1499\",\n        \"currencyCode\": \"USD\",\n        \"formattedPrice\": \"$14.99\"\n    },\n    \"itemTotal\": {\n        \"amount\": \"2998\",\n        \"currencyCode\": \"USD\",\n        \"formattedPrice\": \"$29.98\"\n    }\n}",
+    "body": null,
     "isBase64Encoded": false
 }

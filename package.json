@@ -11,10 +11,12 @@
     "add-cart-item-local": "sls invoke local -f addCartItem --path functions/cartItem/add/addCartItem.json",
     "update-cart-item-local": "sls invoke local -f updateCartItem --path functions/cartItem/update/updateCartItem.json",
     "del-cart-item-local": "sls invoke local -f deleteCartItem --path functions/cartItem/delete/deleteCartItem.json",
+    "checkout-local": "sls invoke local -f checkoutCart --path functions/checkout/checkoutCart.json",
     "test": "jest"
   },
   "dependencies": {
     "serverless": "^1.61.2",
+    "serverless-dotenv-plugin": "^2.4.2",
     "stripe": "^8.9.0",
     "uuid": "^2.0.3"
   },

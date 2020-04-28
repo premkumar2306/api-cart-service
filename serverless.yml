@@ -5,6 +5,7 @@ frameworkVersion: ">=1.1.0 <2.0.0"
 plugins:
   - serverless-dynamodb-local
   - serverless-offline
+  - serverless-dotenv-plugin
   - serverless-pseudo-parameters
 
 custom:
@@ -113,6 +114,8 @@ functions:
           path: cart/{cartid}/checkout
           method: post
           cors: true
+    environment:
+      STRIPE_API_KEY: ${env:STRIPE_API_KEY}
 
 resources:
   # DynamoDB
