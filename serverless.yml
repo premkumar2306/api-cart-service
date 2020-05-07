@@ -59,9 +59,13 @@ functions:
     handler: functions/get/handler.handler
     events:
       - http:
-          path: cart/{cartid}
+          path: cart/{id}
           method: get
           cors: true
+          request:
+            parameters:
+              paths:
+                id: true
   createCart:
     handler: functions/create/handler.handler
     events:
