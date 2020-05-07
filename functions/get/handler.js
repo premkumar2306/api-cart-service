@@ -18,7 +18,7 @@ module.exports.get = async function(cartid) {
 module.exports.handler = async (event, context) => {
     debugger;
     console.log(JSON.stringify(event));
-    const cartId = event.queryStringParameters.cartid;
+    const cartId = event.pathParameters.cartid;
     try {
         const cart = await this.get(cartId);
         return {

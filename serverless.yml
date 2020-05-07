@@ -5,7 +5,6 @@ frameworkVersion: ">=1.1.0 <2.0.0"
 plugins:
   - serverless-dynamodb-local
   - serverless-offline
-  - serverless-dotenv-plugin
   - serverless-pseudo-parameters
 
 custom:
@@ -63,10 +62,6 @@ functions:
           path: cart/{cartid}
           method: get
           cors: true
-          request:
-            parameters:
-              paths:
-                cartid: true
   createCart:
     handler: functions/create/handler.handler
     events:
@@ -95,13 +90,10 @@ functions:
     handler: functions/cartItem/delete/handler.handler
     events:
       - http:
-          path: cart/{cartid}
+          path: cart/{cartid}/deleteItem
           method: delete
           cors: true
-          request:
-            parameters:
-              paths:
-                cartid: true
+
   deleteCart:
     handler: functions/delete/handler.handler
     events:
@@ -117,8 +109,6 @@ functions:
           path: cart/{cartid}/checkout
           method: post
           cors: true
-    environment:
-      STRIPE_API_KEY: ${env:STRIPE_API_KEY}
 
 resources:
   # DynamoDB
