@@ -1,10 +1,9 @@
 {
     "resource": "/cart",
-    "path": "/cart",
+    "path": "/cart/",
     "httpMethod": "POST",
     "headers": {
-        "Accept": "*/*",
-        "Accept-Encoding": "gzip, deflate, br",
+        "Authorization": "$ctx.request.headers.Authorization",
         "CloudFront-Forwarded-Proto": "https",
         "CloudFront-Is-Desktop-Viewer": "true",
         "CloudFront-Is-Mobile-Viewer": "false",
@@ -12,22 +11,19 @@
         "CloudFront-Is-Tablet-Viewer": "false",
         "CloudFront-Viewer-Country": "US",
         "Content-Type": "application/json",
+        "Date": "Fri, 8 May 2020 02:31:26 Z",
         "Host": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
-        "Postman-Token": "6182b32e-5394-4a0d-a99a-c68a460742b3",
-        "User-Agent": "PostmanRuntime/7.24.1",
-        "Via": "1.1 89f5815ea89e2c259d279849df06095a.cloudfront.net (CloudFront)",
-        "X-Amz-Cf-Id": "aDXyKwNYJj_3y_XKtt9E-RRQrFLDJe8Xn401qpi9LNSMKHX4DUX-Xg==",
-        "X-Amzn-Trace-Id": "Root=1-5ea26821-80a88e1cffd4d40688053b5e",
-        "X-Forwarded-For": "192.64.12.41, 130.176.50.134",
+        "User-Agent": "AWSAppSync-Http-Client",
+        "Via": "1.1 d19e64e406af1f88f7f96d9dcb2393ca.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "e6mZDrlAliGs6pPQKJiHZwI2tH49tSkLtSL7jCixj56cETMbqJa5EA==",
+        "X-Amzn-Trace-Id": "Root=1-5eb4c47e-813219d3f05ddaa70032c7da",
+        "X-Forwarded-For": "34.234.255.211, 70.132.60.90",
         "X-Forwarded-Port": "443",
         "X-Forwarded-Proto": "https"
     },
     "multiValueHeaders": {
-        "Accept": [
-            "*/*"
-        ],
-        "Accept-Encoding": [
-            "gzip, deflate, br"
+        "Authorization": [
+            "$ctx.request.headers.Authorization"
         ],
         "CloudFront-Forwarded-Proto": [
             "https"
@@ -50,26 +46,26 @@
         "Content-Type": [
             "application/json"
         ],
+        "Date": [
+            "Fri, 8 May 2020 02:31:26 Z"
+        ],
         "Host": [
             "4rdz741pfg.execute-api.us-east-1.amazonaws.com"
         ],
-        "Postman-Token": [
-            "6182b32e-5394-4a0d-a99a-c68a460742b3"
-        ],
         "User-Agent": [
-            "PostmanRuntime/7.24.1"
+            "AWSAppSync-Http-Client"
         ],
         "Via": [
-            "1.1 89f5815ea89e2c259d279849df06095a.cloudfront.net (CloudFront)"
+            "1.1 d19e64e406af1f88f7f96d9dcb2393ca.cloudfront.net (CloudFront)"
         ],
         "X-Amz-Cf-Id": [
-            "aDXyKwNYJj_3y_XKtt9E-RRQrFLDJe8Xn401qpi9LNSMKHX4DUX-Xg=="
+            "e6mZDrlAliGs6pPQKJiHZwI2tH49tSkLtSL7jCixj56cETMbqJa5EA=="
         ],
         "X-Amzn-Trace-Id": [
-            "Root=1-5ea26821-80a88e1cffd4d40688053b5e"
+            "Root=1-5eb4c47e-813219d3f05ddaa70032c7da"
         ],
         "X-Forwarded-For": [
-            "192.64.12.41, 130.176.50.134"
+            "34.234.255.211, 70.132.60.90"
         ],
         "X-Forwarded-Port": [
             "443"
@@ -86,32 +82,32 @@
         "resourceId": "pgolih",
         "resourcePath": "/cart",
         "httpMethod": "POST",
-        "extendedRequestId": "LeU1RG6zoAMF78w=",
-        "requestTime": "24/Apr/2020:04:16:33 +0000",
-        "path": "/dev/cart",
+        "extendedRequestId": "MMOjuECFoAMFeCg=",
+        "requestTime": "08/May/2020:02:31:26 +0000",
+        "path": "/dev/cart/",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",
         "domainPrefix": "4rdz741pfg",
-        "requestTimeEpoch": 1587701793661,
-        "requestId": "a9625de9-63b9-4ced-b3fa-2b4bc1d5b5d9",
+        "requestTimeEpoch": 1588905086191,
+        "requestId": "71380c0d-8b1e-467d-81dc-66d9464722b9",
         "identity": {
             "cognitoIdentityPoolId": null,
             "accountId": null,
             "cognitoIdentityId": null,
             "caller": null,
-            "sourceIp": "192.64.12.41",
+            "sourceIp": "34.234.255.211",
             "principalOrgId": null,
             "accessKey": null,
             "cognitoAuthenticationType": null,
             "cognitoAuthenticationProvider": null,
             "userArn": null,
-            "userAgent": "PostmanRuntime/7.24.1",
+            "userAgent": "AWSAppSync-Http-Client",
             "user": null
         },
         "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
         "apiId": "4rdz741pfg"
     },
-    "body": "{\n    \"cartId\": \"123456673\",\n    \"customerId\": \"cus_123456\",\n    \"cartItems\": [\n        {\n            \"brand\": \"productId\",\n            \"SKU\": \"b821cca3\",\n            \"quantity\": \"2\",\n            \"images\": \"http://images.icecat.biz/img/gallery/40027482_7383642436.jpg\",\n            \"title\": \"Acer B7 B247Y bmiprzx 60.5 cm (23.8\\\") 1920 x 1080 pixels Full HD LED Black\",\n            \"category\": \"Monitor\",\n            \"price\": {\n                \"amount\": \"11999\",\n                \"currencyCode\": \"USD\",\n                \"formattedPrice\": \"$119.99\"\n            }\n        },\n        {\n            \"brand\": \"Acer\",\n            \"productId\": \"20190322TU1\",\n            \"category\": \"Laptop\",\n            \"quantity\": \"1\",\n            \"images\": \"https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png\",\n            \"title\": \"Acer full edition monitor\",\n            \"price\": {\n                \"amount\": \"14999\",\n                \"currencyCode\": \"USD\",\n                \"formattedPrice\": \"$149.99\"\n            }\n        }\n    ]\n}",
+    "body": "{\"cartInput\":{\"pk\":\"sdfsdf\",\"cartItems\":[{\"images\":\"http://images.icecat.biz/img/gallery/40027482_7383642436.jpg\",\"quantity\":\"2\",\"price\":{\"currencyCode\":\"USD\",\"amount\":\"11999\",\"formattedPrice\":\"$119.99\"},\"sku\":\"324324\",\"title\":\"Acer B7 B247Y bmiprzx 60.5 cm 920 x 1080 pixels Full HD LED Black\"}]}}",
     "isBase64Encoded": false
 }
