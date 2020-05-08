@@ -4,6 +4,7 @@ const mapToStripe = require("./mapToStripe");
 const createStripeCheckout = async (cartId, customerId) => {
     console.log(`cartId: ${cartId} checkout process began at ${new Date().toISOString()}`);
     const cart = await getCart(cartId);
+    console.log('getCart success.');
     console.log(cart);
     const stripe = require('stripe')(process.env.STRIPE_API_KEY);
     try {

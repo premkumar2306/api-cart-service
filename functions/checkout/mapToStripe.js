@@ -4,8 +4,8 @@
 const mapCartItems = function (cartItems) {
     const items = cartItems.map(c => {
         return {
-            name: c.category,
-            description: c.title,
+            name: c.brand,
+            description: c.description,
             images: [c.images],
             amount: c.itemTotal.amount,
             quantity: c.quantity,

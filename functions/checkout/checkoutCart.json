@@ -1,6 +1,6 @@
 {
     "resource": "/cart/{cartid}/checkout",
-    "path": "/cart/ea64629efbeef299/checkout",
+    "path": "/cart/d690789cc69cc5a0/checkout",
     "httpMethod": "POST",
     "headers": {
         "Accept": "*/*",
@@ -81,7 +81,7 @@
     "queryStringParameters": null,
     "multiValueQueryStringParameters": null,
     "pathParameters": {
-        "cartid": "ea64629efbeef299"
+        "cartid": "d690789cc69cc5a0"
     },
     "stageVariables": null,
     "requestContext": {
@@ -90,7 +90,7 @@
         "httpMethod": "POST",
         "extendedRequestId": "LlKaiFMioAMFzXw=",
         "requestTime": "26/Apr/2020:06:03:47 +0000",
-        "path": "/dev/cart/ea64629efbeef299/checkout",
+        "path": "/dev/cart/d690789cc69cc5a0/checkout",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",
