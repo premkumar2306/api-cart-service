@@ -7,5 +7,5 @@ module.exports.handler = async function (event, context) {
     const cartID = event.pathParameters.cartid;
     const customerID = 'cus_H9tezcPBgseibW'
     const data = await createStripeCheckout(cartID, customerID);
-    return { statusCode: 200, body: JSON.stringify({ data }) };
+    return { statusCode: 200, body: JSON.stringify(data) };
 }
