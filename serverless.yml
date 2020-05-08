@@ -107,7 +107,7 @@ functions:
     events:
       - http:
           path: cart/{cartid}/checkout
-          method: post
+          method: get
           cors: true
 
 resources:
