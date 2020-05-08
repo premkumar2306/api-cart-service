@@ -1,24 +1,24 @@
-module.exports.findProduct = function (products, SKU) {
+module.exports.findProduct = function (products, sku) {
     let match = products.filter(item => {
-        if (item.SKU == SKU)
+        if (item.sku == sku)
             return true;
     });
     if (match && match[0])
         return match[0];
 };
 
-module.exports.increaseItemQuantity = function(products, SKU, qty=1){
+module.exports.increaseItemQuantity = function(products, sku, qty=1){
     return products.map(item => {
-        if (item.SKU === SKU){
+        if (item.sku === sku){
             item.quantity = parseInt(item.quantity) + parseInt(qty)
         }
         return item;
     });
 }
 
-module.exports.reduceItemQuantity = function(products, SKU, qty=1) {
+module.exports.reduceItemQuantity = function(products, sku, qty=1) {
     const content = products.map(item => {
-        if (item.SKU === SKU) {
+        if (item.sku === sku) {
             item.quantity = parseInt(item.quantity) - parseInt(qty);
         }
         return item;

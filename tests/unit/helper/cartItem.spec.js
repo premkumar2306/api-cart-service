@@ -12,7 +12,7 @@ describe('cartItem helper methods', () => {
                     "formattedPrice": "$29.98"
                 },
                 "quantity": "2",
-                "SKU": "B000062TU1",
+                "sku": "B000062TU1",
                 "price": {
                     "currencyCode": "USD",
                     "amount": "1499",
@@ -30,7 +30,7 @@ describe('cartItem helper methods', () => {
                     "formattedPrice": "$299.98"
                 },
                 "quantity": "2",
-                "SKU": "20190322TU1",
+                "sku": "20190322TU1",
                 "price": {
                     "currencyCode": "USD",
                     "amount": "14999",
@@ -48,7 +48,7 @@ describe('cartItem helper methods', () => {
                     "formattedPrice": "$249.99"
                 },
                 "quantity": "1",
-                "SKU": "predatorxb2",
+                "sku": "predatorxb2",
                 "price": {
                     "currencyCode": "USD",
                     "amount": "24999",
@@ -74,9 +74,9 @@ describe('cartItem helper methods', () => {
                 }
             }
         ];
-        const SKU = "B000062TU1";
-        const response = cartItem.findProduct(cartItems, SKU);
-        expect(response.SKU).toBe(SKU);
+        const sku = "B000062TU1";
+        const response = cartItem.findProduct(cartItems, sku);
+        expect(response.sku).toBe(sku);
         expect(response.quantity).toBe("2");
         expect(response.category).toBe("DVD");
     });
@@ -91,7 +91,7 @@ describe('cartItem helper methods', () => {
                     "formattedPrice": "$29.98"
                 },
                 "quantity": "2",
-                "SKU": "B000062TU1",
+                "sku": "B000062TU1",
                 "price": {
                     "currencyCode": "USD",
                     "amount": "1499",
@@ -109,7 +109,7 @@ describe('cartItem helper methods', () => {
                     "formattedPrice": "$299.98"
                 },
                 "quantity": "2",
-                "SKU": "20190322TU1",
+                "sku": "20190322TU1",
                 "price": {
                     "currencyCode": "USD",
                     "amount": "14999",
@@ -127,7 +127,7 @@ describe('cartItem helper methods', () => {
                     "formattedPrice": "$249.99"
                 },
                 "quantity": "1",
-                "SKU": "predatorxb2",
+                "sku": "predatorxb2",
                 "price": {
                     "currencyCode": "USD",
                     "amount": "24999",
@@ -153,10 +153,10 @@ describe('cartItem helper methods', () => {
                 }
             }
         ];
-        const SKU = "B000062TU1";
+        const sku = "B000062TU1";
         const quantity = 2;
-        const response = cartItem.increaseItemQuantity(cartItems, SKU, quantity);
-        expect(response[0].SKU).toBe(SKU);
+        const response = cartItem.increaseItemQuantity(cartItems, sku, quantity);
+        expect(response[0].sku).toBe(sku);
         expect(response[0].quantity).toBe(4);
         expect(response[0].category).toBe("DVD");
     });
@@ -171,7 +171,7 @@ describe('cartItem helper methods', () => {
                     "formattedPrice": "$29.98"
                 },
                 "quantity": "2",
-                "SKU": "B000062TU1",
+                "sku": "B000062TU1",
                 "price": {
                     "currencyCode": "USD",
                     "amount": "1499",
@@ -189,7 +189,7 @@ describe('cartItem helper methods', () => {
                     "formattedPrice": "$299.98"
                 },
                 "quantity": "2",
-                "SKU": "20190322TU1",
+                "sku": "20190322TU1",
                 "price": {
                     "currencyCode": "USD",
                     "amount": "14999",
@@ -207,7 +207,7 @@ describe('cartItem helper methods', () => {
                     "formattedPrice": "$249.99"
                 },
                 "quantity": "1",
-                "SKU": "predatorxb2",
+                "sku": "predatorxb2",
                 "price": {
                     "currencyCode": "USD",
                     "amount": "24999",
@@ -233,18 +233,18 @@ describe('cartItem helper methods', () => {
                 }
             }
         ];
-        const mockSKU = "B000062TU1";
+        const mocksku = "B000062TU1";
         const quantity = 1;
-        const firstResponse = cartItem.reduceItemQuantity(cartItems, mockSKU, quantity);
-        expect(firstResponse[0].SKU).toBe(mockSKU);
+        const firstResponse = cartItem.reduceItemQuantity(cartItems, mocksku, quantity);
+        expect(firstResponse[0].sku).toBe(mocksku);
         expect(firstResponse[0].quantity).toBe(1);
         expect(firstResponse.length).toBe(4);
-        const findProudctWithQtyOne = cartItem.findProduct(firstResponse, mockSKU);
+        const findProudctWithQtyOne = cartItem.findProduct(firstResponse, mocksku);
         expect(findProudctWithQtyOne).not.toBeUndefined();
         // again reduct the quantity
-        const secondResponse = cartItem.reduceItemQuantity(firstResponse, mockSKU, quantity);
+        const secondResponse = cartItem.reduceItemQuantity(firstResponse, mocksku, quantity);
         expect(secondResponse.length).toBe(3);
-        const findProudctWithZeroQty = cartItem.findProduct(secondResponse, mockSKU);
+        const findProudctWithZeroQty = cartItem.findProduct(secondResponse, mocksku);
         expect(findProudctWithZeroQty).toBeUndefined();
     });
 });

@@ -5,7 +5,7 @@ const mapCartItems = function (cartItems) {
     console.log(cartItems);
     const items = cartItems.map(c => {
         return {
-            SKU: c.SKU,
+            sku: c.sku,
             brand: c.brand,
             quantity: c.quantity,
             title: c.title,

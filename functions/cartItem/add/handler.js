@@ -8,8 +8,8 @@ const addItem = async (cartId, newItem) => {
     const cart = await getCart(cartId);
     console.log(JSON.stringify(cart));
     let productsInCart = cart.cartItems;
-    if (findProduct(productsInCart, newItem.SKU)) {
-        productsInCart = increaseItemQuantity(productsInCart, newItem.SKU, newItem.quantity);
+    if (findProduct(productsInCart, newItem.sku)) {
+        productsInCart = increaseItemQuantity(productsInCart, newItem.sku, newItem.quantity);
         console.log(JSON.stringify(productsInCart));
     } else {
         productsInCart.push(newItem);
