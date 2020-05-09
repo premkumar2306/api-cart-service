@@ -1,33 +1,29 @@
 {
     "resource": "/cart/{cartid}/checkout",
-    "path": "/cart/d690789cc69cc5a0/checkout",
-    "httpMethod": "POST",
+    "path": "/cart/1d1b857ba168bf6e/checkout",
+    "httpMethod": "GET",
     "headers": {
-        "Accept": "*/*",
-        "Accept-Encoding": "gzip, deflate, br",
+        "Authorization": "$ctx.request.headers.Authorization",
         "CloudFront-Forwarded-Proto": "https",
         "CloudFront-Is-Desktop-Viewer": "true",
         "CloudFront-Is-Mobile-Viewer": "false",
         "CloudFront-Is-SmartTV-Viewer": "false",
         "CloudFront-Is-Tablet-Viewer": "false",
         "CloudFront-Viewer-Country": "US",
-        "Content-Type": "application/json",
+        "content-type": "application/octet-stream",
+        "Date": "Sat, 9 May 2020 00:44:04 Z",
         "Host": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
-        "Postman-Token": "db3ebdd6-eaba-4617-9eab-48da3f5eca23",
-        "User-Agent": "PostmanRuntime/7.24.1",
-        "Via": "1.1 2aa70b747c4cbd671958bc7faab603a2.cloudfront.net (CloudFront)",
-        "X-Amz-Cf-Id": "bwP3H7cNQRhoyT_j0O4SMfIgkppyohnB1HHRTW8WzfDqKUvKOdHutw==",
-        "X-Amzn-Trace-Id": "Root=1-5ea52443-9c0f776569c40f8e8b628a96",
-        "X-Forwarded-For": "192.64.12.41, 130.176.50.86",
+        "User-Agent": "AWSAppSync-Http-Client",
+        "Via": "1.1 649b4de6ebe50fb3c542f3d95c8ed8bb.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "T1rn4jyn2_gtZYhFOi-NL_U3FIc3bM40_r2AY1BhbmAmirSGxSfkrQ==",
+        "X-Amzn-Trace-Id": "Root=1-5eb5fcd4-7551dfb6019bdcd01328fba6",
+        "X-Forwarded-For": "34.227.182.245, 70.132.60.80",
         "X-Forwarded-Port": "443",
         "X-Forwarded-Proto": "https"
     },
     "multiValueHeaders": {
-        "Accept": [
-            "*/*"
-        ],
-        "Accept-Encoding": [
-            "gzip, deflate, br"
+        "Authorization": [
+            "$ctx.request.headers.Authorization"
         ],
         "CloudFront-Forwarded-Proto": [
             "https"
@@ -47,29 +43,29 @@
         "CloudFront-Viewer-Country": [
             "US"
         ],
-        "Content-Type": [
-            "application/json"
+        "content-type": [
+            "application/octet-stream"
+        ],
+        "Date": [
+            "Sat, 9 May 2020 00:44:04 Z"
         ],
         "Host": [
             "4rdz741pfg.execute-api.us-east-1.amazonaws.com"
         ],
-        "Postman-Token": [
-            "db3ebdd6-eaba-4617-9eab-48da3f5eca23"
-        ],
         "User-Agent": [
-            "PostmanRuntime/7.24.1"
+            "AWSAppSync-Http-Client"
         ],
         "Via": [
-            "1.1 2aa70b747c4cbd671958bc7faab603a2.cloudfront.net (CloudFront)"
+            "1.1 649b4de6ebe50fb3c542f3d95c8ed8bb.cloudfront.net (CloudFront)"
         ],
         "X-Amz-Cf-Id": [
-            "bwP3H7cNQRhoyT_j0O4SMfIgkppyohnB1HHRTW8WzfDqKUvKOdHutw=="
+            "T1rn4jyn2_gtZYhFOi-NL_U3FIc3bM40_r2AY1BhbmAmirSGxSfkrQ=="
         ],
         "X-Amzn-Trace-Id": [
-            "Root=1-5ea52443-9c0f776569c40f8e8b628a96"
+            "Root=1-5eb5fcd4-7551dfb6019bdcd01328fba6"
         ],
         "X-Forwarded-For": [
-            "192.64.12.41, 130.176.50.86"
+            "34.227.182.245, 70.132.60.80"
         ],
         "X-Forwarded-Port": [
             "443"
@@ -81,34 +77,34 @@
     "queryStringParameters": null,
     "multiValueQueryStringParameters": null,
     "pathParameters": {
-        "cartid": "d690789cc69cc5a0"
+        "cartid": "1d1b857ba168bf6e"
     },
     "stageVariables": null,
     "requestContext": {
         "resourceId": "qqfdnl",
         "resourcePath": "/cart/{cartid}/checkout",
-        "httpMethod": "POST",
-        "extendedRequestId": "LlKaiFMioAMFzXw=",
-        "requestTime": "26/Apr/2020:06:03:47 +0000",
-        "path": "/dev/cart/d690789cc69cc5a0/checkout",
+        "httpMethod": "GET",
+        "extendedRequestId": "MPRxLHTqoAMFq_A=",
+        "requestTime": "09/May/2020:00:44:04 +0000",
+        "path": "/dev/cart/1d1b857ba168bf6e/checkout",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",
         "domainPrefix": "4rdz741pfg",
-        "requestTimeEpoch": 1587881027389,
-        "requestId": "dc7bd65d-49eb-44cd-ad48-343d06f06fe5",
+        "requestTimeEpoch": 1588985044240,
+        "requestId": "d499c68b-c02f-433c-aa7d-4231bfc7b27e",
         "identity": {
             "cognitoIdentityPoolId": null,
             "accountId": null,
             "cognitoIdentityId": null,
             "caller": null,
-            "sourceIp": "192.64.12.41",
+            "sourceIp": "34.227.182.245",
             "principalOrgId": null,
             "accessKey": null,
             "cognitoAuthenticationType": null,
             "cognitoAuthenticationProvider": null,
             "userArn": null,
-            "userAgent": "PostmanRuntime/7.24.1",
+            "userAgent": "AWSAppSync-Http-Client",
             "user": null
         },
         "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",

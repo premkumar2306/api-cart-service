@@ -12,6 +12,7 @@ const mapCartItems = function (cartItems) {
             currency: 'usd'
         }
     });
+    console.log("cart mapping")
     return items;
 }
 module.exports = mapCartItems
