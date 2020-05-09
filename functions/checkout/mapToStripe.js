@@ -13,6 +13,8 @@ const mapCartItems = function (cartItems) {
         }
     });
     console.log("cart mapping")
+    console.log(JSON.stringify(items));
+    console.log(items);
     return items;
 }
 module.exports = mapCartItems
