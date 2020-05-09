@@ -7,7 +7,7 @@ const mapCartItems = function (cartItems) {
             name: c.brand,
             description: c.description,
             images: [c.images],
-            amount: c.itemTotal.amount,
+            amount: c.itemTotal.amount * 100,
             quantity: c.quantity,
             currency: 'usd'
         }
