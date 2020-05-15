@@ -12,6 +12,7 @@
     "update-cart-item-local": "sls invoke local -f updateCartItem --path functions/cartItem/update/updateCartItem.json",
     "del-cart-item-local": "sls invoke local -f deleteCartItem --path functions/cartItem/delete/deleteCartItem.json",
     "checkout-local": "sls invoke local -f checkoutCart --path functions/checkout/checkoutCart.json",
+    "checkout-session-local": "sls invoke local -f checkoutSession --path functions/checkout-session/checkoutSession.json",
     "test": "jest"
   },
   "dependencies": {

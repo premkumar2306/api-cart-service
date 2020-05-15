@@ -2,11 +2,6 @@ service: cart-service
 
 frameworkVersion: ">=1.1.0 <2.0.0"
 
-plugins:
-  - serverless-dynamodb-local
-  - serverless-offline
-  - serverless-pseudo-parameters
-
 custom:
   stage: ${opt:stage, self:provider.stage}
   service: cart-service
@@ -18,9 +13,6 @@ custom:
       migrate: true
     migration:
       dir: offline/migrations
-
-package:
-  individually: true
 
 provider:
   name: aws
@@ -104,12 +96,30 @@ functions:
   
   checkoutCart:
     handler: functions/checkout/index.handler
+    environment:
+      STRIPE_API_KEY: ${env:STRIPE_API_KEY}
     events:
       - http:
           path: cart/{cartid}/checkout
           method: get
           cors: true
 
+  checkoutSession:
+    handler: functions/checkout-session/index.handler
+    environment:
+      STRIPE_API_KEY: ${env:STRIPE_API_KEY}
+    events:
+      - http:
+          path: cart/checkout-session/{sessionid}
+          method: get
+          cors: true
+
 resources:
   # DynamoDB
   - ${file(resources/dynamodb-table.yml)}
+
+plugins:
+  - serverless-dynamodb-local
+  - serverless-offline
+  - serverless-pseudo-parameters
+  - serverless-dotenv-plugin
