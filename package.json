@@ -12,15 +12,18 @@
     "update-cart-item-local": "sls invoke local -f updateCartItem --path functions/cartItem/update/updateCartItem.json",
     "del-cart-item-local": "sls invoke local -f deleteCartItem --path functions/cartItem/delete/deleteCartItem.json",
     "checkout-local": "sls invoke local -f checkoutCart --path functions/checkout/checkoutCart.json",
+    "amazonpay-session": "sls invoke local -f amazonpayNewSession --path functions/amazonpay/session.json",
     "checkout-session-local": "sls invoke local -f checkoutSession --path functions/checkout-session/checkoutSession.json",
     "test": "jest"
   },
   "dependencies": {
+    "@amazonpay/amazon-pay-api-sdk-nodejs": "^2.0.1",
     "crypto": "^1.0.1",
     "serverless": "^1.61.2",
     "serverless-dotenv-plugin": "^2.4.2",
     "stripe": "^8.9.0",
-    "uuid": "^2.0.3"
+    "uuid": "^3.4.0",
+    "uuidv4": "^6.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

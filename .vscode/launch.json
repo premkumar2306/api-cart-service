@@ -99,6 +99,20 @@
                 "--path",
                 "events/checkoutCart.json"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "checkout amazon pay session",
+            "program": "${workspaceRoot}/node_modules/.bin/sls",
+            "args": [
+                "invoke",
+                "local",
+                "-f",
+                "amazonpayNewSession",
+                "--path",
+                "functions/amazonpay/session.json"
+            ]
         }
     ]
 }
