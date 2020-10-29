@@ -17,7 +17,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@amazonpay/amazon-pay-api-sdk-nodejs": "^2.0.1",
+    "@amazonpay/amazon-pay-api-sdk-nodejs": "^2.1.1",
     "crypto": "^1.0.1",
     "serverless": "^1.61.2",
     "serverless-dotenv-plugin": "^2.4.2",

@@ -10,10 +10,10 @@
     d "1"
     es5-ext "^0.10.47"
 
-"@amazonpay/amazon-pay-api-sdk-nodejs@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@amazonpay/amazon-pay-api-sdk-nodejs/-/amazon-pay-api-sdk-nodejs-2.0.1.tgz#482f67f302272ee12ce76b6fedbceb19cb672bfb"
-  integrity sha512-gusEgQdWoF4uqOvvtmrtEDcJlyNQC+KrZQgPj8JSAoWqSE2E5hKbl920oNOlok4wGRJ3IaNJRsK2Y1f05bnIqQ==
+"@amazonpay/amazon-pay-api-sdk-nodejs@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@amazonpay/amazon-pay-api-sdk-nodejs/-/amazon-pay-api-sdk-nodejs-2.1.1.tgz#88ba436c39e1466b7f0c4c6a922488254af1db7a"
+  integrity sha512-L7fUVIi18E/ugShmABnKCEwRQTMlA01pCfH51BYzyfqdX5rGJ7CP46yYNORoodki8y2YH2uwIPZ4F2M4Vr6veQ==
   dependencies:
     request "^2.88.0"
     uuid "^3.3.3"
