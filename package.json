@@ -21,7 +21,7 @@
     "crypto": "^1.0.1",
     "serverless": "^2.9.0",
     "serverless-dotenv-plugin": "^3.1.0",
-    "stripe": "^8.9.0",
+    "stripe": "^8.119.0",
     "uuid": "^8.3.1",
     "uuidv4": "^6.1.0"
   },
