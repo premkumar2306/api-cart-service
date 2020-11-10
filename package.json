@@ -28,7 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
-    "aws-sdk": "^2.786.0",
+    "aws-sdk": "^2.788.0",
     "babel-jest": "^26.6.3",
     "jest": "^26.6.3",
     "node.extend": "^2.0.2",
