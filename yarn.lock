@@ -1450,7 +1450,7 @@
     node-fetch "^2.6.0"
     shortid "^2.2.14"
 
-"@serverless/components@^3.4.0":
+"@serverless/components@^3.4.2":
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/@serverless/components/-/components-3.4.2.tgz#41005e80db35ebe622f730545bd95e80e8299bcb"
   integrity sha512-yBQwN4Z0LqsYzA+SCTh6/LaGEPAu6lNAr32j2pjjZWCnDwpV1TKaSCNDTAPNSVk5L2/8exRpiEQUNM0NyTGWqA==
@@ -2152,7 +2152,7 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk@^2.624.0, aws-sdk@^2.7.0, aws-sdk@^2.796.0, aws-sdk@^2.799.0:
+aws-sdk@^2.624.0, aws-sdk@^2.7.0, aws-sdk@^2.799.0:
   version "2.799.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.799.0.tgz#8b1a64c1a9f8ccf5794eb07bdd8051e4cb6adcfd"
   integrity sha512-NYAoiNU+bJXhlJsC0rFqrmD5t5ho7/VxldmziP6HLPYHfOCI9Uvk6UVjfPmhLWPm0mHnIxhsHqmsNGyjhHNYmw==
@@ -6583,12 +6583,12 @@ p-limit@^2.0.0, p-limit@^2.2.0:
   dependencies:
     p-try "^2.0.0"
 
-p-limit@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-3.0.2.tgz#1664e010af3cadc681baafd3e2a437be7b0fb5fe"
-  integrity sha512-iwqZSOoWIW+Ew4kAGUlN16J4M7OB3ysMLSZtnhmqx7njIHFPlxWBX8xo3lVTyFVq6mI/lL9qt2IsN1sHwaxJkg==
+p-limit@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-3.1.0.tgz#e1daccbe78d0d1388ca18c64fea38e3e57e3706b"
+  integrity sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==
   dependencies:
-    p-try "^2.0.0"
+    yocto-queue "^0.1.0"
 
 p-locate@^3.0.0:
   version "3.0.0"
@@ -7520,19 +7520,19 @@ serverless-pseudo-parameters@^2.5.0:
   resolved "https://registry.yarnpkg.com/serverless-pseudo-parameters/-/serverless-pseudo-parameters-2.5.0.tgz#f30bf34db166e4b8b22144a8e65aca71b90dd1e6"
   integrity sha512-A/O49AR8LL6jlnPSmnOTYgL1KqVgskeRla4sVDeS/r5dHFJlwOU5MgFilc7aaQP8NWAwRJANaIS9oiSE3I+VUA==
 
-serverless@^2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/serverless/-/serverless-2.12.0.tgz#5e993a5c27c22b2cf603d8e97bafa7b7f619a1af"
-  integrity sha512-T36JRXVwIqB0FNV7h8n9vG2EnfwuznQnIH4ICmnfIZ2UcfE+cF2IBU98W1j6Pebh1qYUIM4uDZ7SnyvaGfGImw==
+serverless@^2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/serverless/-/serverless-2.13.0.tgz#f6c7d2760daf071a2b4323bbe2c4e3efb5d309de"
+  integrity sha512-MOz0JYlPrWGwuyVUIncyaNRSlwOzVUFj5T/ITRjtO5PYXUWr+BB+yhZ97KoOhuL/hVnQ7ZjsmYgOvzo8hHwv9w==
   dependencies:
     "@serverless/cli" "^1.5.2"
-    "@serverless/components" "^3.4.0"
+    "@serverless/components" "^3.4.2"
     "@serverless/enterprise-plugin" "^4.1.2"
     "@serverless/utils" "^2.0.0"
     ajv "^6.12.6"
     ajv-keywords "^3.5.2"
     archiver "^5.1.0"
-    aws-sdk "^2.796.0"
+    aws-sdk "^2.799.0"
     bluebird "^3.7.2"
     boxen "^4.2.0"
     cachedir "^2.3.0"
@@ -7541,6 +7541,7 @@ serverless@^2.12.0:
     d "^1.0.1"
     dayjs "^1.9.6"
     decompress "^4.2.1"
+    dotenv "^8.2.0"
     download "^8.0.0"
     essentials "^1.1.1"
     fastest-levenshtein "^1.0.12"
@@ -7562,7 +7563,7 @@ serverless@^2.12.0:
     ncjsm "^4.1.0"
     node-fetch "^2.6.1"
     object-hash "^2.0.3"
-    p-limit "^3.0.2"
+    p-limit "^3.1.0"
     promise-queue "^2.2.5"
     replaceall "^0.1.6"
     semver "^7.3.2"
@@ -8953,6 +8954,11 @@ yeast@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
   integrity sha1-AI4G2AlDIMNy28L47XagymyKxBk=
+
+yocto-queue@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
+  integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
 zip-stream@^4.0.4:
   version "4.0.4"
