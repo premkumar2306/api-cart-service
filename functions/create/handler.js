@@ -1,17 +1,17 @@
-'use strict';
 const dynamodb = require('../dynamodb');
 const mapper = require('../../helper/mapCart');
 
 const validate = function (cart) {
+  console.log('validate', cart);
   return true;
-}
+};
 
 const create = async function (body) {
   console.log('enter create..');
   console.log(body);
   const data = mapper(body);
   console.log('mapper completed..');
-  console.log(`data to insert ${JSON.stringify(data)}`)
+  console.log(`data to insert ${JSON.stringify(data)}`);
   if (!validate(data)) {
     throw new Error('Validation error');
   }
@@ -26,17 +26,16 @@ const create = async function (body) {
 };
 
 module.exports.create = create;
-module.exports.handler = async (event, context) => {
-  debugger;
+module.exports.handler = async (event) => {
   console.log(JSON.stringify(event));
   try {
     const body = JSON.parse(event.body);
     const cart = body.cartInput;
-    console.log(cart)
+    console.log(cart);
     const data = await create(cart);
     return {
       statusCode: 200,
-      body: JSON.stringify(data.Item)
+      body: JSON.stringify(data.Item),
     };
   } catch (error) {
     console.log(error);
@@ -44,6 +43,6 @@ module.exports.handler = async (event, context) => {
       statusCode: error.statusCode || 501,
       headers: { 'Content-Type': 'text/plain' },
       body: `${JSON.stringify(error)}`,
-    }
+    };
   }
 };

@@ -1,24 +1,23 @@
-"use strict";
-const getCart = require("../../get/handler").get;
-const { findProduct, updateItemQuantity } = require("../../../helper/common");
-const { getPrice } = require("../../../helper/common");
-const mapper = require("../../../helper/mapCart");
-const dynamodb = require("../../dynamodb");
+const getCart = require('../../get/handler').get;
+const { findProduct, updateItemQuantity } = require('../../../helper/common');
+const { getPrice } = require('../../../helper/common');
+const mapper = require('../../../helper/mapCart');
+const dynamodb = require('../../dynamodb');
 
 const updateCart = async (cartId, newCartItems) => {
   console.log(`cartId: ${cartId}\tadd:${JSON.stringify(newCartItems)}`);
   const cart = await getCart(cartId);
   if (!cart) {
-    throw new Error("Not able to find the cart");
+    throw new Error('Not able to find the cart');
   }
   console.log(JSON.stringify(cart));
-  let productsInCart = cart.cartItems;
-  cart.subTotal && delete cart.subTotal;
+  const productsInCart = cart.cartItems;
+  delete cart.subTotal;
   // add price to the product
 
   // TODO: reduce or increase need to check with the business
   const tempCart = [];
-  for (const cartItem of newCartItems) {
+  newCartItems.forEach((cartItem) => {
     const existingItem = findProduct(productsInCart, cartItem.sku);
     if (existingItem) {
       delete existingItem.itemTotal;
@@ -26,17 +25,18 @@ const updateCart = async (cartId, newCartItems) => {
       existingItem.price = getPrice(cartItem.sku);
       if (existingItem.quantity > 0) {
         tempCart.push(existingItem);
-        console.log("Item quantity updated: ", existingItem);
+        console.log('Item quantity updated: ', existingItem);
         console.log(JSON.stringify(existingItem));
       } else {
-        console.log("Existing Item removed: ", existingItem);
+        console.log('Existing Item removed: ', existingItem);
       }
     } else {
-      cartItem.quantity = parseInt(cartItem.quantity) || 0;
-      cartItem.price = getPrice(cartItem.sku);
-      tempCart.push(cartItem);
+      const newCartItem = { ...cartItem };
+      newCartItem.quantity = parseInt(newCartItem.quantity, 2);
+      newCartItem.price = getPrice(newCartItem.sku);
+      tempCart.push(newCartItem);
     }
-  }
+  });
 
   const data = { ...cart, ...{ cartItems: tempCart } };
   const body = mapper(data);
@@ -56,8 +56,7 @@ const updateCart = async (cartId, newCartItems) => {
 
 module.exports.updateCart = updateCart;
 
-module.exports.handler = async function (event, context) {
-  debugger;
+module.exports.handler = async function (event) {
   console.log(JSON.stringify(event));
   const cartId = event.pathParameters.cartid;
   const newItem = JSON.parse(event.body);

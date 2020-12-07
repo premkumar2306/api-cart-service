@@ -52,6 +52,7 @@ functions:
           path: cart/{cartid}
           method: get
           cors: true
+  
   createCart:
     handler: functions/create/handler.handler
     events:
@@ -64,7 +65,7 @@ functions:
     handler: functions/cartItem/update/handler.handler
     events:
       - http:
-          path: cart/{cartid}/updateItem
+          path: cart/{cartid}/update
           method: post
           cors: true
   
