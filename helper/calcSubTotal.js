@@ -4,9 +4,9 @@ const calcSubTotal = function(products) {
     }, 0);
     console.log(`subtotal ${totalCost}`)
     return {
-        currencyCode: "USD",
+        currencyCode: "INR",
         amount: totalCost,
-        formattedPrice: `$${(totalCost/ 100).toFixed(2)}`
+        formattedPrice: `₹${(totalCost/ 100).toFixed(2)}`
     }
 }
 module.exports = calcSubTotal;

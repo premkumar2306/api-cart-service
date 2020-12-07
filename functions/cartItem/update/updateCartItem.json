@@ -1,6 +1,6 @@
 {
     "resource": "/cart/{cartid}/updateItem",
-    "path": "/cart/d991f290-4ed6-11ea-9121-7568a5538074/updateItem",
+    "path": "/cart/e4439350436f72fd/updateItem",
     "httpMethod": "POST",
     "headers": {
         "Accept": "*/*",
@@ -85,7 +85,7 @@
     "queryStringParameters": null,
     "multiValueQueryStringParameters": null,
     "pathParameters": {
-        "cartid": "d991f290-4ed6-11ea-9121-7568a5538074"
+        "cartid": "e4439350436f72fd"
     },
     "stageVariables": null,
     "requestContext": {
@@ -94,7 +94,7 @@
         "httpMethod": "POST",
         "extendedRequestId": "Gk0xiFxEoAMFgPQ=",
         "requestTime": "20/Jan/2020:01:25:55 +0000",
-        "path": "/dev/cart/d991f290-4ed6-11ea-9121-7568a5538074/updateItem",
+        "path": "/dev/cart/e4439350436f72fd/updateItem",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",
@@ -118,6 +118,6 @@
         "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
         "apiId": "4rdz741pfg"
     },
-    "body": "{\n    \"cartItemId\": \"DDDDD\",\n    \"ASIN\": \"B000062TU1\",\n    \"quantity\": \"1\",\n    \"title\": \"Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)\",\n    \"productGroup\": \"DVD\",\n    \"price\": {\n        \"amount\": \"1499\",\n        \"currencyCode\": \"USD\",\n        \"formattedPrice\": \"$14.99\"\n    },\n    \"itemTotal\": {\n        \"amount\": \"2998\",\n        \"currencyCode\": \"USD\",\n        \"formattedPrice\": \"$29.98\"\n    }\n}",
+    "body": "[{\"sku\": \"123\",\r\n    \"ASIN\": \"B000062TU1\",\r\n    \"quantity\": \"0\",\r\n    \"title\": \"Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)\",\r\n    \"productGroup\": \"DVD\"\r\n},\r\n{\"sku\": \"122\",\r\n    \"ASIN\": \"B0001\",\r\n    \"quantity\": \"2\",\r\n    \"title\": \"Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 2)\",\r\n    \"productGroup\": \"NETFLIX\"\r\n}]",
     "isBase64Encoded": false
 }

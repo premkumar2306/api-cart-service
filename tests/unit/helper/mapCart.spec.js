@@ -14,8 +14,8 @@ describe('map Cart', () => {
                     "category": "DVD",
                     "price": {
                         "amount": "1499",
-                        "currencyCode": "USD",
-                        "formattedPrice": "$14.99"
+                        "currencyCode": "INR",
+                        "formattedPrice": "₹14.99"
                     }
                 },
                 {
@@ -27,15 +27,15 @@ describe('map Cart', () => {
                     "title": "Acer full edition monitor",
                     "price": {
                         "amount": "14999",
-                        "currencyCode": "USD",
-                        "formattedPrice": "$149.99"
+                        "currencyCode": "INR",
+                        "formattedPrice": "₹149.99"
                     }
                 }
             ]
         };
         const response = mapCart(cart);
         expect(response.subTotal.amount).toBe(32996);
-        expect(response.subTotal.formattedPrice).toBe("$329.96");
+        expect(response.subTotal.formattedPrice).toBe("₹329.96");
     });
 });
 

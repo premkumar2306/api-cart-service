@@ -13,8 +13,8 @@ module.exports = (cart) => {
     const timestamp = new Date().getTime();
     const uuid = crypto.randomBytes(8).toString("hex");
     let data = {
-        pk: cart.cartId || uuid,
-        sk: cart.customerId || uuid,
+        pk: cart.pk || uuid,
+        sk: cart.sk || uuid,
         cartItems: mapCartItems(cart.cartItems),
         created: timestamp,
         updated: timestamp

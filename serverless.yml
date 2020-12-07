@@ -1,7 +1,5 @@
 service: cart-service
 
-frameworkVersion: ">=1.1.0 <2.0.0"
-
 custom:
   stage: ${opt:stage, self:provider.stage}
   service: cart-service
@@ -38,10 +36,6 @@ provider:
       Resource: "arn:aws:secretsmanager:us-east-1:#{AWS::AccountId}:secret:/external/*"
     - Effect: Allow
       Action:
-        - S3:GetObject
-      Resource: "arn:aws:s3:::pn-daily-product-feed/key/amazonpay/*"
-    - Effect: Allow
-      Action:
         - dynamodb:Query
         - dynamodb:Scan
         - dynamodb:GetItem
@@ -66,14 +60,6 @@ functions:
           method: post
           cors: true
 
-  addCartItem:
-    handler: functions/cartItem/add/handler.handler
-    events:
-      - http:
-          path: cart/{cartid}/addItem
-          method: post
-          cors: true
-
   updateCartItem:
     handler: functions/cartItem/update/handler.handler
     events:
@@ -82,14 +68,6 @@ functions:
           method: post
           cors: true
   
-  deleteCartItem:
-    handler: functions/cartItem/delete/handler.handler
-    events:
-      - http:
-          path: cart/{cartid}/deleteItem
-          method: delete
-          cors: true
-
   deleteCart:
     handler: functions/delete/handler.handler
     events:
@@ -106,14 +84,6 @@ functions:
       - http:
           path: cart/{cartid}/checkout
           method: get
-          cors: true
-
-  amazonpayNewSession:
-    handler: functions/amazonpay/handler.handler
-    events:
-      - http:
-          path: cart/amazonpay-session
-          method: post
           cors: true
 
   checkoutSession:

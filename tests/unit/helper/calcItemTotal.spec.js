@@ -8,9 +8,9 @@ describe('item Total', () => {
             "quantity": "2",
             "sku": "B000062TU1",
             "price": {
-                "currencyCode": "USD",
+                "currencyCode": "INR",
                 "amount": "1499",
-                "formattedPrice": "$14.99"
+                "formattedPrice": "₹14.99"
             },
             "title": "Harry Potter and the Sorcerer's Stone (Full Screen Edition) (Harry Potter 1)",
             "category": "DVD",
@@ -18,7 +18,7 @@ describe('item Total', () => {
         };
         const response = calcItemTotal(cartItem);
         expect(response.amount).toBe(2998);
-        expect(response.formattedPrice).toBe("$29.98");
+        expect(response.formattedPrice).toBe("₹29.98");
     });
 });
 

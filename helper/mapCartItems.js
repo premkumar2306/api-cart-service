@@ -1,9 +1,19 @@
-const calcItemTotal = require("./calcItemTotal");
+const calcItemTotal = function(price, quantity) {
+    console.log('calcItemTotal')
+    const totalAmt = price * quantity;
+    console.log(totalAmt)
+    return {
+        amount: totalAmt,
+        currencyCode: "INR",
+        formattedPrice: `₹${(totalAmt/ 100).toFixed(2)}`
+    }
+}
 
 const mapCartItems = function (cartItems) {
     console.log('enter mapCartItems');
     console.log(cartItems);
     const items = cartItems.map(c => {
+        const itemTotal = calcItemTotal(parseInt(c.price.amount), parseInt(c.quantity))
         return {
             sku: c.sku,
             brand: c.brand,
@@ -11,12 +21,8 @@ const mapCartItems = function (cartItems) {
             title: c.title,
             images: c.images,
             category: c.category,
-            price: {
-                amount: c.price.amount,
-                currencyCode: c.price.currencyCode || "USD",
-                formattedPrice: c.price.formattedPrice
-            },
-            itemTotal: calcItemTotal(c)
+            price: c.price,
+            itemTotal: itemTotal
         }
     });
     console.log(`cartitems ${items}`);
