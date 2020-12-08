@@ -1,4 +1,4 @@
-const getCart = require('../../get/handler').get;
+const { getCart } = require('../../get/handler');
 const { findProduct, updateItemQuantity } = require('../../../helper/common');
 const { getPrice } = require('../../../helper/common');
 const mapper = require('../../../helper/mapCart');
@@ -21,7 +21,11 @@ const updateCart = async (cartId, newCartItems) => {
     const existingItem = findProduct(productsInCart, cartItem.sku);
     if (existingItem) {
       delete existingItem.itemTotal;
-      updateItemQuantity(existingItem, cartItem.sku, cartItem.quantity);
+      existingItem.quantity = updateItemQuantity(
+        existingItem,
+        cartItem.sku,
+        cartItem.quantity,
+      );
       existingItem.price = getPrice(cartItem.sku);
       if (existingItem.quantity > 0) {
         tempCart.push(existingItem);
@@ -32,9 +36,11 @@ const updateCart = async (cartId, newCartItems) => {
       }
     } else {
       const newCartItem = { ...cartItem };
-      newCartItem.quantity = parseInt(newCartItem.quantity, 2);
+      newCartItem.quantity = newCartItem.quantity || 1;
       newCartItem.price = getPrice(newCartItem.sku);
-      tempCart.push(newCartItem);
+      if (newCartItem.quantity > 0) {
+        tempCart.push(newCartItem);
+      }
     }
   });
 

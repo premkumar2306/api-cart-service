@@ -7,6 +7,9 @@ const getPrice = function (sku) {
 };
 
 const findProduct = function (products, sku) {
+  if (!products) {
+    return false;
+  }
   const match = products.filter((item) => {
     if (item.sku === sku) return true;
   });
@@ -14,6 +17,9 @@ const findProduct = function (products, sku) {
 };
 
 const removeProduct = function (products, sku) {
+  if (!products) {
+    return false;
+  }
   const content = products.filter((item) => {
     item.sku !== sku;
   });
@@ -23,12 +29,12 @@ const removeProduct = function (products, sku) {
 const updateItemQuantity = function (product, sku, qty = 1) {
   const tempProduct = {...product}
   if (tempProduct.sku === sku) {
-    tempProduct.quantity = parseInt(tempProduct.quantity) || parseInt(qty) || 0;
+    tempProduct.quantity = parseInt(qty) || 0;
     if (tempProduct.quantity < 0) {
       tempProduct.quantity = 0;
     }
   }
-  return tempProduct;
+  return tempProduct.quantity;
 };
 
 module.exports = {

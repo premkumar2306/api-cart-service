@@ -1,6 +1,6 @@
 const dynamodb = require('../dynamodb');
 
-module.exports.get = async function (cartid) {
+module.exports.getCart = async function (cartid) {
   const params = {
     TableName: process.env.DYNAMODB_TABLE,
     KeyConditionExpression: 'pk = :i',
@@ -16,7 +16,7 @@ module.exports.handler = async (event) => {
   console.log(JSON.stringify(event));
   const cartId = event.pathParameters.cartid;
   try {
-    const cart = await this.get(cartId);
+    const cart = await this.getCart(cartId);
     return {
       statusCode: 200,
       body: JSON.stringify(cart),

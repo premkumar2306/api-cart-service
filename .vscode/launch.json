@@ -47,34 +47,6 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch add Item to cart",
-            "program": "${workspaceRoot}/node_modules/.bin/sls",
-            "args": [
-                "invoke",
-                "local",
-                "-f",
-                "addCartItem",
-                "--path",
-                "functions/cartItem/add/addCartItem.json"
-            ]
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch del Item on cart",
-            "program": "${workspaceRoot}/node_modules/.bin/sls",
-            "args": [
-                "invoke",
-                "local",
-                "-f",
-                "deleteCartItem",
-                "--path",
-                "functions/cartItem/delete/deleteCartItem.json"
-            ]
-        },
-        {
-            "type": "node",
-            "request": "launch",
             "name": "Launch Update Item on cart",
             "program": "${workspaceRoot}/node_modules/.bin/sls",
             "args": [
@@ -98,20 +70,6 @@
                 "checkoutCart",
                 "--path",
                 "events/checkoutCart.json"
-            ]
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "checkout amazon pay session",
-            "program": "${workspaceRoot}/node_modules/.bin/sls",
-            "args": [
-                "invoke",
-                "local",
-                "-f",
-                "amazonpayNewSession",
-                "--path",
-                "functions/amazonpay/session.json"
             ]
         }
     ]
