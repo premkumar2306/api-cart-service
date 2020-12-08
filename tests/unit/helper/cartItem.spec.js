@@ -157,7 +157,7 @@ describe('cartItem helper methods', () => {
     expect(updateQuantity).toBe(quantity);
   });
 
-  test('should be able to decrement the quantity', () => {
+  test('new quantity is set when cart item is call updateItemQuantity ', () => {
       const cartItems = [
           {
               "images": "https://static.acer.com/up/Resource/Acer/Laptops/Swift_7/Photogallery/20190322/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
@@ -181,12 +181,11 @@ describe('cartItem helper methods', () => {
       const quantity = 1;
       const responseQuantity = updateItemQuantity(cartItems[0], mocksku, quantity);
       expect(responseQuantity).toBe(1);
-      const findProudctWithQtyOne = findProduct(cartItems, mocksku);
-      expect(findProudctWithQtyOne).not.toBeUndefined();
-      // again reduct the quantity
       const secondResponseQty = updateItemQuantity(cartItems[1], "20190322TU1", 3);
       expect(secondResponseQty).toBe(3);
       const findProudctWithZeroQty = findProduct(cartItems, "20190322TU");
       expect(findProudctWithZeroQty).toBeUndefined();
+      const findProudctWithQtyOne = findProduct(cartItems, mocksku);
+      expect(findProudctWithQtyOne).not.toBeUndefined();
   });
 });

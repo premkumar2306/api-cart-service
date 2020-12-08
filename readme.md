@@ -54,19 +54,72 @@ This is a shopping cart manangement repo: Using serverless framework and node:12
 https://docs.aws.amazon.com/AWSECommerceService/latest/DG/UsingValuesReturnedbyCartCreateinOtherCartOperations.html
 
 ## TODO
+- [x] Logging
 - [ ] Authentication
-- [ ] Logging
 - [ ] Monitoring
 - [ ] Alerts
+- [ ] Price check
 - [ ] Handle Out of Stock Items
 - [ ] Items With Limited Quantities
-- [ ] Validate the create cart - It is not possible to create an empty cart. At least, one item must be added.
 - [ ] Ninety days automatic cart cleanup and move to s3
 
-| Category        | Description 
-| :------------- |:-------------|
-| ForEachQuantityXGetQuantityFreeX	      | For a specified number of items, you receive additional items for free. For example, buy six dozen eggs and get a dozen eggs free.|
-| BuyAmountXGetSimpleShippingFreeX	      | For a specified dollar amount, you receive free shipping. For example, spend $25 and your item is shipped free of charge.|
-| BuyAmountXGetAmountOffX	      	      | For a specified dollar amount, you receive a discounted price. For example, spend $25 and get a $5 discount.|
-| BuyQuantityXGetAmountOffX	      	   | For a specified number of items, you receive a discounted price. For example, buy three balls and get a $5 discount.|
-| BuyQuantityXGetPercentOffX	      	   | For a specified number of items, you receive a percentage discount. For example, buy three balls and get a 15% discount.|
+### Query
+
+```html 
+query getCart {
+  getCart(id: "11111114") {
+    amount
+    pk
+    cartItems {
+      brand
+      sku
+      title
+      quantity
+      itemTotal {
+        amount
+        currencyCode
+        formattedPrice
+      }
+      price {
+        amount
+        currencyCode
+        formattedPrice
+      }
+    }
+    subTotal {
+      amount
+      currencyCode
+      formattedPrice
+    }
+  }
+}
+```
+
+### Mutation
+```
+mutation {
+	putCart(
+		cartInput: {
+			pk: "123456"
+			cartItems: [
+				{
+					sku: "1213"
+					quantity: "2"
+					images: "http://images.icecat.biz/img/gallery/40027482_7383642436.jpg"
+					title: "Acer B7 B247Y bmiprzx 60.5 cm (23.8\") 1920 x 1080 pixels Full HD LED Black"
+        },
+        {
+					sku: "1214"
+					quantity: "2"
+					images: "http://images.icecat.biz/img/gallery/40027482_7383642436.jpg"
+					title: "Acer B7 B247Y bmiprzx 60.5 cm (23.8\") 1920 x 1080 pixels Full HD LED Black"
+				}
+			]
+		}
+	) {
+		pk
+		sk
+	}
+}
+
+```
