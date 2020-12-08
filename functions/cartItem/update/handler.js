@@ -1,33 +1,71 @@
-'use strict';
-const getCart = require('../../get/handler').get;
-const updateCart = require("../../create/handler").create;
-const { findProduct, reduceItemQuantity } = require('../../../helper/cartItem');
+const { getCart } = require('../../get/handler');
+const { findProduct, updateItemQuantity } = require('../../../helper/common');
+const { getPrice } = require('../../../helper/common');
+const mapper = require('../../../helper/mapCart');
+const dynamodb = require('../../dynamodb');
 
-const addItem = async (cartId, newItem) => {
-    console.log(`cartId: ${cartId}\tadd:${JSON.stringify(newItem)}`);
-    const cart = await getCart(cartId);
-    console.log(JSON.stringify(cart));
-    let productsInCart = cart.cartItems;
-    // TODO: reduce or increase need to check with the business
-    if (findProduct(productsInCart, newItem.cartItemId)) {
-        productsInCart = reduceItemQuantity(productsInCart, newItem.cartItemId, newItem.quantity);
-        console.log(JSON.stringify(productsInCart));
+const updateCart = async (cartId, newCartItems) => {
+  console.log(`cartId: ${cartId}\tadd:${JSON.stringify(newCartItems)}`);
+  const cart = await getCart(cartId);
+  if (!cart) {
+    throw new Error('Not able to find the cart');
+  }
+  console.log(JSON.stringify(cart));
+  const productsInCart = cart.cartItems;
+  delete cart.subTotal;
+  // add price to the product
+
+  // TODO: reduce or increase need to check with the business
+  const tempCart = [];
+  newCartItems.forEach((cartItem) => {
+    const existingItem = findProduct(productsInCart, cartItem.sku);
+    if (existingItem) {
+      delete existingItem.itemTotal;
+      existingItem.quantity = updateItemQuantity(
+        existingItem,
+        cartItem.sku,
+        cartItem.quantity,
+      );
+      existingItem.price = getPrice(cartItem.sku);
+      if (existingItem.quantity > 0) {
+        tempCart.push(existingItem);
+        console.log('Item quantity updated: ', existingItem);
+        console.log(JSON.stringify(existingItem));
+      } else {
+        console.log('Existing Item removed: ', existingItem);
+      }
     } else {
-        productsInCart.push(newItem);
+      const newCartItem = { ...cartItem };
+      newCartItem.quantity = newCartItem.quantity || 1;
+      newCartItem.price = getPrice(newCartItem.sku);
+      if (newCartItem.quantity > 0) {
+        tempCart.push(newCartItem);
+      }
     }
-    const data = { ...cart, ...{ cartItems: productsInCart } }
-    await updateCart(data);
+  });
+
+  const data = { ...cart, ...{ cartItems: tempCart } };
+  const body = mapper(data);
+  const params = {
+    TableName: process.env.DYNAMODB_TABLE,
+    Item: body,
+  };
+  try {
+    await dynamodb.put(params).promise();
     const response = await getCart(cartId);
     return response;
+  } catch (error) {
+    console.log(error);
+  }
+  return {};
 };
 
-module.exports.addItem = addItem;
+module.exports.updateCart = updateCart;
 
-module.exports.handler = async function (event, context) {
-    debugger;
-    console.log(JSON.stringify(event));
-    const cartId = event.pathParameters.cartid;
-    const newItem = JSON.parse(event.body);
-    const data = await addItem(cartId, newItem);
-    return { statusCode: 200, body: JSON.stringify({ data }) };
-}
+module.exports.handler = async function (event) {
+  console.log(JSON.stringify(event));
+  const cartId = event.pathParameters.cartid;
+  const newItem = JSON.parse(event.body);
+  const data = await updateCart(cartId, newItem);
+  return { statusCode: 200, body: JSON.stringify({ data }) };
+};

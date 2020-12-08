@@ -1,9 +1,7 @@
-'use strict';
-
 const AWS = require('aws-sdk'); // eslint-disable-line import/no-extraneous-dependencies
 
-let options = {
-    region: 'us-east-1'
+const options = {
+  region: 'us-east-1',
 };
 
 // connect to local DB if running offline
