@@ -36,10 +36,10 @@ module.exports.handler = async (event) => {
     const body = JSON.parse(event.body);
     const cart = body.cartInput;
     console.log(cart);
-    const data = await create(cart);
+    const newCart = await create(cart);
     return {
       statusCode: 200,
-      body: JSON.stringify(data.Item),
+      body: JSON.stringify(newCart),
     };
   } catch (error) {
     console.log(error);

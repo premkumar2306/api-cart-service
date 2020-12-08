@@ -108,6 +108,6 @@
         "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
         "apiId": "4rdz741pfg"
     },
-    "body": "{\"cartInput\":{\"pk\":\"111111\",\"cartItems\":[{\"images\":\"http://images.icecat.biz/img/gallery/40027482_7383642436.jpg\",\"quantity\":\"2\",\"sku\":\"12342\",\"title\":\"Acer B7 B247Y bmiprzx 60.5 cm 920 x 1080 pixels Full HD LED Black\"},{\"images\":\"http://images.icecat.biz/img/gallery/40027482_7383642436.jpg\",\"quantity\":\"2\",\"sku\":\"324324\",\"title\":\"Acer B7 B247Y bmiprzx 60.5 cm 920 x 1080 pixels Full HD LED Black\"}]}}",
+    "body": "{\"cartInput\":{\"pk\":\"11111112\",\"cartItems\":[{\"images\":\"http://images.icecat.biz/img/gallery/40027482_7383642436.jpg\",\"quantity\":\"2\",\"sku\":\"12342\",\"title\":\"Acer B7 B247Y bmiprzx 60.5 cm 920 x 1080 pixels Full HD LED Black\"},{\"images\":\"http://images.icecat.biz/img/gallery/40027482_7383642436.jpg\",\"quantity\":\"2\",\"sku\":\"324324\",\"title\":\"Acer B7 B247Y bmiprzx 60.5 cm 920 x 1080 pixels Full HD LED Black\"}]}}",
     "isBase64Encoded": false
 }
