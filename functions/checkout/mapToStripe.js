@@ -1,11 +1,11 @@
 const mapCartItems = function (cartItems) {
   const items = cartItems.map((c) => ({
-    name: c.brand,
-    description: c.description,
+    name: c.sku,
+    description: c.title,
     images: [c.images],
-    amount: c.itemTotal.amount * 100,
+    amount: c.itemTotal.amount,
     quantity: c.quantity,
-    currency: 'usd',
+    currency: 'inr',
   }));
   console.log('cart mapping');
   console.log(JSON.stringify(items));

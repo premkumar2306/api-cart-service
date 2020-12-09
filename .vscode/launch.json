@@ -69,7 +69,7 @@
                 "-f",
                 "checkoutCart",
                 "--path",
-                "events/checkoutCart.json"
+                "functions/checkout/checkoutCart.json"
             ]
         }
     ]

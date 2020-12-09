@@ -122,4 +122,6 @@ mutation {
 	}
 }
 
+[FACT-1898] Bump @rally/chatterbox-ui to 1.4.1
+
 ```

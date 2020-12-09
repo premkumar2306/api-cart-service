@@ -1,4 +1,4 @@
-const getCart = require('../get/handler').get;
+const { getCart } = require('../get/handler');
 const mapToStripe = require('./mapToStripe');
 
 const createStripeCheckout = async (cartId, customerId) => {
