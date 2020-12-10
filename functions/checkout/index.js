@@ -1,17 +1,38 @@
 const { getCart } = require("../get/handler");
-const createStripeCheckout = require('./stripe/create-stripe-checkout');
 const createRazorPayCheckout = require("./razorpay/razorpay-checkout");
+const dynamodb = require('../dynamodb');
 
 module.exports.handler = async function (event) {
   console.log(JSON.stringify(event));
   const cartId = event.pathParameters.cartid;
-  const customerId = 'cus_H9tezcPBgseibW';
+  const customerId = "cus_H9tezcPBgseibW";
+  const body = JSON.parse(event.body);
   console.log(
     `cartId: ${cartId} checkout process began at ${new Date().toISOString()}`
   );
   const cart = await getCart(cartId);
-  const stripeSession = await createStripeCheckout(cart, cartId, customerId);
-  const razorOrder = await createRazorPayCheckout(cart, cartId, customerId);
-  data = { ...stripeSession, razor: razorOrder, ...cart, id: razorOrder.id };
-  return { statusCode: 200, body: JSON.stringify(data) };
+  const checkout = { ...cart };
+  if (!body.razorpay_payment_id) {
+    const razorOrder = await createRazorPayCheckout(cart, cartId, customerId);
+    checkout.razor = razorOrder;
+    checkout.id = razorOrder.id;
+  } else {
+    checkout.payment = {
+      razorpay_order_id: body.razorpay_order_id,
+      razorpay_payment_id: body.razorpay_payment_id,
+      razorpay_signature: body.razorpay_signature
+    };
+  }
+  const params = {
+    TableName: process.env.DYNAMODB_TABLE,
+    Item: checkout,
+  };
+  try {
+    await dynamodb.put(params).promise();
+    const response = await getCart(cartId);
+    return { statusCode: 200, body: JSON.stringify(response) };
+  } catch (error) {
+    console.log(error);
+    return { statusCode: 501, body: JSON.stringify(error) };
+  }
 };

@@ -84,17 +84,7 @@ functions:
     events:
       - http:
           path: cart/{cartid}/checkout
-          method: get
-          cors: true
-
-  checkoutSession:
-    handler: functions/checkout-session/index.handler
-    environment:
-      STRIPE_API_KEY: ${env:STRIPE_API_KEY}
-    events:
-      - http:
-          path: cart/checkout-session/{sessionid}
-          method: get
+          method: post
           cors: true
 
 resources:

@@ -1,29 +1,37 @@
 {
     "resource": "/cart/{cartid}/checkout",
     "path": "/cart/22222222/checkout",
-    "httpMethod": "GET",
+    "httpMethod": "POST",
     "headers": {
-        "Authorization": "$ctx.request.headers.Authorization",
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Cache-Control": "no-cache",
         "CloudFront-Forwarded-Proto": "https",
         "CloudFront-Is-Desktop-Viewer": "true",
         "CloudFront-Is-Mobile-Viewer": "false",
         "CloudFront-Is-SmartTV-Viewer": "false",
         "CloudFront-Is-Tablet-Viewer": "false",
         "CloudFront-Viewer-Country": "US",
-        "content-type": "application/octet-stream",
-        "Date": "Sat, 9 May 2020 00:44:04 Z",
-        "Host": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
-        "User-Agent": "AWSAppSync-Http-Client",
-        "Via": "1.1 649b4de6ebe50fb3c542f3d95c8ed8bb.cloudfront.net (CloudFront)",
-        "X-Amz-Cf-Id": "T1rn4jyn2_gtZYhFOi-NL_U3FIc3bM40_r2AY1BhbmAmirSGxSfkrQ==",
-        "X-Amzn-Trace-Id": "Root=1-5eb5fcd4-7551dfb6019bdcd01328fba6",
-        "X-Forwarded-For": "34.227.182.245, 70.132.60.80",
+        "Content-Type": "application/json",
+        "Host": "ucp3hsx48f.execute-api.us-east-1.amazonaws.com",
+        "Postman-Token": "f3bfc849-17b5-4cee-afef-ca5e4350a18e",
+        "User-Agent": "PostmanRuntime/7.26.8",
+        "Via": "1.1 5da5773a6acab8f3aabf385b38683f20.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "aqVURlqvJO7QCGkMoyf-qFJ67tXoPy0fGW0kZvJ-khIclOZ8XzbZ3Q==",
+        "X-Amzn-Trace-Id": "Root=1-5fd258f9-4fb8c029724bb5e549cb9d41",
+        "X-Forwarded-For": "207.181.207.119, 70.132.48.79",
         "X-Forwarded-Port": "443",
         "X-Forwarded-Proto": "https"
     },
     "multiValueHeaders": {
-        "Authorization": [
-            "$ctx.request.headers.Authorization"
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "Cache-Control": [
+            "no-cache"
         ],
         "CloudFront-Forwarded-Proto": [
             "https"
@@ -43,29 +51,29 @@
         "CloudFront-Viewer-Country": [
             "US"
         ],
-        "content-type": [
-            "application/octet-stream"
-        ],
-        "Date": [
-            "Sat, 9 May 2020 00:44:04 Z"
+        "Content-Type": [
+            "application/json"
         ],
         "Host": [
-            "4rdz741pfg.execute-api.us-east-1.amazonaws.com"
+            "ucp3hsx48f.execute-api.us-east-1.amazonaws.com"
+        ],
+        "Postman-Token": [
+            "f3bfc849-17b5-4cee-afef-ca5e4350a18e"
         ],
         "User-Agent": [
-            "AWSAppSync-Http-Client"
+            "PostmanRuntime/7.26.8"
         ],
         "Via": [
-            "1.1 649b4de6ebe50fb3c542f3d95c8ed8bb.cloudfront.net (CloudFront)"
+            "1.1 5da5773a6acab8f3aabf385b38683f20.cloudfront.net (CloudFront)"
         ],
         "X-Amz-Cf-Id": [
-            "T1rn4jyn2_gtZYhFOi-NL_U3FIc3bM40_r2AY1BhbmAmirSGxSfkrQ=="
+            "aqVURlqvJO7QCGkMoyf-qFJ67tXoPy0fGW0kZvJ-khIclOZ8XzbZ3Q=="
         ],
         "X-Amzn-Trace-Id": [
-            "Root=1-5eb5fcd4-7551dfb6019bdcd01328fba6"
+            "Root=1-5fd258f9-4fb8c029724bb5e549cb9d41"
         ],
         "X-Forwarded-For": [
-            "34.227.182.245, 70.132.60.80"
+            "207.181.207.119, 70.132.48.79"
         ],
         "X-Forwarded-Port": [
             "443"
@@ -81,35 +89,35 @@
     },
     "stageVariables": null,
     "requestContext": {
-        "resourceId": "qqfdnl",
+        "resourceId": "eepqhy",
         "resourcePath": "/cart/{cartid}/checkout",
-        "httpMethod": "GET",
-        "extendedRequestId": "MPRxLHTqoAMFq_A=",
-        "requestTime": "09/May/2020:00:44:04 +0000",
+        "httpMethod": "POST",
+        "extendedRequestId": "XWLXDH2vIAMFSRw=",
+        "requestTime": "10/Dec/2020:17:20:57 +0000",
         "path": "/dev/cart/22222222/checkout",
-        "accountId": "677660837407",
+        "accountId": "843978520210",
         "protocol": "HTTP/1.1",
         "stage": "dev",
-        "domainPrefix": "4rdz741pfg",
-        "requestTimeEpoch": 1588985044240,
-        "requestId": "d499c68b-c02f-433c-aa7d-4231bfc7b27e",
+        "domainPrefix": "ucp3hsx48f",
+        "requestTimeEpoch": 1607620857810,
+        "requestId": "645a7543-09ef-43cd-ba1b-c1a9af948836",
         "identity": {
             "cognitoIdentityPoolId": null,
             "accountId": null,
             "cognitoIdentityId": null,
             "caller": null,
-            "sourceIp": "34.227.182.245",
+            "sourceIp": "207.181.207.119",
             "principalOrgId": null,
             "accessKey": null,
             "cognitoAuthenticationType": null,
             "cognitoAuthenticationProvider": null,
             "userArn": null,
-            "userAgent": "AWSAppSync-Http-Client",
+            "userAgent": "PostmanRuntime/7.26.8",
             "user": null
         },
-        "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
-        "apiId": "4rdz741pfg"
+        "domainName": "ucp3hsx48f.execute-api.us-east-1.amazonaws.com",
+        "apiId": "ucp3hsx48f"
     },
-    "body": null,
+    "body": "{\n      \"razorpay_order_id\": \"order_GBQ6WyjaDbdYhk\",\n      \"razorpay_payment_id\": \"pay_GBMIMMyTBjBH2s\",\n      \"razorpay_signature\": \"53d9bbf56b280ec6c747f38d0a69f2548a6a8c809f8a98a75ed2ee3b734f0a07\"\n}",
     "isBase64Encoded": false
 }
