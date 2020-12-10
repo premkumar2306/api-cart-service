@@ -5,12 +5,12 @@ const mapper = require('../../../helper/mapCart');
 const dynamodb = require('../../dynamodb');
 
 const updateCart = async (cartId, newCartItems) => {
-  console.log(`cartId: ${cartId}\tadd:${JSON.stringify(newCartItems)}`);
+  console.info(`cartId: ${cartId}\tadd:${JSON.stringify(newCartItems)}`);
   const cart = await getCart(cartId);
   if (!cart) {
     throw new Error('Not able to find the cart');
   }
-  console.log(JSON.stringify(cart));
+  console.info(JSON.stringify(cart));
   const productsInCart = cart.cartItems;
   delete cart.subTotal;
   // add price to the product
@@ -29,10 +29,10 @@ const updateCart = async (cartId, newCartItems) => {
       existingItem.price = getPrice(cartItem.sku);
       if (existingItem.quantity > 0) {
         tempCart.push(existingItem);
-        console.log('Item quantity updated: ', existingItem);
-        console.log(JSON.stringify(existingItem));
+        console.info('Item quantity updated: ', existingItem);
+        console.info(JSON.stringify(existingItem));
       } else {
-        console.log('Existing Item removed: ', existingItem);
+        console.warn('Existing Item removed: ', existingItem);
       }
     } else {
       const newCartItem = { ...cartItem };

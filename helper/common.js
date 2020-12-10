@@ -37,9 +37,29 @@ const updateItemQuantity = function (product, sku, qty = 1) {
   return tempProduct.quantity;
 };
 
+const calcTax = function(products) {
+  return 0.0;
+}
+
+const calcShipping = function(products) {
+  return 0.0;
+}
+
+const calcOrderTotal = function(subTotal, tax, shipping) {
+  const totalCost =  parseInt(subTotal.amount) + parseInt(tax) + parseInt(shipping);
+  return {
+    currencyCode: 'INR',
+    amount: totalCost,
+    formattedPrice: `₹${(totalCost / 100).toFixed(2)}`,
+  };
+}
+
 module.exports = {
   getPrice,
   findProduct,
   removeProduct,
   updateItemQuantity,
+  calcTax,
+  calcShipping,
+  calcOrderTotal
 };

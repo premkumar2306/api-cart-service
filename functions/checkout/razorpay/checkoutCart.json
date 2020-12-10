@@ -74,7 +74,9 @@
             "https"
         ]
     },
-    "queryStringParameters": null,
+    "queryStringParameters": {
+        "type": "razorpay"
+    },
     "multiValueQueryStringParameters": null,
     "pathParameters": {
         "cartid": "22222222"
