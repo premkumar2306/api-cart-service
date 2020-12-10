@@ -1,7 +1,7 @@
 const mapCartItems = function (cartItems) {
   const items = cartItems.map((c) => ({
     name: c.sku,
-    description: c.title,
+    description: c.description || c.title,
     images: [c.images],
     amount: c.itemTotal.amount,
     quantity: c.quantity,
