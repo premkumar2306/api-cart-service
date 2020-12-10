@@ -17,13 +17,13 @@
     "coverage": "jest --collect-coverage"
   },
   "dependencies": {
-    "aws-sdk": "^2.802.0",
     "axios": "^0.21.0",
     "crypto": "^1.0.1",
     "razorpay": "^2.0.6",
     "stripe": "^8.126.0",
     "uuid": "^8.3.1",
-    "uuidv4": "^6.2.5"
+    "uuidv4": "^6.2.5",
+    "aws-sdk": "^2.805.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
