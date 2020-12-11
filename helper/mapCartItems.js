@@ -23,6 +23,7 @@ const mapCartItems = function (cartItems) {
       images: c.images,
       category: c.category,
       price: c.price,
+      partnumber: c.partnumber,
       itemTotal,
     };
   });
