@@ -19,6 +19,7 @@ const mapCartItems = function (cartItems) {
       brand: c.brand,
       quantity: c.quantity,
       title: c.title,
+      description: c.description,
       images: c.images,
       category: c.category,
       price: c.price,
