@@ -118,6 +118,6 @@
         "domainName": "ucp3hsx48f.execute-api.us-east-1.amazonaws.com",
         "apiId": "ucp3hsx48f"
     },
-    "body": "{\n      \"razorpay_order_id\": \"order_GBQ6WyjaDbdYhk\",\n      \"razorpay_payment_id\": \"pay_GBMIMMyTBjBH2s\",\n      \"razorpay_signature\": \"53d9bbf56b280ec6c747f38d0a69f2548a6a8c809f8a98a75ed2ee3b734f0a07\"\n}",
+    "body": "{\"checkoutInput\":{\"id\":\"22222222\",\"pk\":\"22222222\",\"razorpay_order_id\":\"22222222\",\"razorpay_payment_id\":\"22222222\",\"razorpay_signature\":\"22222222\"}}",
     "isBase64Encoded": false
 }
