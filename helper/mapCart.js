@@ -15,7 +15,7 @@ module.exports = (cart) => {
   const subTotal = calcSubTotal(cartItems);
   const tax = calcTax(cart.cartItems);
   const shipping = calcShipping(cart.cartItems);
-  const ordertotal = calcOrderTotal(subTotal, tax, shipping);
+  const orderTotal = calcOrderTotal(subTotal, tax, shipping);
   const data = {
     pk: cart.pk || uuid,
     sk: cart.sk || uuid,
@@ -25,7 +25,7 @@ module.exports = (cart) => {
     tax,
     shipping,
     subTotal,
-    ordertotal
+    orderTotal
   };
   console.log(`data ${data}`);
   return { ...data,  };

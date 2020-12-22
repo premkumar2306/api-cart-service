@@ -4,18 +4,16 @@
 ## What's in this repository?
 
 This is a shopping cart manangement repo: Using serverless framework and node:12.x lamdba and dynamodb as backend
- * create a new cart (atleast one item needed)
+ * create a new cart
 ``` bash
 .
 ├── functions               
 │   ├── cartItem
-│   │   ├── add    
-│   │   ├── update     
-│   │   └── delete
+│   │   └── update
 │   ├── checkout
-│   │   ├── checkout.html
-│   │   ├── create-stripe-checkout
-│   │   └── mapToStripe
+│   │   ├── razorpay
+│   │   ├── stripe
+│   │   └── zoho
 │   ├── create
 │   │   ├── handler
 │   │   └──  create.json
@@ -40,14 +38,13 @@ This is a shopping cart manangement repo: Using serverless framework and node:12
 ## Commands
 
 ### Install 
-    npm install
+    yarn
 ### Local Lambda Invoke
-    npm run create-cart-local
-    npm run get-cart-local
-    npm run delete-cart-local
-    npm run add-cart-item-local
-    npm run update-cart-item-local
-    npm run del-cart-item-local
+    yarn run create-cart-local
+    yarn run get-cart-local
+    yarn run add-cart-item-local
+    yarn run checkout-session-local
+    yarn run delete-cart-local
 
 ## Remove cart
 
@@ -121,7 +118,5 @@ mutation {
 		sk
 	}
 }
-
-[FACT-1898] Bump @rally/chatterbox-ui to 1.4.1
 
 ```
