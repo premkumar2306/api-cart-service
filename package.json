@@ -23,7 +23,7 @@
     "stripe": "^8.131.1",
     "uuid": "^8.3.1",
     "uuidv4": "^6.2.5",
-    "aws-sdk": "^2.828.0"
+    "aws-sdk": "^2.829.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
