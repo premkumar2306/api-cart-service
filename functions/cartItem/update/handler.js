@@ -1,14 +1,14 @@
-const { getCart } = require('../../get/handler');
-const { findProduct, updateItemQuantity } = require('../../../helper/common');
-const { getPrice } = require('../../../helper/common');
-const mapper = require('../../../helper/mapCart');
-const dynamodb = require('../../dynamodb');
+const { getCart } = require("../../get/handler");
+const { findProduct, updateItemQuantity } = require("../../../helper/common");
+const { getPrice } = require("../../../helper/common");
+const mapper = require("../../../helper/mapCart");
+const dynamodb = require("../../dynamodb");
 
 const updateCart = async (cartId, newCartItems) => {
   console.info(`cartId: ${cartId}\tadd:${JSON.stringify(newCartItems)}`);
   const cart = await getCart(cartId);
   if (!cart) {
-    throw new Error('Not able to find the cart');
+    throw new Error("Not able to find the cart");
   }
   console.info(JSON.stringify(cart));
   const productsInCart = cart.cartItems;
@@ -17,32 +17,33 @@ const updateCart = async (cartId, newCartItems) => {
 
   // TODO: reduce or increase need to check with the business
   const tempCart = [];
-  newCartItems.forEach((cartItem) => {
+  for (let i = 0; i < newCartItems.length; i++) {
+    const cartItem = newCartItems[i];
     const existingItem = findProduct(productsInCart, cartItem.sku);
     if (existingItem) {
       delete existingItem.itemTotal;
       existingItem.quantity = updateItemQuantity(
         existingItem,
         cartItem.sku,
-        cartItem.quantity,
+        cartItem.quantity
       );
-      existingItem.price = getPrice(cartItem.sku);
+      existingItem.price = await getPrice(cartItem);
       if (existingItem.quantity > 0) {
         tempCart.push(existingItem);
-        console.info('Item quantity updated: ', existingItem);
+        console.info("Item quantity updated: ", existingItem);
         console.info(JSON.stringify(existingItem));
       } else {
-        console.warn('Existing Item removed: ', existingItem);
+        console.warn("Existing Item removed: ", existingItem);
       }
     } else {
       const newCartItem = { ...cartItem };
       newCartItem.quantity = newCartItem.quantity || 1;
-      newCartItem.price = getPrice(newCartItem.sku);
+      newCartItem.price = await getPrice(newCartItem);
       if (newCartItem.quantity > 0) {
         tempCart.push(newCartItem);
       }
     }
-  });
+  }
 
   const data = { ...cart, ...{ cartItems: tempCart } };
   const body = mapper(data);

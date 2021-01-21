@@ -1,8 +1,26 @@
-const getPrice = function (sku) {
+const dynamodb = require("../functions/dynamodb");
+
+getProducts = async function (id) {
+  const params = {
+    TableName: "dev-products",
+    KeyConditionExpression: "pk = :i",
+    ExpressionAttributeValues: {
+      ":i": id,
+    },
+  };
+  try {
+    const result = await dynamodb.query(params).promise();
+    return result.Items[0];
+  } catch (error) {
+    console.log(error);
+  }
+};
+const getPrice = async function (cartItem) {
+  const product = await getProducts(cartItem.sku);
   return {
-    amount: '11100',
-    currencyCode: 'INR',
-    formattedPrice: '₹111.00',
+    amount: parseFloat(product.landingCost.replace(",","")) * 100,
+    currencyCode: "INR",
+    formattedPrice: `₹ ${product.landingCost}`,
   };
 };
 
@@ -27,7 +45,7 @@ const removeProduct = function (products, sku) {
 };
 
 const updateItemQuantity = function (product, sku, qty = 1) {
-  const tempProduct = {...product}
+  const tempProduct = { ...product };
   if (tempProduct.sku === sku) {
     tempProduct.quantity = parseInt(qty) || 0;
     if (tempProduct.quantity < 0) {
@@ -37,22 +55,23 @@ const updateItemQuantity = function (product, sku, qty = 1) {
   return tempProduct.quantity;
 };
 
-const calcTax = function(products) {
+const calcTax = function (products) {
   return 0.0;
-}
+};
 
-const calcShipping = function(products) {
+const calcShipping = function (products) {
   return 0.0;
-}
+};
 
-const calcOrderTotal = function(subTotal, tax, shipping) {
-  const totalCost =  parseInt(subTotal.amount) + parseInt(tax) + parseInt(shipping);
+const calcOrderTotal = function (subTotal, tax, shipping) {
+  const totalCost =
+    parseInt(subTotal.amount) + parseInt(tax) + parseInt(shipping);
   return {
-    currencyCode: 'INR',
+    currencyCode: "INR",
     amount: totalCost,
     formattedPrice: `₹${(totalCost / 100).toFixed(2)}`,
   };
-}
+};
 
 module.exports = {
   getPrice,
@@ -61,5 +80,5 @@ module.exports = {
   updateItemQuantity,
   calcTax,
   calcShipping,
-  calcOrderTotal
+  calcOrderTotal,
 };

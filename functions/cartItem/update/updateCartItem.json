@@ -1,6 +1,6 @@
 {
     "resource": "/cart/{cartid}/updateItem",
-    "path": "/cart/111111/updateItem",
+    "path": "/cart/b821cca3/updateItem",
     "httpMethod": "POST",
     "headers": {
         "Accept": "*/*",
@@ -85,7 +85,7 @@
     "queryStringParameters": null,
     "multiValueQueryStringParameters": null,
     "pathParameters": {
-        "cartid": "111111"
+        "cartid": "b821cca3"
     },
     "stageVariables": null,
     "requestContext": {
@@ -94,7 +94,7 @@
         "httpMethod": "POST",
         "extendedRequestId": "Gk0xiFxEoAMFgPQ=",
         "requestTime": "20/Jan/2020:01:25:55 +0000",
-        "path": "/dev/cart/111111/updateItem",
+        "path": "/dev/cart/b821cca3/updateItem",
         "accountId": "677660837407",
         "protocol": "HTTP/1.1",
         "stage": "dev",
@@ -118,6 +118,6 @@
         "domainName": "4rdz741pfg.execute-api.us-east-1.amazonaws.com",
         "apiId": "4rdz741pfg"
     },
-    "body": "[\n    {\n        \"brand\": \"Acer\",\n        \"productId\": \"predatorxb2\",\n        \"category\": \"Monitor\",\n        \"quantity\": 0,\n        \"sku\": \"123\",\n        \"img\": \"https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png\",\n        \"title\": \"Acer Monitor Predator series; Game at unimaginable speeds. Lightning-fueled refresh rates let you unleash your maximum potential.\"\n    },\n     {\n        \"brand\": \"Acer\",\n        \"productId\": \"predatorxb2\",\n        \"category\": \"Monitor\",\n        \"quantity\": 2,\n        \"sku\": \"124\",\n        \"img\": \"https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png\",\n        \"title\": \"Acer Monitor Predator series; Game at unimaginable speeds. Lightning-fueled refresh rates let you unleash your maximum potential.\"\n    }\n\n]",
+    "body": "[\n    {\n        \"brand\": \"Acer\",\n        \"productId\": \"predatorxb2\",\n        \"category\": \"Monitor\",\n        \"quantity\": 0,\n        \"sku\": \"GI606A662\",\n        \"img\": \"https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png\",\n        \"title\": \"Acer Monitor Predator series; Game at unimaginable speeds. Lightning-fueled refresh rates let you unleash your maximum potential.\"\n    },\n     {\n        \"brand\": \"Acer\",\n        \"productId\": \"predatorxb2\",\n        \"category\": \"Monitor\",\n        \"quantity\": 2,\n        \"sku\": \"GDB53P371N9\",\n        \"img\": \"https://static.acer.com/up/Resource/Acer/Acer_Gaming/IEM_Katowice_2018/20180209/Predator_XB241.png\",\n        \"title\": \"Acer Monitor Predator series; Game at unimaginable speeds. Lightning-fueled refresh rates let you unleash your maximum potential.\"\n    }\n\n]",
     "isBase64Encoded": false
 }
