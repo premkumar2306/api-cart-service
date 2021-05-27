@@ -8661,10 +8661,10 @@ strip-outer@^1.0.0:
   dependencies:
     escape-string-regexp "^1.0.2"
 
-stripe@^8.132.0:
-  version "8.132.0"
-  resolved "https://registry.yarnpkg.com/stripe/-/stripe-8.132.0.tgz#3c6403dea9699ee112d515388f7cfbadb2375600"
-  integrity sha512-VFKQJWgPt2X0r/jh4wS6Kgx6/VH1IHw1466wIwahgWzgSANme5iNaJ+1AW45hvRUZJ+T15f2hTfQkQGyP73ZCg==
+stripe@^8.150.0:
+  version "8.150.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-8.150.0.tgz#d48b9efe4d104cd65385ccc2fec6ede6cfb9bfa2"
+  integrity sha512-48YMLupzvDyVZUs37xUBd1SF0E3B77ahOTLhL7ycVwZqwjlQ30K7iHTejIAUdtEnWaNkaOz0LX6jHeR49IulRQ==
   dependencies:
     "@types/node" ">=8.1.0"
     qs "^6.6.0"
